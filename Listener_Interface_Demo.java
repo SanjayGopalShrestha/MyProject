@@ -111,7 +111,8 @@ Statement stmt2 = conn.createStatement();
  String a4 = "insert into student (Roll, Name) values(1,'A'),(2,'B'),(3,'C');";
  stmt4.executeUpdate(a4);
 
- 
+ PreparedStatement stmt5 = conn.createStatement("select * from student where Roll>1;");
+ ResultSet a6 = stmt5.executeQuery();
  
  conn.close();
 }
@@ -163,6 +164,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
