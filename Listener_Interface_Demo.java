@@ -115,7 +115,7 @@ Statement stmt2 = conn.createStatement();
  ResultSet a6 = stmt5.executeQuery();
  while (a6.next())
   {
-   System.out.println(a6.getInt("Rol")+"   "+a6.getString("Name"));
+   System.out.println(a6.getInt("Roll")+"   "+a6.getString("Name"));
   }
  conn.close();
 }
@@ -167,6 +167,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
