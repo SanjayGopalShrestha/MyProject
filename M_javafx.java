@@ -1,3 +1,13 @@
+/*
+To Run
+======
+E:\jtest\myproject\Java Awt, Swing, JavaFX>javac --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml M_javafx.java
+
+E:\jtest\myproject\Java Awt, Swing, JavaFX>java --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" M_javafx
+Connection Successful!
+*/
+
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -57,4 +67,5 @@ e1.printStackTrace();
     }
 
 }
+
 
