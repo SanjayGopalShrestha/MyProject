@@ -2,6 +2,11 @@
 
 To Run
 ======
+In XAMPP Control Panel: 
+Apache Start
+MySQL Start
+
+Download: jdbc\mysql-connector-j-9.5.0.jar and Save it in C:\
 
 E:\jtest>javac Rough.java
 
@@ -127,3 +132,4 @@ f.setVisible(true);
 
 
  
+
