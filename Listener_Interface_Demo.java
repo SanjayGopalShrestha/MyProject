@@ -1,3 +1,21 @@
+/*
+
+To Run
+======
+
+E:\jtest>javac Rough.java
+
+E:\jtest>java -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" Rough
+
+Output
+======
+Shows the Interface: Type Mr. A, Click OK
+Mr. A
+Connection Successful!
+
+*/
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -105,6 +123,7 @@ f.pack();
 f.setVisible(true);
 }
 }
+
 
 
  
