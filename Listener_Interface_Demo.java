@@ -111,12 +111,23 @@ Statement stmt2 = conn.createStatement();
  String a4 = "insert into student (Roll, Name) values(1,'A'),(2,'B'),(3,'C');";
  stmt4.executeUpdate(a4);
 
+ Statement stmt5 = conn.createStatement();
+ String y1 ="select * from student where Roll>1;";
+ ResultSet a6 = stmt5.executeQuery(y1);
+ while (a6.next())
+ {
+   System.out.println(a6.getInt("Roll")+"   "+a6.getString("Name"));
+ }
+ 
+ /*
  PreparedStatement stmt5 = conn.prepareStatement("select * from student where Roll>1;");
  ResultSet a6 = stmt5.executeQuery();
  while (a6.next())
   {
    System.out.println(a6.getInt("Roll")+"   "+a6.getString("Name"));
   }
+ */
+ 
  conn.close();
 }
 catch(SQLException p)
@@ -167,6 +178,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
