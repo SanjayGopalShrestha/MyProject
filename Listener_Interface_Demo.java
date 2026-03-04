@@ -105,6 +105,17 @@ p.printStackTrace();
 });
 
 
+ t.addActionListener(new ActionListener()
+ {
+ public void actionPerformed(ActionEvent e)
+ {
+ String p = t.getText();
+ System.out.println(p);
+ }
+ });
+   
+                      
+
 c.addActionListener(new ActionListener()
 {
 public void actionPerformed(ActionEvent e)
@@ -132,4 +143,5 @@ f.setVisible(true);
 
 
  
+
 
