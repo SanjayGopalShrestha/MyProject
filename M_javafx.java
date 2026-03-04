@@ -7,6 +7,7 @@ Start MySQL
 
 Download: "javafx-sdk-17.0.18" framework (library) 
 Save it in C:\
+Add the .jar files to your classpath when compiling and running as below for windows
 
 E:\jtest\myproject\Java Awt, Swing, JavaFX>javac --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml M_javafx.java
 
@@ -74,6 +75,7 @@ e1.printStackTrace();
     }
 
 }
+
 
 
 
