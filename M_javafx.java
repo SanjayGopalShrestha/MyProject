@@ -5,6 +5,7 @@ Download XAMPP from: https://www.apachefriends.org/
 Start Apache
 Start MySQL
 
+Go to: https://gluonhq.com/products/javafx/ 
 Download: "javafx-sdk-17.0.18" framework (library) 
 Save it in C:\
 Add the .jar files to your classpath when compiling and running as below for windows
@@ -75,6 +76,7 @@ e1.printStackTrace();
     }
 
 }
+
 
 
 
