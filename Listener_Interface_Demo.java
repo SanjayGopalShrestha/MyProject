@@ -79,7 +79,7 @@ x.createParallelGroup(GroupLayout.Alignment.BASELINE)
 );
 
 
-b.addActionListener(new ActionListener()
+t.addActionListener(new ActionListener()
 {
 public void actionPerformed(ActionEvent e)
 {
@@ -139,7 +139,7 @@ p.printStackTrace();
 }
 });
 
-
+/*
  t.addActionListener(new ActionListener()
  {
  public void actionPerformed(ActionEvent e)
@@ -148,7 +148,7 @@ p.printStackTrace();
  System.out.println(p);
  }
  });
-   
+*/   
                       
 
 c.addActionListener(new ActionListener()
@@ -178,6 +178,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
