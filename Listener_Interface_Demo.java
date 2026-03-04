@@ -94,23 +94,24 @@ try {
 Connection conn = DriverManager.getConnection(url, user, password);
 System.out.println("Connection Successful!");
 
- Statement stmt1 = new createStatement();
+ Statement stmt1 = conn.createStatement();
  String a1 = "create database College_Lawrence;";
  stmt1.executeUpdate(a1);
 
-Statement stmt2 = new createStatement();
+Statement stmt2 = conn.createStatement();
  String a2 = "use College_Lawrence;";
  stmt2.executeUpdate(a2);
 
 
- Statement stmt3 = new createStatement();
+ Statement stmt3 = conn.createStatement();
  String a3 ="create table student (Roll integer, Name varchar(15));";
  stmt3.executeUpdate(a3);
 
- Statement stmt4 = new createStatement();
+ Statement stmt4 = conn.createStatement();
  String a4 = "insert into student (Roll, Name) values(1,'A'),(2,'B'),(3,'C');";
  stmt4.executeUpdate(a4);
 
+ 
  
  conn.close();
 }
@@ -162,6 +163,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
