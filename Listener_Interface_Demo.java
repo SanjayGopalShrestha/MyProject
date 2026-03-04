@@ -113,7 +113,10 @@ Statement stmt2 = conn.createStatement();
 
  PreparedStatement stmt5 = conn.prepareStatement("select * from student where Roll>1;");
  ResultSet a6 = stmt5.executeQuery();
- 
+ while (a6.next())
+  {
+   System.out.println(a6.getInt("Rol")+"   "+a6.getString("Name"));
+  }
  conn.close();
 }
 catch(SQLException p)
@@ -164,6 +167,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
