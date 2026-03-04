@@ -119,7 +119,7 @@ Statement stmt2 = conn.createStatement();
    System.out.println(a6.getInt("Roll")+"   "+a6.getString("Name"));
  }
  
- /*
+ /* or you can replace with below statement for above statement
  PreparedStatement stmt5 = conn.prepareStatement("select * from student where Roll>1;");
  ResultSet a6 = stmt5.executeQuery();
  while (a6.next())
@@ -178,6 +178,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
