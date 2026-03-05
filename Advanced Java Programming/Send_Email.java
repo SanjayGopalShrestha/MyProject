@@ -3,10 +3,10 @@ Download APIs:
 - javax.activation.jar
 - javax.mail.jar 
 Copy them in your project folder and Compile and Run as below:
-E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Rough.java
-E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Rough  
+E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Send_Email.java
+E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Send_Email  
 
-
+Go to "https://myaccount.google.com/apppasswords" to create App Password, Give App Name "Email"
 
 */
 
