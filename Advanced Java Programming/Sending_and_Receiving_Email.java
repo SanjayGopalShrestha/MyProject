@@ -4,7 +4,7 @@ Download:
 - javax.mail.jar 
 Copy them in your project folder where this file is saved and Compile and Run as below:
 
-Go to "https://myaccount.google.com/apppasswords" to create App Password
+Go to "https://myaccount.google.com/apppasswords" to create App Password, Give App Name "Email"
 
 E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Receive_Email.java
 E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Receive_Email
