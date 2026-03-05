@@ -1,3 +1,11 @@
+/* 
+To Run
+======
+XAMPP Control Panel
+Apache Start
+MySQL Start
+*/
+
 import time
 # at the beginning:
 start_time = time.time()
@@ -785,4 +793,5 @@ print("%f seconds" % (time.time() - start_time))
 
 
 a.mainloop()
+
 
