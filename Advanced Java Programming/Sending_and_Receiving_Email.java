@@ -1,9 +1,12 @@
 /*
-
-
-
-
+Download:
+- javax.activation.jar
+- javax.mail.jar 
+Copy them in your project folder and Compile and Run as below:
+E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Rough.java
+E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Rough  
 */
+
 import javax.mail.*;
 import java.util.Properties;
 
