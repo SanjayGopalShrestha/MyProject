@@ -1,17 +1,20 @@
 /*
-Download:
+Download APIs:
 - javax.activation.jar
 - javax.mail.jar 
 Copy them in your project folder and Compile and Run as below:
 E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Rough.java
 E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Rough  
+
+
+
 */
 
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
 
-public class Java_Mail_API {
+public class Send_Email {
     public static void main(String[] args) throws Exception {
 
         String from = "mr.sanjayshrestha@gmail.com";
