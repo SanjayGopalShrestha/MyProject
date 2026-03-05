@@ -11,7 +11,7 @@ import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
 
-public class Rough {
+public class Java_Mail_API {
     public static void main(String[] args) throws Exception {
 
         String from = "mr.sanjayshrestha@gmail.com";
