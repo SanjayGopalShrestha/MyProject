@@ -2,15 +2,18 @@
 Download:
 - javax.activation.jar
 - javax.mail.jar 
-Copy them in your project folder and Compile and Run as below:
-E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Rough.java
-E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Rough  
+Copy them in your project folder where this file is saved and Compile and Run as below:
+
+Go to "https://myaccount.google.com/apppasswords" to create App Password
+
+E:\jtest>javac -cp ".;javax.mail.jar;javax.activation.jar" Receive_Email.java
+E:\jtest>java -cp ".;javax.mail.jar;javax.activation.jar" Receive_Email
 */
 
 import javax.mail.*;
 import java.util.Properties;
 
-public class Sending_and_Receiving_Email {
+public class Receive_Email {
     public static void main(String[] args) throws Exception {
         String user = "mr.sanjayshrestha@gmail.com";
         String password = "kiwh wvif ixbz bccl"; // Or OAuth2 token
