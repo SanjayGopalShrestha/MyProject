@@ -1,1 +1,2 @@
-Git Works
+Cleanroom AI practice 
+Component based AI modeling
