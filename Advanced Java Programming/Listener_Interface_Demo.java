@@ -127,6 +127,25 @@ Statement stmt2 = conn.createStatement();
    System.out.println(a6.getInt("Roll")+"   "+a6.getString("Name"));
   }
  */
+
+
+ /*
+Statement stmt5 = conn.createStatement();
+            String y1 = "SELECT * FROM student WHERE Roll > 1;";
+            ResultSet a6 = stmt5.executeQuery(y1);
+
+            // Get metadata of ResultSet
+            ResultSetMetaData rsmd = a6.getMetaData();
+            int columnCount = rsmd.getColumnCount(); // total number of columns
+
+            while (a6.next()) {
+                for (int i = 1; i <= columnCount; i++) { // JDBC columns start at 1
+                    System.out.print(a6.getString(i) + "\t"); // get value dynamically
+                }
+                System.out.println(); // new row
+            }
+*/
+
  
  conn.close();
 }
@@ -178,6 +197,7 @@ f.setVisible(true);
 
 
  
+
 
 
 
