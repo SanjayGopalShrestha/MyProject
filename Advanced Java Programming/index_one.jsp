@@ -10,6 +10,7 @@ apache-tomcat-9.0.113/
 NOTE: In servlet the files (.java and .class) have to be in different folder but here index.jsp and one.jsp both
 have to be exactly on same folder "YourApp", not in YourApp/src/com/example/Rough1.java and YourApp/WEB-INF/classes/com/
 example/Rough1.class as in servlet.
+
 */
 
 
