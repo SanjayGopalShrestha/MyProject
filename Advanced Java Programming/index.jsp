@@ -9,6 +9,10 @@ apache-tomcat-9.0.113/
 
 */
 
+
+// index.jsp
+// =========
+
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
@@ -25,3 +29,39 @@ apache-tomcat-9.0.113/
 
 </body>
 </html>
+
+
+/*
+// one.jsp
+// =======
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+
+<html>
+<head>
+    <title>Form Output</title>
+</head>
+<body>
+
+<h2>Form Data Submitted:</h2>
+
+<%
+    // Read form parameters
+    String name = request.getParameter("name");
+    String age = request.getParameter("age");
+
+    if(name != null && age != null && !name.isEmpty() && !age.isEmpty()){
+        out.println("Name: " + name + "<br>");
+        out.println("Age: " + age + "<br>");
+    } else {
+        out.println("Please enter both Name and Age!");
+    }
+%>
+
+<br>
+<a href="index.jsp">Go Back</a>
+
+</body>
+</html>
+*/
+
