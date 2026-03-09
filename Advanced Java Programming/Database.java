@@ -157,13 +157,10 @@ Connection conn = DriverManager.getConnection(url, user, password);
 System.out.println("Connected Successfully with MySQL Database Server!");
 
 
-//PreparedStatement ps = conn.prepareStatement("SELECT * FROM student WHERE Roll>1");
-//ps.setInt(1, 42); // sets the first "?" to 42
-
-
-Statement y = conn.createStatement();
-String sql1 = "show databases;";
-ResultSet rs1 = y.executeQuery(sql1);
+PreparedStatement ps = conn.prepareStatement("show databases;");
+//Statement y = conn.createStatement();
+//String sql1 = "show databases;";
+ResultSet rs1 = ps.executeQuery();
 
 while(rs1.next())
 {
@@ -282,4 +279,5 @@ System.out.println(p.getPassword());
 
 }
 }
+
 
