@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class Main
+public class Database
 {
 public static void main(String[] arg)
 {
@@ -282,3 +282,4 @@ System.out.println(p.getPassword());
 
 }
 }
+
