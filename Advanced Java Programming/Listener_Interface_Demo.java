@@ -8,9 +8,9 @@ MySQL Start
 
 Download: jdbc\mysql-connector-j-9.5.0.jar and Save it in C:\
 
-E:\jtest>javac Rough.java
+E:\jtest>javac Main.java
 
-E:\jtest>java -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" Rough
+E:\jtest>java -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" Main
 
 Output
 ======
