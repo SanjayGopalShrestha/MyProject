@@ -234,7 +234,7 @@ JButton button = new JButton("Open File");
             int result1 = fileChooser.showOpenDialog(f);
 
             if (result1 == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = fileChooser.getSelectedFile();
+                java.io.File selectedFile = fileChooser.getSelectedFile();
 
 try (BufferedReader br = new BufferedReader(new FileReader(selectedFile))) {
                     textArea.read(br, null);
@@ -313,6 +313,5 @@ f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 }
 }
-
 
 
