@@ -137,12 +137,13 @@ p8.add(label);
 // -----Create internal frame--------
 
 JPanel p9 = new JPanel();
+p9.setLayout(null);
 p9.setBounds(900,650,250,150);
 p9.setBackground(Color.decode("#FFCCAA"));
 
         JInternalFrame internal = new JInternalFrame(
                 "Internal Window", true, true, true, true);
-        internal.setSize(500, 300);
+        internal.setSize(215,135);
         internal.setVisible(true);
 
         // Create menu bar
@@ -316,9 +317,40 @@ p1.add(p12);
 
 
 
+// --------------Popup Menu Open------------------
+ JPanel panel = new JPanel();
+panel.setLayout(null);
+panel.setBounds(620,831,300, 200); 
+        
+        // Create popup menu
+        JPopupMenu popupMenu = new JPopupMenu();
+
+        JMenuItem item1 = new JMenuItem("Option 1");
+        JMenuItem item2 = new JMenuItem("Option 2");
+
+        popupMenu.add(item1);
+        popupMenu.add(item2);
+
+        // Add mouse listener to show popup
+        panel.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                if (e.isPopupTrigger())
+                    popupMenu.show(e.getComponent(), e.getX(), e.getY());
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                if (e.isPopupTrigger())
+                    popupMenu.show(e.getComponent(), e.getX(), e.getY());
+            }
+        });
+p1.add(panel);
+        //f.add(panel);
+
+//------------Popup Menu Close------------------
+
 
 f.setContentPane(p1);
-f.setSize(1200, 1500);
+f.setSize(1200,2000);
 f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
 f.setVisible(true);
 
