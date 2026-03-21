@@ -10,9 +10,9 @@ Download: "javafx-sdk-17.0.18" framework (library)
 Save it in C:\
 Add the .jar files to your classpath when compiling and running as below for windows
 
-E:\jtest\myproject\Java Awt, Swing, JavaFX>javac --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml M_javafx.java
+E:\jtest>javac --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml Syllabus_javafx.java
 
-E:\jtest\myproject\Java Awt, Swing, JavaFX>java --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" M_javafx
+E:\jtest>java --module-path "C:\javafx-sdk-17.0.18\lib" --add-modules javafx.controls,javafx.fxml -cp ".;C:\jdbc\mysql-connector-j-9.5.0\mysql-connector-j-9.5.0.jar" Syllabus_javafx
 Connection Successful!
 */
 
@@ -30,7 +30,7 @@ import java.sql.DriverManager;
 //import java.io.File; 
 import javafx.stage.FileChooser;
 
-public class M_javafx extends Application
+public class Syllabus_javafx extends Application
 {
     public void start(Stage stage)
     {
