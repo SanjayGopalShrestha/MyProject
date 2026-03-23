@@ -12,7 +12,7 @@ DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
 socket.receive(packet);
 
 
-String clientIP = packet.getAddress().getHostAddress();
+String clientIP = packet.getAddress().getHostAddress();     //methods of DatagramPacket class
 
 System.out.println("Client IP: " + clientIP);
 
