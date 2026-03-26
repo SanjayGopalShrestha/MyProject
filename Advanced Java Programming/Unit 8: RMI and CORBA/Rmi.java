@@ -57,6 +57,33 @@ public class Client {
     }
 }
 ________________________________________
+Keep everything in one folder:
+/RMIExample
+  Hello.java
+  HelloImpl.java
+  Server.java
+  Client.java
+
+Then just run:
+javac *.java
+java Server
+java Client
+________________________________________
+
+For better structure (recommended later)
+
+In real projects, you usually separate client and server, like this:
+/common
+  Hello.java
+
+/server
+  HelloImpl.java
+  Server.java
+
+/client
+  Client.java
+
+
 How to run
 1.	Compile all files: 
 javac *.java
