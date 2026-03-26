@@ -1,11 +1,11 @@
-1. Create Remote Interface
+1. Create Remote Interface (Hello.java)
 import java.rmi.*;
 
 public interface Hello extends Remote {
     String sayHello() throws RemoteException;
 }
 ________________________________________
-2. Implement the Remote Object
+2. Implement the Remote Object (HelloImpl.java)
 import java.rmi.*;
 import java.rmi.server.*;
 
@@ -20,7 +20,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     }
 }
 ________________________________________
-3. Server Code
+3. Server Code (Server.java)
 import java.rmi.registry.*;
 
 public class Server {
@@ -38,7 +38,7 @@ public class Server {
     }
 }
 ________________________________________
-4. Client Code
+4. Client Code (Client.java)
 import java.rmi.registry.*;
 
 public class Client {
