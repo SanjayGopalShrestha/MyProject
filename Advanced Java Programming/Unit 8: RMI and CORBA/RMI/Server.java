@@ -1,6 +1,7 @@
 // 3. Server Code (Server.java)
 
-import java.rmi.registry.*;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 public class Server {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Server {
             Registry registry = LocateRegistry.createRegistry(1099);
             registry.rebind("HelloService", obj);
 
-            System.out.println("Server is running...");
+            System.out.println("Server ready...");
         } catch (Exception e) {
             e.printStackTrace();
         }
