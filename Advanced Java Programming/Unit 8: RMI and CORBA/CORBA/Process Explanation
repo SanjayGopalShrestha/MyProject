@@ -1,13 +1,18 @@
+/*
+
 1. IDL File
 ===========
+Hello.idl (Save it in, E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\Hello.idl")
 
-Hello.idl
-=========
+Run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
+
+*/ 
 
 interface Hello {
     string sayHello();
 };
-Defines a single remote method.
+
+//Defines a single remote method.
 
   
 2. Generate Java Stubs
