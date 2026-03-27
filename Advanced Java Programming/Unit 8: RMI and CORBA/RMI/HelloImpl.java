@@ -1,7 +1,7 @@
 // 2. Implement the Remote Object (HelloImpl.java)
 
-import java.rmi.*;
-import java.rmi.server.*;
+import java.rmi.server.UnicastRemoteObject;
+import java.rmi.RemoteException;
 
 public class HelloImpl extends UnicastRemoteObject implements Hello {
 
@@ -10,6 +10,6 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     }
 
     public String sayHello() {
-        return "Hello from Server!";
+        return "Hello, world!";
     }
 }
