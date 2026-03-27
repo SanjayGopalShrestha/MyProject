@@ -186,11 +186,10 @@ On Windows, use ; instead of : as the path separator.
 
 Download From: 
 ==============
-https://repo.maven.apache.org/maven2/org/jacorb/jacorb/
-
-https://repo.maven.apache.org/maven2/org/jacorb/jacorb/
+https://www.jacorb.org/download.html
 
 Download:
 =========
-jacorb-3.9
+jacorb-3.9-binary.zip
+
 
