@@ -123,3 +123,63 @@ Important Notes:
    - To use CORBA in these versions, you would need an external implementation, such as:
         - JacORB
         - OpenORB
+
+
+Choose a CORBA implementation
+=============================
+Popular open-source options:
+
+JacORB – a widely used Java CORBA implementation
+    Website: https://www.jacorb.org/
+OpenORB – another Java CORBA ORB
+    Website: http://openorb.sourceforge.net/
+
+Add the library to your project
+===============================
+If you use Maven, for JacORB:
+
+<dependency>
+    <groupId>org.jacorb</groupId>
+    <artifactId>jacorb</artifactId>
+    <version>3.12</version> <!-- check latest version -->
+</dependency>
+
+For Gradle:
+
+implementation 'org.jacorb:jacorb:3.12'
+
+If not using a build tool, download the JARs and add them to your classpath.
+
+Replace removed JDK CORBA packages
+==================================
+The JDK removed:
+
+javax.rmi.CORBA
+org.omg.CORBA
+
+With JacORB, these are replaced by JacORB’s own classes, but JacORB also provides org.omg.CORBA compatible packages, so you can often reuse your existing CORBA code with minor adjustments.
+
+4. Initialize and run ORB
+
+Example using JacORB:
+
+import org.omg.CORBA.ORB;
+
+public class CorbaServer {
+    public static void main(String[] args) {
+        // Initialize the ORB
+        ORB orb = ORB.init(args, null);
+
+        // Your CORBA object setup goes here
+        System.out.println("CORBA ORB initialized with JacORB on JDK 11+");
+    }
+}
+ 
+Compile and run
+===============
+Make sure JacORB JARs are on the classpath:
+
+javac -cp jacorb.jar MyCorbaApp.java
+java -cp .:jacorb.jar MyCorbaApp
+
+On Windows, use ; instead of : as the path separator.
