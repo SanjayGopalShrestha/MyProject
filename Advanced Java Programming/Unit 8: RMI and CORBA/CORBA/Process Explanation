@@ -2,9 +2,11 @@
 
 1. IDL File
 ===========
-Hello.idl (Save it in, E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\Hello.idl")
+Download and extract "jacorb-3.9-binary.zip" and extract it in "E:\jtest\CORBAProject\jacorb"
 
-Run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
+Now save "Hello.idl" in, E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\" 
+
+From command prompt run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
 
 After running, you will see files below in "bin" folder:
 ========================================================
