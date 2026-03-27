@@ -109,3 +109,17 @@ Minimal IDL (1 method only)
 1 server class, 1 client class
 No extra classes or complex setup
 Demonstrates basic remote method invocation
+
+Important Notes:
+================
+1. JDK 1.2 through JDK 8
+   - CORBA was included as part of the Java SE platform in the javax.rmi.CORBA and org.omg packages.
+   - You could use it directly without additional libraries.
+2. JDK 9 through JDK 10
+   - CORBA was deprecated in JDK 9 as part of the modularization project (Project Jigsaw).
+   - You could still use it by including the java.corba module, but it was marked for removal.
+     JDK 11 and later
+3. CORBA was removed entirely from the JDK.
+   - To use CORBA in these versions, you would need an external implementation, such as:
+        - JacORB
+        - OpenORB
