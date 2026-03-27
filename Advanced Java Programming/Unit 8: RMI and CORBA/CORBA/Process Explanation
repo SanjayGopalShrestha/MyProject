@@ -1,6 +1,8 @@
 1. IDL File
+===========
 
 Hello.idl
+=========
 
 interface Hello {
     string sayHello();
@@ -9,6 +11,7 @@ Defines a single remote method.
 
   
 2. Generate Java Stubs
+======================
 
 Run in the folder where Hello.idl is:
 
@@ -18,8 +21,10 @@ Generates all necessary Java stub/skeleton files in HelloApp folder.
 
 
 3. Server Implementation
+========================
 
 HelloImpl.java
+==============
 
 import HelloApp.*;
 
@@ -29,7 +34,9 @@ public class HelloImpl extends HelloPOA {
     }
 }
 
+
 Server.java
+===========
 
 import HelloApp.*;
 import org.omg.CORBA.*;
@@ -56,8 +63,10 @@ public class Server {
 
 
 4. Client
+=========
 
 Client.java
+===========
 
 import HelloApp.*;
 import org.omg.CORBA.*;
@@ -75,7 +84,9 @@ public class Client {
 }
 
 
+
 5. How to Run
+=============
 Start Name Service:
 orbd -ORBInitialPort 1050
 
