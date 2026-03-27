@@ -114,13 +114,13 @@ Run the Server:
 //java Server -ORBInitialPort 1050 (For JDK 8.0)
 
 //For JDK 11.0
-E:\jtest>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
+E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
 
 Run the Client (new terminal):
 //java Client -ORBInitialPort 1050 (JDK 8.0)
 
 //For JDK 11.0
-E:\jtest>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Client
+E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Client
 
 Output:
 Hello CORBA!
