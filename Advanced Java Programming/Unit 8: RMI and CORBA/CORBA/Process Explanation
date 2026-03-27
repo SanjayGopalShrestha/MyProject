@@ -6,6 +6,12 @@ Hello.idl (Save it in, E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\Hello.idl")
 
 Run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
 
+After running, you will see files below in "bin" folder:
+========================================================
+Hello.java
+HelloHelper.java
+_HelloStub.java
+
 */ 
 
 interface Hello {
