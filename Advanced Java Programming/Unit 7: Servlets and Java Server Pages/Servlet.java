@@ -1,4 +1,6 @@
 /*
+- Start Tomcat (Go to C:\tomcat\apache-tomcat-9.0.113\bin\startup.bat)
+
 - To Run: 
   @WebServlet("/Servlet") and class Servlet have to be same i.e. in both places same name "servlet", this is called servlet mapping
 
