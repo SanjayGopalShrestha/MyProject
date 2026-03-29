@@ -1,5 +1,4 @@
 /*
-- Start Tomcat (Go to C:\tomcat\apache-tomcat-9.0.113\bin\startup.bat)
 
 - To Run: 
   @WebServlet("/Servlet") and class Servlet have to be same i.e. in both places same name "servlet", this is called servlet mapping
@@ -12,6 +11,8 @@
 - It will create Rough1.class file in C:\tomcat\apache-tomcat-9.0.113\webapps\YourApp\src\com\example\Rough1.class
 
 - Move that Rough1.class file to C:\tomcat\apache-tomcat-9.0.113\webapps\YourApp\WEB-INF\classes\com\example\Rough1.class
+
+- Start Tomcat (Go to C:\tomcat\apache-tomcat-9.0.113\bin\startup.bat)
 
 - Now, open a browser, type: http://localhost:8080/YourApp/Rough1
 
