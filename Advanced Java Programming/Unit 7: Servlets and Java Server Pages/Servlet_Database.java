@@ -1,3 +1,15 @@
+/* 
+
+Note:
+=====
+1. XAMPP MySQL should be on
+2. mysql-connector-j-9.5.0 or mysql-connector-j-9.6.0 should be in "C:\tomcat\apache-tomcat-9.0.113\lib" 
+3. To Run
+   ======
+   C:\tomcat\apache-tomcat-9.0.113\webapps\YourApp\src\com\example>javac -cp ".;C:\tomcat\apache-tomcat-9.0.113\lib\Servlet-api.jar" Servlet_Database.java
+
+*/
+
 package com.example;
 
 import java.io.IOException;
