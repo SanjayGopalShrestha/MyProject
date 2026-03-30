@@ -49,13 +49,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet("/Servlet")  
-public class Servlet extends HttpServlet {
-
+public class Servlet extends HttpServlet 
+{
     @Override
-    protected void doGet(HttpServletRequest request,
-                         HttpServletResponse response)
-            throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+     {
         PrintWriter out = response.getWriter();
         out.println("Hello from Servlet");
     }
