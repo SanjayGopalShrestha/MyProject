@@ -11,6 +11,13 @@ NOTE: In servlet the files (.java and .class) have to be in different folder but
 have to be exactly on same folder "YourApp", not in YourApp/src/com/example/Rough1.java and YourApp/WEB-INF/classes/com/
 example/Rough1.class as in servlet.
 
+To Run
+======
+- Open a Browser
+- Type: //localhost:8080/YourApp and hit enter
+- index.jsp will open with a form, type the values like Name: Mr.A, Age: 25
+- It will show Name: Mr.A and Age: 25 with Go Back link
+
 */
 
 
