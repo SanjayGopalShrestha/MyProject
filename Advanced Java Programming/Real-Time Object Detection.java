@@ -2,6 +2,10 @@
 
 Real-Time Object Detection Project Code
 
+Output Link:
+============
+https://www.youtube.com/watch?v=f5SSddoZSW0
+
 */
 
 import org.opencv.core.*;
