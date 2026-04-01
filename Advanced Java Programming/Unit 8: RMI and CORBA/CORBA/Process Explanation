@@ -6,7 +6,7 @@
 E:\jtest>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" org.jacorb.naming.NameServer -DOAPort=1050
 - compile all .java files in HelloApp module (javac *.java)
 - It will create the .class files of all .java files in HelloApp
-- Copy all .class files in "\bin" folder
+- Copy all .class files in "\bin" folder from HelloApp
 - Create Server progrm in \bin folder (eg: Server.java)
 - Now compile Sever program with full -cp (in new cmd)
 E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server.java
@@ -20,6 +20,10 @@ INFO InterceptorManager started with 0 Server Interceptors, 0 Client Interceptor
 INFO oid: 00 01 16 15 4B 1E 41 15 24 22 10 06 30 46 38 14 14 1B 48 4C ....K.A.$"..0F8...HL1B                                                          .object is activated
 CORBA Server is running...
 - Create Client Program in \bin folder (eg: Client.java)
+- Move Hello.class and HelloHelper.class to HelloApp module
+- Compile it with full -cp
+- Run it with full -cp
+
 
 
 
