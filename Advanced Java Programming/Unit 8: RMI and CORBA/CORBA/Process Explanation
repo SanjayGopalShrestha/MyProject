@@ -16,12 +16,12 @@ _HelloStub.java
 
 */ 
 
-module HelloApp
-{
-interface Hello {
-    string sayHello();
-}
+module HelloApp {
+    interface Hello {
+        string sayHello();
+    };
 };
+
 
 //Defines a single remote method.
 
