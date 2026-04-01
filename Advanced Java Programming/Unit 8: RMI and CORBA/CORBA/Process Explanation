@@ -55,28 +55,36 @@ public class HelloImpl extends HelloPOA {
 Server.java
 ===========
 
-import HelloApp.*;
 import org.omg.CORBA.*;
-import org.omg.CosNaming.*;
 import org.omg.PortableServer.*;
 
 public class Server {
-    public static void main(String[] args) throws Exception {
-        ORB orb = ORB.init(args, null);
-        POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
-        rootpoa.the_POAManager().activate();
+    public static void main(String[] args) {
+        try {
+            // Initialize ORB
+            ORB orb = ORB.init(args, null);
 
-        HelloImpl hello = new HelloImpl();
-        Hello href = HelloHelper.narrow(rootpoa.servant_to_reference(hello));
+            // Get Root POA and activate manager
+            POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+            rootpoa.the_POAManager().activate();
 
-        NamingContextExt ncRef = NamingContextExtHelper.narrow(
-            orb.resolve_initial_references("NameService"));
-        ncRef.rebind(ncRef.to_name("Hello"), href);
+            // Create HelloImpl object
+            HelloImpl helloImpl = new HelloImpl();
 
-        System.out.println("Server ready...");
-        orb.run();
+            // Register object with ORB
+            rootpoa.activate_object(helloImpl);
+
+            System.out.println("CORBA Server is running...");
+
+            // Wait for client requests
+            orb.run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
+
+
 
 
 4. Client
