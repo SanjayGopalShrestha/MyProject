@@ -1,5 +1,5 @@
-Make a list of RMI and CORBA projects in Java
-=============================================
+list of RMI and CORBA projects in Java
+======================================
 
 
 RMI (Remote Method Invocation) Projects in Java
