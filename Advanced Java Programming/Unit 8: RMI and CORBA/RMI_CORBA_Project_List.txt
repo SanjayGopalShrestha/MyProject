@@ -7,70 +7,68 @@ RMI (Remote Method Invocation) Projects in Java
 
 Basic Projects
 ==============
-
-Remote Calculator
-Remote String Manipulation System
-Student Information System
-Temperature Converter (Client-Server)
-Simple Login Authentication System
+1. Remote Calculator
+2. Remote String Manipulation System
+3. Student Information System
+4. Temperature Converter (Client-Server)
+5. Simple Login Authentication System
 
 Intermediate Projects
 =====================
-Chat Application (Multi-client)
-Online Voting System
-Library Management System
-Banking System (Account operations)
-Employee Management System
-Online Quiz System
-File Transfer System
+1. Chat Application (Multi-client)
+2. Online Voting System
+3. Library Management System
+4. Banking System (Account operations)
+5. Employee Management System
+6. Online Quiz System
+7. File Transfer System
 
 Advanced Projects
 =================
-Distributed File System
-Online Auction System
-Multiplayer Game (e.g., Tic-Tac-Toe)
-Remote Job Execution System
-Collaborative Text Editor
-Cloud Storage Simulation
-Distributed Task Scheduler
+1. Distributed File System
+2. Online Auction System
+3. Multiplayer Game (e.g., Tic-Tac-Toe)
+4. Remote Job Execution System
+5. Collaborative Text Editor
+6. Cloud Storage Simulation
+7. Distributed Task Scheduler
 
 CORBA Projects in Java
 ======================
 
 Basic Projects
 ==============
-
-Hello World CORBA Application
-Calculator using IDL
-String Operations System
-Basic Client-Server Communication System
+1. Hello World CORBA Application
+2. Calculator using IDL
+3. String Operations System
+4. Basic Client-Server Communication System
 
 Intermediate Projects
 =====================
-Employee Management System
-Hotel Reservation System
-Online Quiz System
-Library System
-Banking System
-Distributed Chat Application
+1. Employee Management System
+2. Hotel Reservation System
+3. Online Quiz System
+4. Library System
+5. Banking System
+6. Distributed Chat Application
 
 Advanced Projects
 =================
-E-Commerce System (Distributed modules)
-Stock Trading System
-Airline Reservation System
-Distributed Healthcare System
-Smart Traffic Management System
-Multi-language Distributed System
-Supply Chain Management System
+1. E-Commerce System (Distributed modules)
+2. Stock Trading System
+3. Airline Reservation System
+4. Distributed Healthcare System
+5. Smart Traffic Management System
+6. Multi-language Distributed System
+7. Supply Chain Management System
 
 Hybrid (RMI + CORBA) Projects
 =============================
-Enterprise Resource Planning (ERP) System
-Distributed E-Learning Platform
-Microservices-based Application
-Smart City Management System
-Distributed Banking System
+1. Enterprise Resource Planning (ERP) System
+2. Distributed E-Learning Platform
+3. Microservices-based Application
+4. Smart City Management System
+5. Distributed Banking System
 
 Tip
 ===
