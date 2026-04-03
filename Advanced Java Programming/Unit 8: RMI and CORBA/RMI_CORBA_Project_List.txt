@@ -1,0 +1,78 @@
+Make a list of RMI and CORBA projects in Java
+=============================================
+
+
+RMI (Remote Method Invocation) Projects in Java
+===============================================
+
+Basic Projects
+==============
+
+Remote Calculator
+Remote String Manipulation System
+Student Information System
+Temperature Converter (Client-Server)
+Simple Login Authentication System
+
+Intermediate Projects
+=====================
+Chat Application (Multi-client)
+Online Voting System
+Library Management System
+Banking System (Account operations)
+Employee Management System
+Online Quiz System
+File Transfer System
+
+Advanced Projects
+=================
+Distributed File System
+Online Auction System
+Multiplayer Game (e.g., Tic-Tac-Toe)
+Remote Job Execution System
+Collaborative Text Editor
+Cloud Storage Simulation
+Distributed Task Scheduler
+
+CORBA Projects in Java
+======================
+
+Basic Projects
+==============
+
+Hello World CORBA Application
+Calculator using IDL
+String Operations System
+Basic Client-Server Communication System
+
+Intermediate Projects
+=====================
+Employee Management System
+Hotel Reservation System
+Online Quiz System
+Library System
+Banking System
+Distributed Chat Application
+
+Advanced Projects
+=================
+E-Commerce System (Distributed modules)
+Stock Trading System
+Airline Reservation System
+Distributed Healthcare System
+Smart Traffic Management System
+Multi-language Distributed System
+Supply Chain Management System
+
+Hybrid (RMI + CORBA) Projects
+=============================
+Enterprise Resource Planning (ERP) System
+Distributed E-Learning Platform
+Microservices-based Application
+Smart City Management System
+Distributed Banking System
+
+Tip
+===
+RMI projects → Easier, best for quick implementation
+CORBA projects → More complex, good for viva + theory marks
