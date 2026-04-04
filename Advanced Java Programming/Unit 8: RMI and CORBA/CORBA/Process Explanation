@@ -107,7 +107,7 @@ public class Server {
             rootpoa.the_POAManager().activate();
 
             // Create HelloImpl object
-            HelloImpl helloImpl = new HelloImpl();
+            HelloImpl helloImpl = new HelloImpl();  //HelloImpl.java implemented
 
             // Register object with ORB
             rootpoa.activate_object(helloImpl);
