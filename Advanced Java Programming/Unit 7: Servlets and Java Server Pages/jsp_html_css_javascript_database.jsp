@@ -1,12 +1,10 @@
 /*
 Note: 
 ====
-
-
-
-1. XAMPP MySQL should be on
-2. mysql-connector-j-9.5.0.jar or mysql-connector-j-9.6.0.jar should be in "C:\tomcat\apache-tomcat-9.0.113\lib" 
-3. To Run
+1. .jsp file should be saved in "C:\tomcat\apache-tomcat-9.0.113\webapps\YourApp" folder
+2. XAMPP MySQL should be on
+3. mysql-connector-j-9.5.0.jar or mysql-connector-j-9.6.0.jar should be in "C:\tomcat\apache-tomcat-9.0.113\lib" 
+4. To Run
    ======
    //localhost:8080/YourApp/jsp_html_css_javascript_database.jsp
 */
