@@ -1,4 +1,4 @@
-/*
+<%-- 
 Note: 
 ====
 1. .jsp file should be saved in "C:\tomcat\apache-tomcat-9.0.113\webapps\YourApp" folder
@@ -7,7 +7,7 @@ Note:
 4. To Run
    ======
    //localhost:8080/YourApp/jsp_html_css_javascript_database.jsp
-*/
+--%>
 
 <html>
 <body>
