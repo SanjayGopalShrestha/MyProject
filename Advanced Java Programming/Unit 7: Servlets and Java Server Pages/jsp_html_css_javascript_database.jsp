@@ -1,8 +1,14 @@
 /*
 Note: 
 ====
-1. mysql-connector-9.5.0.jar should be saved in "tomcat\lib" folder
-2. To run: //localhost:8080/YourApp/jsp_html_css_javascript_database.jsp
+
+
+
+1. XAMPP MySQL should be on
+2. mysql-connector-j-9.5.0.jar or mysql-connector-j-9.6.0.jar should be in "C:\tomcat\apache-tomcat-9.0.113\lib" 
+3. To Run
+   ======
+   //localhost:8080/YourApp/jsp_html_css_javascript_database.jsp
 */
 
 <html>
