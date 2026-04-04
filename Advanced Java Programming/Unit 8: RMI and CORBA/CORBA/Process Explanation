@@ -38,9 +38,14 @@ From command prompt run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.i
 
 After running, you will see files below in "bin" folder:
 ========================================================
+_HelloStub.java
 Hello.java
 HelloHelper.java
-_HelloStub.java
+HelloHolder.java
+HelloOperations.java
+HelloPOA.java
+HelloPOATie.java
+
 
 */ 
 
@@ -60,9 +65,14 @@ module HelloApp {
 From command prompt run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
 
 Generates all necessary Java stub/skeleton files as above:
+
+_HelloStub.java
 Hello.java
 HelloHelper.java
-_HelloStub.java
+HelloHolder.java
+HelloOperations.java
+HelloPOA.java
+HelloPOATie.java
 
 
 3. Server Implementation
