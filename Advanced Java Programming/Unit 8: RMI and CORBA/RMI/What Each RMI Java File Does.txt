@@ -228,6 +228,10 @@ Think of it like:
 •	obj (HelloImpl) = Actual person
 •	Client = Someone dialing using the name 
 
+In Short This class:
+Creates instance of HelloImpl, Starts registry, Makes object available to clients
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 4. Explain this code line by line: (Client.java) 
 ================================================
 Code
