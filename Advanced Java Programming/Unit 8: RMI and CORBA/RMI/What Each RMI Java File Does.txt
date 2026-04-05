@@ -370,3 +370,6 @@ Example class	    HelloImpl	                    Server
 Runs when	        Client calls method	            Server starts
 Responsibility	    Business logic	                Infrastructure
 
+
+
+
