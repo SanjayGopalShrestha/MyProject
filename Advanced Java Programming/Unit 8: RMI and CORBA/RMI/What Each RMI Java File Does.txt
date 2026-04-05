@@ -327,3 +327,46 @@ Simple analogy
 •	sayHello() → Calling the person 
 •	response → What they say back 
 
+
+What is the difference between server implementation code and server code in RMI Java?
+
+Server implementation code → defines what the remote method does
+Server code → starts the server and makes the object available to clients
+
+1. Server Implementation Code
+This is the class (like HelloImpl) where you implement the remote interface.
+
+✅ Purpose
+Contains business logic
+Defines what happens when a client calls a method
+
+🔍 What it does
+Implements the Hello interface
+Provides actual method body (sayHello)
+Runs when client invokes method remotely
+
+👉 This is the real worker
+
+🚀 2. Server Code (Main Server Program)
+
+✅ Purpose
+Starts RMI system
+Creates object
+Registers it in registry
+
+🔍 What it does
+Creates instance of HelloImpl
+Starts registry
+Makes object available to clients
+
+👉 This is the launcher/manager
+
+⚖️ Main Differences
+Feature	            Server Implementation	        Server Code
+==================================================================
+Role	            Defines logic	                Starts system
+Contains	        Method implementations	        Setup & binding
+Example class	    HelloImpl	                    Server
+Runs when	        Client calls method	            Server starts
+Responsibility	    Business logic	                Infrastructure
+
