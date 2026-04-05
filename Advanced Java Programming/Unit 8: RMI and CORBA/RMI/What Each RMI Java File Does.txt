@@ -1,0 +1,329 @@
+1. Explain this code line by line: (Hello.java) 
+================================================
+Let’s go through this RMI interface line by line and explain what each part does:
+
+Code
+====
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface Hello extends Remote {
+    String sayHello() throws RemoteException;
+}
+________________________________________
+Explanation
+1. import java.rmi.Remote;
+•	Imports the Remote interface from the RMI package 
+•	Any interface that wants to support remote method calls must extend this 
+•	It acts as a marker interface (no methods, just identifies it as remote) 
+________________________________________
+2. import java.rmi.RemoteException;
+•	Imports the RemoteException class 
+•	This exception handles network-related errors (e.g., connection failure, server crash) 
+________________________________________
+3. public interface Hello extends Remote {
+•	Declares an interface named Hello 
+•	extends Remote means: 
+o	This is a remote interface 
+o	Its methods can be called from another JVM (possibly another machine) 
+________________________________________
+4. String sayHello() throws RemoteException;
+•	Declares a method: 
+o	Return type: String 
+o	Method name: sayHello() 
+•	throws RemoteException is required because: 
+o	Remote calls can fail due to network issues 
+o	Java forces you to handle or declare such exceptions 
+Important rule in RMI:
+Every method in a remote interface must declare throws RemoteException
+________________________________________
+What This Interface Represents
+•	It defines a contract between client and server 
+•	The server will implement this interface 
+•	The client will call this method remotely 
+________________________________________
+How It Fits in RMI
+1.	Define interface (Hello) ✅ 
+2.	Implement it on server 
+3.	Register it in RMI registry 
+4.	Client looks it up and calls sayHello() 
+________________________________________
+In Short This code:
+Defines a remote interface with one method (sayHello) that can be invoked over a network, and safely handles communication errors using RemoteException.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2. Explain the code line by line: (HelloImpl.java) 
+===================================================
+Let’s break down this RMI server implementation line by line:
+________________________________________
+Code
+====
+import java.rmi.server.UnicastRemoteObject;
+import java.rmi.RemoteException;
+
+public class HelloImpl extends UnicastRemoteObject implements Hello {
+
+    protected HelloImpl() throws RemoteException {
+        super();
+    }
+
+    public String sayHello() {
+        return "Hello, world!";
+    }
+}
+________________________________________
+
+Explanation
+===========
+1. import java.rmi.server.UnicastRemoteObject;
+•	Imports the class UnicastRemoteObject 
+•	This class is used to: 
+o	Export the object so it can receive remote calls 
+o	Handle communication between client and server automatically 
+________________________________________
+2. import java.rmi.RemoteException;
+•	Imports RemoteException 
+•	Required because: 
+o	Remote operations can fail due to network issues 
+________________________________________
+3. public class HelloImpl extends UnicastRemoteObject implements Hello {
+•	Declares a class HelloImpl 
+•	extends UnicastRemoteObject: 
+o	Makes this object remotely accessible 
+o	Automatically exports it to the RMI runtime 
+•	implements Hello: 
+o	Implements the remote interface you defined earlier 
+o	Must provide implementation for sayHello() 
+________________________________________
+4. protected HelloImpl() throws RemoteException {
+•	Constructor of the class 
+•	protected is commonly used in RMI (not mandatory, but conventional) 
+•	throws RemoteException: 
+o	Required because the parent class constructor can throw it 
+________________________________________
+5. super();
+•	Calls the constructor of UnicastRemoteObject 
+•	This is very important: 
+o	It exports the object 
+o	Makes it ready to accept remote calls 
+•	Without this, the object won’t be accessible remotely 
+________________________________________
+6. public String sayHello() {
+•	Implements the method declared in the Hello interface 
+•	This is the remote method that clients will call 
+________________________________________
+7. return "Hello, world!";
+•	Returns a simple string response to the client 
+•	This value will be sent over the network to the caller 
+________________________________________
+What This Class Does
+•	Creates a remote object implementation 
+•	Makes it accessible over the network 
+•	Provides actual logic for the remote method 
+________________________________________
+How It Fits in RMI Flow
+1.	Interface (Hello) → defines method 
+2.	This class (HelloImpl) → implements method ✅ 
+3.	Server registers this object in registry 
+4.	Client calls sayHello() remotely 
+________________________________________
+In Short This class:
+Implements a remote service, exports it using UnicastRemoteObject, and provides the actual logic (sayHello) that clients can call over the network.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3. Explain this code line by line: (Server.java) 
+=================================================
+Let’s go through your RMI server code line by line:
+Code
+====
+import java.rmi.registry.LocateRegistry; 
+import java.rmi.registry.Registry; 
+public class Server 
+{ 
+public static void main(String[] args) 
+{ 
+try 
+{ 
+HelloImpl obj = new HelloImpl(); 
+Registry registry = LocateRegistry.createRegistry(1099); 
+registry.rebind("HelloService", obj); 
+System.out.println("Server ready..."); 
+} 
+catch (Exception e) 
+{ 
+e.printStackTrace(); 
+}
+} 
+} 
+________________________________________
+Import statements
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+•	LocateRegistry
+→ Used to create or get access to the RMI registry 
+•	Registry
+→ Represents the RMI registry object where services are registered 
+________________________________________
+Class declaration
+public class Server {
+•	Defines a class named Server 
+•	This will act as your RMI server program 
+________________________________________
+Main method (entry point)
+public static void main(String[] args) {
+•	Execution starts here when you run the program 
+________________________________________
+Try block
+try {
+•	Wraps code to handle possible exceptions (RMI operations can fail) 
+________________________________________
+Create remote object
+HelloImpl obj = new HelloImpl();
+•	Creates an object of HelloImpl 
+•	This is your remote service implementation 
+•	It must: 
+o	Implement a remote interface (like Hello) 
+o	Usually extend UnicastRemoteObject 
+________________________________________
+Create RMI Registry
+Registry registry = LocateRegistry.createRegistry(1099);
+•	Starts an RMI Registry inside this program 
+•	Runs on port 1099 (default RMI port) 
+•	No need to run rmiregistry separately 
+________________________________________
+Bind object to registry
+registry.rebind("HelloService", obj);
+•	Registers your remote object with the name "HelloService" 
+•	Clients will use this name to find the object 
+rebind() means:
+•	If name exists → replace it 
+•	If not → create new entry 
+________________________________________
+Confirmation message
+System.out.println("Server ready...");
+•	Prints message indicating server is running and ready for clients 
+________________________________________
+Catch block
+} catch (Exception e) {
+    e.printStackTrace();
+}
+•	Catches any exception that occurs 
+•	Prints error details for debugging 
+________________________________________
+End of main and class
+}
+}
+•	Closes main method and Server class 
+________________________________________
+Overall Flow
+1.	Create remote object (HelloImpl) 
+2.	Start RMI registry on port 1099 
+3.	Register object with name "HelloService" 
+4.	Wait for client requests 
+________________________________________
+Simple analogy
+Think of it like:
+•	Registry = Phone directory 
+•	"HelloService" = Contact name
+•	obj (HelloImpl) = Actual person
+•	Client = Someone dialing using the name 
+
+4. Explain this code line by line: (Client.java) 
+================================================
+Code
+====
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+public class Client {
+    public static void main(String[] args) {
+        try {
+            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+
+            Hello stub = (Hello) registry.lookup("HelloService");
+
+            String response = stub.sayHello();
+            System.out.println("Response from server: " + response);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Let’s break down this RMI Client code step by step:
+
+Import statements
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+•	LocateRegistry
+→ Used to connect to an existing RMI registry 
+•	Registry
+→ Represents the remote registry where services are stored 
+________________________________________
+Class declaration
+public class Client {
+•	Defines a class named Client 
+•	This program will connect to the RMI server 
+________________________________________
+Main method
+public static void main(String[] args) {
+•	Entry point of the client program 
+________________________________________
+Try block
+try {
+•	Wraps code to handle exceptions (network/RMI errors may occur) 
+________________________________________
+Connect to RMI Registry
+Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+•	Connects to the RMI registry running on server 
+•	"localhost" → server is on same machine 
+•	1099 → default RMI port 
+If server is remote, replace "localhost" with IP or hostname
+________________________________________
+Lookup remote object
+Hello stub = (Hello) registry.lookup("HelloService");
+•	Searches the registry for name "HelloService" 
+•	Returns a stub (proxy object) 
+Important:
+•	stub is NOT the real object 
+•	It acts as a local representative of the remote object 
+•	(Hello) → type casting to the remote interface 
+________________________________________
+Call remote method
+String response = stub.sayHello();
+•	Calls method on the remote object 
+•	Behind the scenes: 
+o	Request is sent over network 
+o	Server executes method 
+o	Result is returned 
+________________________________________
+Print result
+System.out.println("Response from server: " + response);
+•	Displays the response received from server 
+________________________________________
+Catch block
+} catch (Exception e) {
+    e.printStackTrace();
+}
+•	Handles any exceptions 
+•	Prints error details for debugging 
+________________________________________
+End of program
+}
+}
+________________________________________
+Overall Flow
+1.	Connect to registry (localhost:1099) 
+2.	Look up service "HelloService" 
+3.	Get stub (proxy) 
+4.	Call remote method sayHello() 
+5.	Print result 
+
+Simple analogy
+•	Registry → Phonebook
+•	lookup("HelloService") → Searching a contact 
+•	stub → Phone
+•	sayHello() → Calling the person 
+•	response → What they say back 
+
