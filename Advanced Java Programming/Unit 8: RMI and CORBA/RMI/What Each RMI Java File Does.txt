@@ -375,5 +375,88 @@ Runs when	        Client calls method	            Server starts
 Responsibility	    Business logic	                Infrastructure
 
 
+There doesn't seem to have a link between "HelloImpl.java" and "Server.java" how could this line "HelloImpl obj = new HelloImpl();" be used in server?
+============================================================================================================
+It looks like there’s no link—but there actually is a direct link, just not written as an “import from file” the way beginners expect.
 
+Let’s clear it up 👇
+
+🧠 The Real Link Between HelloImpl.java and Server.java
+
+The connection is this line:
+
+HelloImpl obj = new HelloImpl();
+
+👉 This works because both classes are part of the same Java project/package (or classpath).
+
+🔗 How Java links them
+
+Java doesn’t link files by filename—it links classes by name via the compiler and classpath.
+
+✅ Case 1: Same package (most common in simple RMI examples)
+
+If both files are in the same folder:
+
+Hello.java
+HelloImpl.java
+Server.java
+
+Then:
+
+No import needed
+Java automatically finds HelloImpl
+✅ Case 2: Different packages
+
+If they are in different packages, then you MUST import:
+
+import mypackage.HelloImpl;
+
+Otherwise → ❌ compilation error
+
+⚙️ What happens during compilation
+
+When you compile:
+
+javac *.java
+HelloImpl.java → produces HelloImpl.class
+Server.java → sees HelloImpl class and links to it
+
+👉 The compiler connects them automatically
+
+🚀 What happens at runtime
+
+When you run:
+
+java Server
+JVM loads Server.class
+
+When it sees:
+
+new HelloImpl();
+It loads HelloImpl.class from the classpath
+
+👉 That’s the “hidden” connection
+
+📦 Why it feels confusing
+
+Because:
+
+There’s no visible “file link”
+Java uses class-level linking, not file references
+
+⚠️ When it will NOT work
+
+You’ll get errors if:
+
+HelloImpl.class is missing
+It’s in a different package without import
+It’s not compiled
+
+✅ Final answer
+
+There is a link, but it’s:
+
+Through the Java compiler
+Through the classpath
+Not through explicit file references
 
