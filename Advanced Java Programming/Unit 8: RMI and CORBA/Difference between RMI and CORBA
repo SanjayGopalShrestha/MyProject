@@ -1,0 +1,52 @@
+Does "Hello.java" in RMI creates stub, skeleton, helper, holder, operations file  like "Hello.idl"   in CORBA/
+
+Short answer: No, Hello.java in RMI does NOT generate stub, skeleton, helper, holder, or operations files like Hello.idl does in CORBA.
+
+🧠 Why the Difference?
+🔹 In CORBA (using IDL like Hello.idl)
+You define interfaces in IDL (language-independent)
+The IDL compiler generates multiple files:
+Stub
+Skeleton
+Helper
+Holder
+Operations
+
+👉 Because CORBA is designed to work across different programming languages
+
+🔹 In Java RMI (Hello.java)
+You define everything directly in Java (no separate IDL)
+Java handles most things automatically
+⚙️ What RMI Generates
+✅ Stub
+Yes (historically)
+Generated using rmic tool
+Acts as a proxy on the client side
+❌ Skeleton
+No (modern Java)
+Older Java versions (pre-Java 5) used skeletons
+Now handled internally by JVM via reflection
+❌ Helper / Holder / Operations
+No
+Not needed because:
+RMI is Java-to-Java only
+Uses built-in serialization and interfaces
+📌 Modern RMI (Important)
+You usually don’t run rmic anymore
+Stubs are generated dynamically at runtime
+So even stub files may not physically exist
+🆚 Quick Comparison
+Feature	RMI (Hello.java)	CORBA (Hello.idl)
+Interface format	Java	IDL
+Stub	Yes (auto/dynamic)	Yes (generated)
+Skeleton	No (obsolete)	Yes
+Helper	No	Yes
+Holder	No	Yes
+Operations	No	Yes
+Language support	Java only	Multi-language
+✅ Final Answer
+
+Hello.java in RMI does not create stub, skeleton, helper, holder, or operations files like CORBA’s Hello.idl.
+RMI relies on Java interfaces and built-in mechanisms, and most of the plumbing is handled automatically.
+
+
