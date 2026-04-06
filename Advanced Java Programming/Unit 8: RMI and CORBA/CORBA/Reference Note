@@ -1,5 +1,9 @@
 Note:
 =====
 
-e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\HelloAp\Hello.idl
+what is ORB and what is its function?
+
+An ORB (Object Request Broker) is the core component of the CORBA architecture (used by the org.omg.CORBA package 
+in Java). It acts like a middleman that enables communication between distributed objects, even if they are on 
+different machines or written in different languages.
 
