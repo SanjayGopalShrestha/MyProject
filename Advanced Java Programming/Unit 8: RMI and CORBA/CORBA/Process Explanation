@@ -32,8 +32,8 @@ Now save "Hello.idl" in, E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\"
 
 From command prompt run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
 
-After running, you will get a folder "HelloApp" with these files in "bin" folder:
-=================================================================================
+After running, you will get a folder "HelloApp" with all necessary Java stub/skeleton files in "bin" folder:
+===========================================================================================================
 _HelloStub.java
 Hello.java
 HelloHelper.java
@@ -55,18 +55,6 @@ module HelloApp {
   
 2. Generate Java Stubs
 ======================
-
-From command prompt run: E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>idl Hello.idl
-
-Generates all necessary Java stub/skeleton files as above:
-
-_HelloStub.java
-Hello.java
-HelloHelper.java
-HelloHolder.java
-HelloOperations.java
-HelloPOA.java
-HelloPOATie.java
 
 File						Type					Purpose
 ========================================================================
