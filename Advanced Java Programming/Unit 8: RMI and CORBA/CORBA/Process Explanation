@@ -74,6 +74,16 @@ HelloOperations.java
 HelloPOA.java
 HelloPOATie.java
 
+File						Type					Purpose
+========================================================================
+Hello.java					Class / Interface		Your main definition
+_HelloStub.java				Class					Client proxy
+HelloHelper.java			Class					Utility methods
+HelloHolder.java			Class					OUT/INOUT wrapper
+HelloOperations.java		Interface				Method definitions
+HelloPOA.java				Abstract Class			Server skeleton
+HelloPOATie.java			Class					Tie adapter
+
 
 3. Server Implementation
 ========================
