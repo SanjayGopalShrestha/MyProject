@@ -63,7 +63,7 @@ import java.rmi.RemoteException;
 
 public class HelloImpl extends UnicastRemoteObject implements Hello {
 
-    protected HelloImpl() throws RemoteException {
+protected HelloImpl() throws RemoteException {    //here it could be package-private, public or private //(private is not useful here as it doesn't allow to inherit)
         super();
     }
 
