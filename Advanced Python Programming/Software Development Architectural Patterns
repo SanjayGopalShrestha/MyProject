@@ -371,18 +371,18 @@ Example: smartphone vibration, gaming controllers
 
 Summary Table
 =============
-Interface Type	        How You Interact
+Interface Type	          How You Interact
 =========================================
-GUI	                    Click, tap
-CLI	                    Type commands
-Menu	                  Select options
-Form	                  Fill fields
-Touch	                  Tap/swipe
-Voice	                  Speak
-Dashboard	              View data
-Gesture	                Move body
-VR/AR	                  Immersive interaction
-BCI	                    Brain signals
+GUI	                      Click, tap
+CLI	                      Type commands
+Menu	                    Select options
+Form	                    Fill fields
+Touch	                    Tap/swipe
+Voice	                    Speak
+Dashboard	                View data
+Gesture	                  Move body
+VR/AR	                    Immersive interaction
+BCI	                      Brain signals
 
 
 
