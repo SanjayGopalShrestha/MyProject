@@ -1,0 +1,57 @@
+Server.java Explanation
+=======================
+
+
+POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+rootpoa.the_POAManager().activate();
+
+🧠 Step-by-Step Explanation
+🔹 1. orb.resolve_initial_references("RootPOA")
+orb = Object Request Broker
+It is the core of CORBA that handles communication between client and server
+
+👉 This line:
+
+Requests a reference to the Root POA
+
+📌 Think of it as:
+
+“Give me access to the main object manager”
+
+🔹 2. POAHelper.narrow(...)
+The returned object is generic (Object)
+narrow() converts it into a POA type
+
+👉 Similar to:
+
+(TypeCasting)
+
+📌 Without narrowing, you can't use POA methods
+
+🔹 3. POA rootpoa = ...
+Stores the Root POA in a variable
+Now you can manage CORBA objects using it
+🔹 4. rootpoa.the_POAManager()
+Gets the POA Manager
+This manager controls whether requests are processed or not
+🔹 5. .activate()
+Starts the POA Manager
+Allows the server to begin handling client requests
+
+📌 Before activation:
+
+Server is NOT ready
+Requests are blocked
+
+📌 After activation:
+
+Server starts responding
+🎯 Simple Analogy
+Code Part	Real-Life Meaning
+ORB	Post office system 📬
+POA	Mail handling office
+POA Manager	Office manager
+activate()	“Start working” signal
+🚀 In One Line
+
+👉 This code gets the main object handler (POA) and activates it so the CORBA server can start processing client requests.
