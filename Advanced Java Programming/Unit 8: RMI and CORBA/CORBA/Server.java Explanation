@@ -79,3 +79,13 @@ Requests a reference to the Root POA
 “Give me access to the main object manager”
 
 
+org.omg.PortableServer
+
+This includes:
+POA
+POAHelper
+POAManager
+
+RootPOA is located inside the ORB runtime environment and is accessed using resolve_initial_
+references("RootPOA"); it is not a physical class or file in the Java program.
+
