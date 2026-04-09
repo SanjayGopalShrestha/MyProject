@@ -55,3 +55,27 @@ activate()	“Start working” signal
 🚀 In One Line
 
 👉 This code gets the main object handler (POA) and activates it so the CORBA server can start processing client requests.
+
+
+A helper class (POAHelper)
+
+Provides utility methods like:
+narrow()
+type()
+id()
+
+POA rootpoa = POAHelper.narrow(obj);
+"RootPOA" is a predefined system object inside the ORB
+The ORB already creates it internally
+
+1. orb.resolve_initial_references("RootPOA")
+orb = Object Request Broker
+It is the core of CORBA that handles communication between client and server
+
+👉 This line:
+Requests a reference to the Root POA
+
+📌 Think of it as:
+“Give me access to the main object manager”
+
+
