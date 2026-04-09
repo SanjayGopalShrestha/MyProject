@@ -1,0 +1,93 @@
+// Using corbaloc (no naming service)
+org.omg.CORBA.Object obj = orb.string_to_object(
+    "corbaloc:iiop:localhost:1050/Hello"
+);
+
+//ncRef.rebind(ncRef.to_name("Hello"), href);
+Hello helloRef = HelloHelper.narrow(obj);
+
+🧠 Step-by-Step Explanation
+
+🔹 1. orb.string_to_object(...)
+   ============================
+org.omg.CORBA.Object obj = orb.string_to_object(
+    "corbaloc:iiop:localhost:1050/Hello"
+);
+✅ What it does:
+Converts a string (URL) into a CORBA object reference
+🌐 Understanding the corbaloc URL
+corbaloc:iiop:localhost:1050/Hello
+
+Breakdown:
+
+Part	            Meaning
+corbaloc:	        CORBA location protocol
+iiop:	            Internet Inter-ORB Protocol
+localhost	        Server machine
+1050	            Port number
+/Hello	          Object name
+
+👉 This directly points to the server object.
+
+🔥 Key Idea
+
+Instead of using a naming service, you're saying:
+
+“I already know where the server is—connect directly.”
+
+🔹 2. (Commented Line)
+   ===================
+// ncRef.rebind(ncRef.to_name("Hello"), href);
+✅ What it means:
+This line is for Naming Service
+It binds the object name "Hello" to a reference
+
+👉 But it's commented out because:
+You are NOT using naming service here
+
+🔹 3. HelloHelper.narrow(obj)
+   ==========================
+Hello helloRef = HelloHelper.narrow(obj);
+✅ What it does:
+Converts generic CORBA object → specific Hello type
+
+📌 Similar to type casting:
+
+(Hello) obj   // but CORBA uses narrow()
+🧠 Why narrow() is Needed?
+
+string_to_object() returns:
+
+org.omg.CORBA.Object
+
+But you need:
+
+Hello
+
+👉 So narrow() safely converts it 
+
+🎯 Analogy
+Step	              Real Life
+corbaloc URL	      Exact address of a shop 🏪
+string_to_object	  Getting shop location
+narrow()	          Entering the correct department
+
+⚖️ corbaloc vs Naming Service
+   ===========================  
+    Feature	          corbaloc	            Naming Service
+    Setup	            Simple	              Requires service
+    Flexibility	      Low	                  High
+    Use case	        Direct access	        Large systems
+
+🚀 Final Flow
+Client
+  ↓
+corbaloc URL
+  ↓
+ORB connects to server
+  ↓
+Gets generic object
+  ↓
+narrow() → Hello object
+  ↓
+Call methods on server
