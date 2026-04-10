@@ -109,7 +109,7 @@ public class Server {
 			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);  //Register is already done here
             
 			// Register object with ORB
-            //rootpoa.activate_object(helloImpl);  //Register is already done
+            //rootpoa.activate_object(helloImpl);  //Register is already done, no need here
 
             System.out.println("CORBA Server is running...");
 
