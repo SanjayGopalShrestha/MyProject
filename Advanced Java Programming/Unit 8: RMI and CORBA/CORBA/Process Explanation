@@ -107,9 +107,9 @@ public class Server {
 
             // Create HelloImpl object
             HelloImpl helloImpl = new HelloImpl();  //HelloImpl.java implemented
-
+			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);
             // Register object with ORB
-            rootpoa.activate_object(helloImpl);
+            //rootpoa.activate_object(helloImpl);
 
             System.out.println("CORBA Server is running...");
 
