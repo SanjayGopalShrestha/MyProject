@@ -210,13 +210,11 @@ If object oriented approach:
 4.1. Design (May be Structured or Object Oriented as per the approach followed in analysis 
 chapter) 
 If structured approach: 
-- Database Design: Transformation of ER to relations and 
-normalizations 
+- Database Design: Transformation of ER to relations and normalizations 
 - Forms and Report Design 
 - Interface and Dialogue Design  
 If object oriented approach:  
-- Refinement of Class, Object, State, Sequence and Activity 
-diagrams 
+- Refinement of Class, Object, State, Sequence and Activity diagrams 
 - Component Diagrams 
 - Deployment Diagrams 
 4.2. Algorithm Details 
