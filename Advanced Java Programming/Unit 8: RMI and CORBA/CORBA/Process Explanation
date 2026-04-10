@@ -143,16 +143,19 @@ public class Client {
             // Initialize ORB once with properties
             ORB orb = ORB.init(args, props);
 
+Hello helloRef = HelloHelper.narrow(obj);
+System.out.println(helloRef.sayHello());
+
             // Using corbaloc (no naming service)
-            org.omg.CORBA.Object obj = orb.string_to_object(
-                "corbaloc:iiop:localhost:1050/Hello"
-            );
+            //org.omg.CORBA.Object obj = orb.string_to_object(
+               // "corbaloc:iiop:localhost:1050/Hello"
+           // );
             
 	        //ncRef.rebind(ncRef.to_name("Hello"), href);
-	        Hello helloRef = HelloHelper.narrow(obj);
+	        //Hello helloRef = HelloHelper.narrow(obj);
 
-            String response = helloRef.sayHello();
-            System.out.println("Server says: " + response);
+            //String response = helloRef.sayHello();
+            //System.out.println("Server says: " + response);
 
         } catch (Exception e) {
             e.printStackTrace();
