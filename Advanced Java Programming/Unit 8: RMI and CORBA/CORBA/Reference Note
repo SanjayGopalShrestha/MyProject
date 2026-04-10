@@ -7,8 +7,87 @@ An ORB (Object Request Broker) is the core component of the CORBA architecture (
 org.omg.CORBA package in Java). It acts like a middleman that enables communication between 
 distributed objects, even if they are on different machines or written in different languages.
 
-Show the hierarchy of POA in CORBA Java?
+Show the hierarchy of ORB in CORBA Java?
+========================================
 
+In CORBA (Java), the ORB (Object Request Broker) itself is not hierarchical in the same way POA 
+is. Instead, it acts as the top-level runtime, and the hierarchy exists under the ORB (mainly 
+through POAs and object references).
+
+That said, you can think of a logical structure around the ORB like this:
+
+🔷 Logical Structure of ORB in CORBA
+
+Application (Client/Server)
+        │
+        └── ORB
+              │
+              ├── RootPOA
+              │      └── Child POAs (hierarchical tree)
+              │
+              ├── Object References (IORs)
+              │
+              ├── Naming Service
+              │
+              ├── Interface Repository (optional)
+              │
+              └── Transport Layer (IIOP, etc.)
+
+🔶 Key Points
+
+1. ORB is the Root (No Parent)
+==============================
+The ORB is the top-most component
+There is no hierarchy of ORBs inside a single process
+You can have multiple ORB instances, but they are independent, not parent/child
+
+2. Hierarchy Exists Below ORB
+=============================
+The real hierarchy starts here:
+
+POA hierarchy (tree structure)
+Object references managed under POAs
+Servants attached to POAs
+
+3. ORB Manages Core Services
+============================
+The ORB coordinates:
+
+Request routing (client → server)
+Object lookup (via Naming Service)
+Communication (IIOP protocol)
+Object activation (through POA)
+
+🔷 Simplified View
+===================
+ORB
+ ├── POA (tree hierarchy)
+ ├── Services (Naming, Trading, etc.)
+ ├── Object References
+ └── Communication Layer
+
+🔶 Example in Java
+===================
+
+ORB orb = ORB.init(args, null);
+
+// Access RootPOA via ORB
+org.omg.CORBA.Object obj =
+    orb.resolve_initial_references("RootPOA");
+
+⚠️ Important Clarification
+===========================
+POA → hierarchical (tree)
+ORB → flat (single root, no internal hierarchy)
+
+🔷 Analogy
+===========
+ORB = Operating System
+POA hierarchy = File system (folders/subfolders)
+
+
+Show the hierarchy of POA in CORBA Java?
+========================================
 In CORBA (Java), the Portable Object Adapter (POA) is organized in a hierarchical structure that 
 manages object lifecycles, request processing, and servant activation.
 
@@ -88,81 +167,5 @@ Improves scalability and control
 Supports fine-grained object management
 
 
-Show the hierarchy of ORB in CORBA Java?
-========================================
 
-In CORBA (Java), the ORB (Object Request Broker) itself is not hierarchical in the same way POA 
-is. Instead, it acts as the top-level runtime, and the hierarchy exists under the ORB (mainly 
-through POAs and object references).
-
-That said, you can think of a logical structure around the ORB like this:
-
-🔷 Logical Structure of ORB in CORBA
-
-Application (Client/Server)
-        │
-        └── ORB
-              │
-              ├── RootPOA
-              │      └── Child POAs (hierarchical tree)
-              │
-              ├── Object References (IORs)
-              │
-              ├── Naming Service
-              │
-              ├── Interface Repository (optional)
-              │
-              └── Transport Layer (IIOP, etc.)
-
-🔶 Key Points
-
-1. ORB is the Root (No Parent)
-==============================
-The ORB is the top-most component
-There is no hierarchy of ORBs inside a single process
-You can have multiple ORB instances, but they are independent, not parent/child
-
-2. Hierarchy Exists Below ORB
-=============================
-The real hierarchy starts here:
-
-POA hierarchy (tree structure)
-Object references managed under POAs
-Servants attached to POAs
-
-3. ORB Manages Core Services
-============================
-The ORB coordinates:
-
-Request routing (client → server)
-Object lookup (via Naming Service)
-Communication (IIOP protocol)
-Object activation (through POA)
-
-🔷 Simplified View
-===================
-ORB
- ├── POA (tree hierarchy)
- ├── Services (Naming, Trading, etc.)
- ├── Object References
- └── Communication Layer
-
-🔶 Example in Java
-===================
-
-ORB orb = ORB.init(args, null);
-
-// Access RootPOA via ORB
-org.omg.CORBA.Object obj =
-    orb.resolve_initial_references("RootPOA");
-
-⚠️ Important Clarification
-===========================
-POA → hierarchical (tree)
-ORB → flat (single root, no internal hierarchy)
-
-🔷 Analogy
-===========
-ORB = Operating System
-POA hierarchy = File system (folders/subfolders)
 
