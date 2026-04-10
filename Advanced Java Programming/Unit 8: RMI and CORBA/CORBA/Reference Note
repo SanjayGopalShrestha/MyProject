@@ -3,13 +3,14 @@ Note:
 
 what is ORB and what is its function?
 =====================================
-An ORB (Object Request Broker) is the core component of the CORBA architecture (used by the org.omg.CORBA package 
-in Java). It acts like a middleman that enables communication between distributed objects, even if they are on 
-different machines or written in different languages.
+An ORB (Object Request Broker) is the core component of the CORBA architecture (used by the 
+org.omg.CORBA package in Java). It acts like a middleman that enables communication between 
+distributed objects, even if they are on different machines or written in different languages.
 
 Show the hierarchy of POA in CORBA Java?
 
-In CORBA (Java), the Portable Object Adapter (POA) is organized in a hierarchical structure that manages object lifecycles, request processing, and servant activation.
+In CORBA (Java), the Portable Object Adapter (POA) is organized in a hierarchical structure that 
+manages object lifecycles, request processing, and servant activation.
 
 Here’s the hierarchy in a clear way:
 
@@ -45,6 +46,7 @@ POA childPOA = rootPOA.create_POA("POA1", manager, policies);
 Each child POA:
 Inherits behavior from its parent
 Can define its own policies (lifespan, threading, servant retention, etc.)
+
 4. Grandchild (Nested) POAs
 POAs can be nested to any depth
 Useful for:
