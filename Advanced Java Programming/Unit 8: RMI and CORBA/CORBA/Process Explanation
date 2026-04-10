@@ -96,10 +96,9 @@ public class Server {
             Properties props = new Properties();
             props.put("org.omg.CORBA.ORBInitialPort", "1050");
             // Optionally specify host if needed:
-            props.put("org.omg.CORBA.ORBInitialHost", "localhost");
+            //props.put("org.omg.CORBA.ORBInitialHost", "localhost");  //Server side "localhost" not needed
             //Initialize ORB once with properties
             ORB orb = ORB.init(args, props);
-
 
             // Get Root POA and activate manager
             POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
@@ -107,10 +106,10 @@ public class Server {
 
             // Create HelloImpl object
             HelloImpl helloImpl = new HelloImpl();  //HelloImpl.java implemented
-			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);
+			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);  //Register is already done here
             
 			// Register object with ORB
-            //rootpoa.activate_object(helloImpl);
+            //rootpoa.activate_object(helloImpl);  //Register is already done
 
             System.out.println("CORBA Server is running...");
 
@@ -140,23 +139,18 @@ public class Client {
             Properties props = new Properties();
             props.put("org.omg.CORBA.ORBInitialPort", "1050");
             // Optionally specify host if needed:
-            props.put("org.omg.CORBA.ORBInitialHost", "localhost");
+            props.put("org.omg.CORBA.ORBInitialHost", "localhost");  //Here "localhost" is needed
             // Initialize ORB once with properties
             ORB orb = ORB.init(args, props);
 
-Hello helloRef = HelloHelper.narrow(obj);
-System.out.println(helloRef.sayHello());
-
             // Using corbaloc (no naming service)
-            //org.omg.CORBA.Object obj = orb.string_to_object(
-               // "corbaloc:iiop:localhost:1050/Hello"
-           // );
+            org.omg.CORBA.Object obj = orb.string_to_object("corbaloc:iiop:localhost:1050/Hello");
             
 	        //ncRef.rebind(ncRef.to_name("Hello"), href);
-	        //Hello helloRef = HelloHelper.narrow(obj);
+	        Hello helloRef = HelloHelper.narrow(obj);
 
-            //String response = helloRef.sayHello();
-            //System.out.println("Server says: " + response);
+            String response = helloRef.sayHello();
+            System.out.println("Server says: " + response);
 
         } catch (Exception e) {
             e.printStackTrace();
