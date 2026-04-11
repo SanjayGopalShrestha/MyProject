@@ -1,1 +1,4229 @@
+Unit 1: Programming in Java (8Hrs.)
+
+1.1.	Java Architecture, Java Buzzwords, Path and ClassPath variables, Sample Java Program, Compling and Running Java Programs.
+Java Architecture
+Create .java file (eg. Main.java), save file as class name, here in our context class is Main, so file should be Main.java
+Javac – creates .class (bytecode) file (eg. Main.class), now you will have Main.java and Main.class files in your folder.
+Java – run/interpret Main class (eg. Java Main or java one.java (if filename is not as class name) using JVM.
+Java Buzzwords
+1. Simple
+•	Java removes complex features like pointers and operator overloading (from C++) 
+•	Easy to learn and write 
+________________________________________
+2. Object-Oriented
+•	Everything is based on objects and classes 
+•	Supports: 
+o	Encapsulation 
+o	Inheritance 
+o	Polymorphism 
+________________________________________
+3. Platform Independent
+•	“Write Once, Run Anywhere” (WORA) 
+•	Java code runs on the Java Virtual Machine 
+•	Compiled into bytecode, not machine code 
+________________________________________
+4. Portable
+•	Same program runs on different systems without modification 
+•	No system-dependent features 
+________________________________________
+5. Secure
+•	No pointers → reduces memory access issues 
+•	Bytecode verification 
+•	Security manager (sandboxing) 
+________________________________________
+6. Robust
+•	Strong memory management 
+•	Exception handling 
+•	Garbage collection prevents memory leaks 
+________________________________________
+7. Multithreaded
+•	Supports multiple threads (tasks) at once 
+•	Useful for: 
+o	Games 
+o	Web servers 
+o	Real-time systems 
+________________________________________
+8. Architecture Neutral
+•	Bytecode is not tied to any specific CPU or OS 
+________________________________________
+9. Interpreted (and Just-In-Time compiled)
+•	Bytecode is interpreted by JVM 
+•	JIT compiler improves performance 
+________________________________________
+10. High Performance
+•	Faster than traditional interpreted languages due to JIT 
+________________________________________
+11. Distributed
+•	Designed for network-based applications 
+•	Supports technologies like: 
+o	RMI 
+o	CORBA 
+________________________________________
+12. Dynamic
+•	Classes can be loaded at runtime 
+•	Supports dynamic linking
+
+Path and ClassPath variables
+
+A path is the address that tells the system where a file or directory is located, either absolutely (from root) or relatively (from current directory).
+There are two related but distinct concepts in Java: CLASSPATH and Class (as in the java.lang.Class object), plus sometimes people confuse classpath variables with environment variables used to locate classes. 
+________________________________________
+CLASSPATH in Java
+What is it?
+CLASSPATH is an environment variable (or command-line parameter) that tells the Java Virtual Machine (JVM) and Java compiler where to look for user-defined classes and packages.
+•	By default, JVM looks in the current directory (.).
+•	If your classes are in other directories or JAR files, you must include them in the classpath.
+________________________________________
+Syntax examples
+a) Environment variable (system-wide)
+•	On Windows:
+set CLASSPATH=C:\myclasses;C:\lib\myjar.jar;.
+•	On Linux/Mac:
+export CLASSPATH=/home/user/classes:/home/user/lib/mylib.jar:.
+b) Command-line option
+javac -cp “.;C:\jdbc\mysql-connector-j-9.5.0\mysql-connnector-j-9.5.0.jar” Database.java
+java -cp “.;C:\jdbc\mysql-connector-j-9.5.0\mysql-connnector-j-9.5.0.jar” Database
+Tip: -cp is shorthand for -classpath.
+________________________________________
+Notes
+•	Multiple paths are separated by : (Linux/Mac) or ; (Windows).
+•	If you don’t set CLASSPATH, the JVM uses . (current directory) by default.
+javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server.java
+java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
+
+Summary Table
+Concept	Purpose
+CLASSPATH	Tells JVM/compiler where to find compiled class files / JARs
+Class object (java.lang.Class)	Represents a Java class at runtime; used for reflection, metadata, dynamic instantiation
+Sample Java Program
+=========================
+Public class Main
+{
+Public static void main(String[ ] arg)
+{
+System.out.println(“Prints with newline.”);
+System.out.println(“Prints without newline.”);
+System.out.printf(“Prints with type specifier.”);
+}
+}
+
+
+Structure of Java program using optional components
+===============================================================
+
+1.	//Documentation
+2.	Package statement
+3.	Import statement
+4.	Class Implementation
+5.	Main Method
+Example (Creating Package)
+=======================
+
+//Demonstration of creating package
+
+/* Below program shows how
+package is created in Java. And 
+this is the same for sub packages
+as well */
+
+package mypack;
+
+class Polygon
+{
+protected int l, b;
+}
+
+public class Rectangle extends Polygon
+{
+public void areaRectangle()
+{
+l = 5;
+b = 10;
+System.out.println(l*b);
+}
+}
+
+
+Class 
+====
+A class is a collection data (characteristics) and behaviors (methods).
+Example:
+=======
+class Rectangle
+{
+private int l, b;
+
+public void areaRectangle()
+{
+l = 5;
+b = 10;
+System.out.println(l*b);
+}
+}
+
+Class Access Modifiers
+==================
+Class - package-private (default),  public
+Elements of interface – public static final for data (default), public abstract for method (default), but Java 8+ added – static, default
+
+Interface Modifiers
+================
+Interface - package-private (default), public
+Elements of Class - package-private (default), private, protected, public
+
+import java.lang.*;
+import java.util.*;
+import java.time.*;
+import java.io.*;
+import java.net.*;
+import java.sql.*;
+import java.awt.*;
+import javax.swing.*;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.layout.Region;
+import javafx.event.Event;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+//import java.io.File; 
+import javafx.stage.FileChooser;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import org.omg.CORBA.*;
+import org.omg.PortableServer.*;	//POA, POAHelper
+import java.util.Properties;
+
+
+interface Polygon
+{
+static void areaRectangle()
+{
+System.out.println(5*6);
+}
+}
+
+
+public class Main
+{
+public static void main(String[] arg)
+{
+Polygon.areaRectangle();
+}
+}
+
+
+The class java.lang.Object is the root of the Java class hierarchy. Every class in Java inherits these methods.
+________________________________________
+📋 Methods of java.lang.Object
+🔹 1. equals(Object obj)
+•	Compares two objects for equality 
+•	Default: compares memory addresses 
+•	Often overridden 
+________________________________________
+🔹 2. hashCode()
+•	Returns a hash value of the object 
+•	Used in hashing structures like HashMap 
+________________________________________
+🔹 3. toString()
+•	Returns string representation of object 
+•	Default: ClassName@hashcode 
+________________________________________
+🔹 4. clone()
+•	Creates and returns a copy of the object 
+•	Requires Cloneable interface 
+________________________________________
+🔹 5. finalize() ⚠️ (deprecated in modern Java)
+•	Called by garbage collector before object destruction 
+•	No longer recommended 
+________________________________________
+🔹 6. getClass()
+•	Returns runtime class of the object 
+________________________________________
+🔹 7. notify()
+•	Wakes up a single thread waiting on this object’s monitor 
+________________________________________
+🔹 8. notifyAll()
+•	Wakes up all waiting threads 
+________________________________________
+🔹 9. wait()
+•	Causes current thread to wait until notified 
+________________________________________
+🔹 10. wait(long timeout)
+•	Waits for specified time 
+________________________________________
+🔹 11. wait(long timeout, int nanos)
+•	Waits with more precise time control 
+________________________________________
+Summary Table
+Method	Purpose
+equals()	Compare objects
+hashCode()	Hash value
+toString()	String representation
+clone()	Copy object
+finalize()	Cleanup before GC (deprecated)
+getClass()	Get class info
+notify()	Wake one thread
+notifyAll()	Wake all threads
+wait()	Pause thread
+________________________________________
+Key Points
+•	These methods are automatically available in every Java class 
+•	Most commonly overridden: 
+o	toString() 
+o	equals() 
+o	hashCode()
+
+
+What is an object in Java?
+An object in Java is an instance of a class that represents a real-world entity and contains state, behavior, and identity.
+That means:
+•	A class is a blueprint
+•	An object is the real thing created from that blueprint
+________________________________________
+An object has:
+1.	State → data (variables / fields)
+2.	Behavior → methods (functions)
+3.	Identity → unique reference in memory
+________________________________________
+Example 
+class Car 
+{ }      // class (blueprint)
+Car c = new Car(); // object (instance)
+
+What keyword is used to create an object in Java?
+Ans: The keyword new is used to create an object in Java.
+________________________________________
+1.	What  getClass() represents?
+Ans: getClass() returns the runtime class of an object.
+Example
+
+class Student {
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student();
+        System.out.println(s.getClass());
+    }
+}
+Output
+class Student
+This shows:
+•	s is an object
+•	At runtime, Java knows it belongs to Student
+•	getClass() returns a Class object describing it
+________________________________________
+2.	What hashCode() represents
+hashCode() returns an integer number that represents an object.
+It’s mainly used by hash-based collections like HashMap and HashSet.
+Before the example, think
+Do you expect two equal objects to have the same or different hash code?
+(Keep that in mind.)
+________________________________________
+Example (default hashCode())
+class Test {
+    public static void main(String[] args) {
+        String s1 = new String("Java");
+        String s2 = new String("Java");
+
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+    }
+}
+Output
+2301506
+2301506
+✔ Even though s1 and s2 are different objects,
+they have the same hash code because their contents are equal.
+________________________________________
+Custom class example
+class Student {
+    int id;
+
+    Student(int id) {
+        this.id = id;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s1 = new Student(1);
+        Student s2 = new Student(1);
+
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+    }
+}
+Here, the hash codes will usually be different,
+because we did not override hashCode().
+________________________________________
+Key rule (very important)
+Rule:
+If equals() is overridden, hashCode() must also be overridden.
+________________________________________
+Quick check 
+1.	True or False?
+If two objects have the same hash code, they must be equal.
+(Just answer True or False.)
+Ans: True
+2.	Can we give a parameter along with "new String("Java")" like this while creating and object?
+Ans: This is exactly how constructors work. Yes, we can pass parameters while creating an object — if the class has a constructor that accepts parameters.
+The line:
+new String("Java")
+works because String has a constructor that takes a String argument.
+________________________________________
+Step 2: What’s really happening?
+When you write:
+new String("Java");
+Java is doing two things:
+1.	Creating a new String object
+2.	Calling this constructor internally:
+String(String value)
+So parameters go to the constructor, not to new itself.
+________________________________________
+Your own class example
+Let’s mirror this idea with a custom class:
+class Student {
+    int id;
+
+    Student(int id) {   // constructor with parameter
+        this.id = id;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student(10); // passing parameter
+    }
+}
+✔ This works because Student(int id) exists.
+❌ If the constructor didn’t exist, Java would give a compile-time error.
+________________________________________
+Important rule to remember
+Rule:
+Parameters can be passed during object creation only through constructors.
+________________________________________
+Quick check (your turn 👇)
+Will this compile or not?
+class Demo {
+}
+
+Demo d = new Demo(5);
+Answer with “Compile” or “Error” (one word).
+No, because it doesn't have constructor.
+Exactly! Perfect reasoning, Since Demo has no constructor that takes an int, Java cannot match new Demo(5) to any constructor, so it gives a compile-time error.
+________________________________________
+Quick tip
+•	If you don’t write any constructor, Java gives a default no-argument constructor.
+•	But if you write a parameterized constructor, the default no-arg constructor disappears unless you add it yourself.
+________________________________________
+ The rule
+ Every class in Java has a constructor, even if you don’t write one.
+•	If you don’t write any constructor, Java provides a default no-argument constructor automatically.
+•	If you write a constructor yourself, Java does not provide a default one.
+________________________________________
+Example
+Case 1: No constructor written
+class Student {
+    int id;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student(); // works! default constructor used
+    }
+}
+Case 2: Parameterized constructor written
+class Student {
+    int id;
+    Student(int id) { // parameterized constructor
+        this.id = id;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Student s = new Student(); // ❌ Error! No default constructor
+        Student s2 = new Student(10); // ✅ Works
+    }
+}
+________________________________________
+Key points
+•	Default constructor → automatically added if no constructor exists.
+•	Parameterized constructor → you must call it with matching parameters.
+Memory tip: “Java always gives a default constructor… until you write your own.”
+________________________________________
+
+Package hierarchy in Java
+========================================
+Step 1: Package hierarchy in Java
+•	In Java, packages are namespaces.
+•	java is a top-level package name. It doesn’t contain classes directly. Instead, it has subpackages like:
+o	java.lang
+o	java.util
+o	java.net
+o	java.sql
+✅ So technically, java itself is not a class container, only a namespace for subpackages.
+________________________________________
+Step 2: What “core package” means
+•	The core Java library generally refers to classes in packages like:
+o	java.lang (mandatory, contains Object, String, etc.)
+o	java.util (collections, date, etc.)
+o	java.io, java.net, java.sql (standard APIs)
+•	java.lang is considered the root core package, because it’s automatically imported and contains the root class Object.
+________________________________________
+Step 3: Where “everything grows from”
+•	Inheritance-wise: Everything in Java grows from java.lang.Object, not from the package java.
+•	java.lang is the real root package for core classes.
+•	java is just the top-level namespace; think of it like a folder that organizes subfolders (java.lang, java.util, etc.).
+________________________________________
+Analogy (folder structure)
+java/               <- top folder (namespace)
+  lang/             <- root core package
+    Object.class
+    String.class
+  util/             <- subpackage
+    Scanner.class
+    ArrayList.class
+  net/              <- subpackage
+    URL.class
+•	Everything inherits from Object (in java.lang)
+•	The “java” folder/package is just a container for these subpackages
+________________________________________
+Key takeaway:
+Inheritance and “core” start from java.lang, not java.
+java is just the top-level namespace for organizing the subpackages.
+
+Show the hierarchy of "System" class?
+Perfect! Let’s carefully go step by step so you can visualize the hierarchy of the System class.
+________________________________________
+Step 1: Which package it’s in
+•	System belongs to the java.lang package:
+java.lang.System
+•	Because it’s in java.lang, it is automatically imported in every Java program.
+________________________________________
+Step 2: Inheritance
+•	System is a final class:
+public final class System
+•	Final classes cannot be subclassed.
+•	It directly extends java.lang.Object, and does not have any intermediate superclass.
+________________________________________
+Step 3: Class hierarchy
+So the hierarchy looks like this:
+java.lang.Object
+        ↑
+java.lang.System
+•	That’s it — simple and direct
+•	Even though it has many static methods and fields (like System.out, System.in, System.err), it does not extend any other class.
+________________________________________
+Step 4: Notes to remember
+1.	System is final, so no subclass can extend it.
+2.	It inherits methods from Object, like toString(), hashCode(), equals().
+3.	All its fields/metvhods are static utility features (like I/O, environment properties, time).
+
+Show the hierarchy of "println()" method?
+println() is often confused as belonging to System, but it’s actually inside another class. Let’s carefully build the hierarchy.
+________________________________________
+Step 1: Where println() lives
+•	You usually call it like this:
+System.out.println("Hello");
+•	System.out is a static field of System:
+public static final PrintStream out;
+•	So println() is not a method of System, but a method of java.io.PrintStream.
+________________________________________
+Step 2: PrintStream class hierarchy
+•	PrintStream is a class in java.io
+•	It extends java.io.FilterOutputStream, which extends java.io.OutputStream, which extends java.lang.Object
+So the class hierarchy looks like this:
+java.lang.Object
+        ↑
+java.io.OutputStream
+        ↑
+java.io.FilterOutputStream
+        ↑
+java.io.PrintStream
+•	println() is defined in PrintStream, so it inherits nothing; it’s a concrete method in PrintStream.
+________________________________________
+Step 3: Summary of method call
+•	System.out → reference to PrintStream
+•	System.out.println() → calls the method inside PrintStream
+•	Methods like println() ultimately come from PrintStream, which inherits from Object through OutputStream chain
+________________________________________
+Step 4: Quick mental diagram
+Object
+  │
+OutputStream
+  │
+FilterOutputStream
+  │
+PrintStream
+  │
+println(), print(), printf() ...
+•	Important: System just provides the out reference; it does not define println() itself.
+
+Inner class example in Java?
+What is an Inner Class?
+An inner class is a class defined inside another class.
+Why use it?
+•	It logically belongs to the outer class
+•	It can access private data of the outer class
+•	Helps organize code
+________________________________________
+Simple Inner Class Example
+Look at this outer class with an inner class inside it:
+class Outer {
+    int x = 10;
+
+    class Inner {
+        void show() {
+            System.out.println("x = " + x);
+        }
+    }
+}
+What’s happening?
+•	Outer is the main class
+•	Inner is inside Outer
+•	Inner can directly access x (even though it’s not public)
+________________________________________
+Creating an Inner Class Object
+This part is important
+class Test {
+    public static void main(String[] args) {
+        Outer obj = new Outer();          // outer object
+        Outer.Inner in = obj.new Inner(); // inner object
+        in.show();
+    }
+}
+Key idea 
+You cannot create an inner class object without an outer class object.
+________________________________________
+Output
+x = 10
+________________________________________
+
+What is wrong with this statement?
+static int x=5;
+The statement itself:
+static int x = 5;
+By itself, this line is NOT wrong in Java.
+So the real question is: where is this written?
+
+Step 1: Possible places this line could appear
+Think about these options: :
+1.	Inside a normal class
+2.	Inside a static nested class
+3.	Inside a method
+4.	Inside a non-static inner class
+Some of these are allowed… some are not.
+Step 2: Key rule to remember 🧠
+Java has a strict rule:
+❌ A non-static inner class cannot have static variables
+✅ Except static final constants
+
+Step 3: So when is this statement WRONG?
+This line is wrong ❌ if it is written inside a non-static inner class, like this:
+class Outer {
+    class Inner {
+        static int x = 5;  // ❌ ERROR
+    }
+}
+Java will complain because:
+•	Inner classes are tied to an object
+•	static members belong to the class, not an object
+
+Step 4: When is it perfectly OK?
+✅ Valid cases:
+class Test {
+    static int x = 5;   // OK
+}
+class Outer {
+    static class Inner {
+        static int x = 5;   // OK
+    }
+}
+
+
+How can we define "static class" for class as the class has only two modifiers default "package-private" and "public"?
+Key idea (the core answer)
+You are 100% correct that a top-level class can have only two access modifiers:
+•	public
+•	default (package-private)
+So…
+There is NO such thing as a “static top-level class” in Java.
+
+Then what is a “static class”?
+When people say static class, they actually mean:
+static nested class, not a top-level class.
+Example:
+class Outer {
+    static class Inner {
+        // this is called a "static class"
+    }
+}
+Here:
+•	Outer → top-level class
+•	Inner → nested class
+•	static applies to the nested class, not the top-level class
+________________________________________
+Why is this allowed?
+Because nested classes are members of another class, just like:
+•	fields
+•	methods
+And members CAN be static.
+So:
+•	❌ Top-level class → cannot be static
+•	✅ Nested class → can be static
+
+Compare: inner vs static nested class 🧠
+Feature	             Inner class	           Static nested class
+Needs outer object	           ✅ Yes	          ❌ No
+Can have static members	           ❌ No	          ✅ Yes
+Access outer instance vars	           ✅ Yes	          ❌ No
+
+Common exam sentence (important!)
+“Java does not support static top-level classes.
+However, Java supports static nested classes.”
+________________________________________
+Complete Running Example: Static Nested Class
+Code (single file)
+class Outer {
+
+    static int x = 10;   // static member of outer class
+
+    // static nested class
+    static class StaticInner {
+        void display() {
+            System.out.println("x = " + x);
+        }
+    }
+
+    public static void main(String[] args) {
+        // creating object of static nested class
+        Outer.StaticInner obj = new Outer.StaticInner();
+        obj.display();
+    }
+}
+
+Output
+x = 10
+
+Step-by-step understanding 🧠
+Why is this called a “static class”?
+•	StaticInner is inside Outer
+•	It is marked static
+•	So its correct name is static nested class
+
+Important observations
+•	✅ No Outer object is created
+•	✅ We directly use Outer.StaticInner
+•	✅ Static nested class can access only static members of Outer
+❌ If x were non-static, this would fail.
+
+Key difference from inner class
+If this were a non-static inner class, we would need:
+Outer o = new Outer();
+Outer.Inner i = o.new Inner();
+But here:
+Outer.StaticInner obj = new Outer.StaticInner();
+Much simpler ✔
+
+One-line exam definition 
+A static nested class is a nested class declared with the static keyword and does not require an instance of the outer class.
+
+Quick check (your turn)
+If I remove static from int x = 10,
+will this program still compile?
+Answer yes or no, and give one reason.
+Ans: No, static class variable could reference to static class only.
+
+Overloading and Overriding
+================================
+
+Method Overloading	Method Overriding
+-	Same method with same name, different number of arguments, types of arguments,
+and different order.	-	When a child class modifies the behavior inherited form parent class.
+-	Rules
+•	Method name should be same
+•	Different number of arguments
+•	Different type of arguments
+•	Different order of arguments	-	Rules
+•	class to class - extends
+•	Interface to class – implements
+•	Using public abstract method
+•	Using default method
+•	Not by using static method
+-	Compile time polymorphism.	-	Runtime Polymorphism
+-	Example
+
+import java.lang.*;
+import java.util.*;
+
+class Polygon
+{
+void area()
+{
+int l=5;
+int b=10;
+System.out.println(l*b);
+}
+
+int area(int l)
+{
+int b=10;
+return l*b;
+}
+
+int area(int l, int b)
+{
+return l*b;
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+Polygon p = new Polygon();
+p.area();
+System.out.println(p.area(5));
+System.out.println(p.area(5,10));
+}
+}
+
+
+	-	Example
+
+import java.lang.*;
+import java.util.*;
+
+class Polygon
+{
+public void area()
+{
+int l=5;
+int b=10;
+System.out.println(l*b);
+}
+}
+
+interface One
+{
+void show();
+}
+
+interface Two
+{
+void display();
+}
+
+class Rectangle extends Polygon implements One, Two
+{
+
+public void area()
+{
+System.out.println(50*3);
+}
+
+public void show()
+{
+System.out.println("Hello");
+}
+
+public void display()
+{
+System.out.println("Nepal");
+}
+
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+Rectangle p = new Rectangle();
+p.area();
+p.show();
+p.display();
+}
+}
+
+
+
+
+1.2.	Arrays, for each loop, Class and Object, Overloading, Access Privileges, Interface, Inner Class,  Final and Static Modifiers, Packages, Inheritance, Overloading.
+1.	 What is an array (in Java)?
+An array is used to store multiple values of the same type in one variable, in a fixed order.
+Instead of:
+int a = 10;
+int b = 20;
+int c = 30;
+You use an array:
+int[] numbers = {10, 20, 30};
+________________________________________
+2.	 Basic array example
+int[] marks = {85, 90, 78};
+•	marks[0] → 85
+•	marks[1] → 90
+•	marks[2] → 78
+⚠️ Index starts from 0, not 1.
+________________________________________
+3.	Creating an array first, then adding values
+int[] age = new int[3];
+age[0] = 15;
+age[1] = 16;
+age[2] = 17;
+________________________________________
+4.	Printing array values (using a loop)
+int[] nums = {2, 4, 6};
+
+for (int i = 0; i < nums.length; i++) {
+    System.out.println(nums[i]);
+}
+________________________________________
+Quick check ✅
+If you write:
+String[] names = {"Ali", "Sara", "John"};
+What value do you think names[1] will print?
+Ans: Sara
+
+An array with no fixed length
+======================
+For this we have to create dynamic list (i.e. ArrayList)
+Example:
+import java.lang.*;
+import java.util.*;
+
+public class Main
+{
+public static void main(String[] arg)
+{
+ArrayList<Integer> list = new ArrayList<>(); // initially empty
+
+list.add(10);  // add element
+list.add(20);  // add another element
+
+System.out.println(list.get(0)); // prints 10
+System.out.println(list.get(0)); // prints 10
+System.out.println(list.size()); // prints 2
+
+}
+}
+
+
+Explanation: 
+
+In above example you can add integer value only with add( ). Because generic type is <integer>.
+
+
+
+
+
+
+
+
+
+
+
+1.	What is a for-each loop?
+A for-each loop is used to go through each element of an array (or collection) one by one, without using index numbers.
+It’s simpler when you don’t need the index.
+________________________________________
+2.	Normal for loop (what you already know)
+int[] numbers = {10, 20, 30};
+
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+________________________________________
+3.	Same thing using for-each loop
+int[] numbers = {10, 20, 30};
+
+for (int num : numbers) {
+    System.out.println(num);
+}
+How to read it:
+“For each num in numbers, print num”
+________________________________________
+4.	For-each with String array
+String[] names = {"Ali", "Sara", "John"};
+
+for (String name : names) {
+    System.out.println(name);
+}
+________________________________________
+5.	When to use for-each?
+✅ Use it when:
+•	You only need the values
+•	You don’t need to change elements
+•	You don’t need the index
+❌ Don’t use it when:
+•	You need the index number
+•	You want to modify array elements
+
+1.	What is overloading in Java?
+Method overloading means:
+Having multiple methods with the same name, but different parameters, in the same class.
+Java decides which method to run based on the arguments you pass.
+________________________________________
+2.	Simple example
+class MathDemo {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+Here:
+•	Method name is the same → add
+•	Parameters are different → 2 parameters vs 3 parameters
+✅ This is overloading
+________________________________________
+3.	Another example (different data types)
+class PrintDemo {
+
+    void show(int a) {
+        System.out.println(a);
+    }
+
+    void show(String a) {
+        System.out.println(a);
+    }
+}
+Same method name show, but:
+•	One takes int
+•	One takes String
+________________________________________
+4.	What is NOT overloading? ❌
+Changing only the return type is NOT overloading:
+int add(int a, int b) { }
+double add(int a, int b) { } // ❌ Not allowed
+________________________________________
+5.	Easy way to remember 🧠
+Overloading depends on:
+•	✅ Number of parameters
+•	✅ Type of parameters
+•	❌ Return type alone (doesn’t count)
+________________________________________
+Quick check ✅
+Is this overloading or not?
+void test(int a) { }
+void test(double a) { }
+What do you think?
+Yes
+Correct ✅ — that is method overloading 👍
+Because:
+•	Same method name → test
+•	Different parameter types → int vs double
+Java can clearly decide which method to call based on the argument you pass.
+Quick recap
+Method overloading means:
+•	Same method name
+•	Different parameter list (number or type)
+•	Happens at compile time
+•	Return type does not matter for overloading
+
+1.	 What is an interface in Java?
+An interface is like a blueprint for classes. It defines methods that a class must implement, but it does not provide the method body (except for default/static methods in modern Java).
+Think of it like a contract:
+“If you implement me, you must provide these methods.”
+________________________________________
+2.	Key points about interfaces
+1.	All methods in an interface are abstract by default (no body).
+2.	Variables are public, static, and final by default.
+3.	A class can implement multiple interfaces (unlike classes — no multiple inheritance).
+________________________________________
+3.	Example
+interface Animal {
+    void eat();    // abstract method
+    void sleep();  // abstract method
+}
+
+class Dog implements Animal {
+    public void eat() {
+        System.out.println("Dog eats bones");
+    }
+
+    public void sleep() {
+        System.out.println("Dog sleeps");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.sleep();
+    }
+}
+Here:
+•	Animal is an interface
+•	Dog implements the interface
+•	Dog provides the body for eat() and sleep()
+________________________________________
+4.	Why use interfaces?
+•	Achieve multiple inheritance
+•	Define common behavior across unrelated classes
+•	Enforce consistency
+
+Does interface have access modifiers?
+1.	Top-level interfaces (outside any class)
+•	Can be public → accessible from anywhere
+•	Or default (no modifier) → accessible only within the same package
+❌ Cannot be private or protected at the top level
+public interface Animal { }   // accessible everywhere
+interface Vehicle { }         // default, package-only
+________________________________________
+2.	Interface members (methods and variables)
+Inside an interface:
+•	Methods are public abstract by default
+•	Variables are public static final by default
+You cannot make a method private (except in modern Java 9+, you can have private helper methods in interfaces)
+interface Animal {
+    int legs = 4;          // public static final by default
+    void eat();            // public abstract by default
+}
+________________________________________
+Quick memory trick
+•	Top-level interface → public or default
+•	Inside interface → all methods are public abstract, all variables are public static final
+
+Can variables inside interface be package-private?
+ 
+Static variables and methods as in class are also same in interface?
+ 
+ 
+Question:
+Can a class that implement an interface call the interface’s static method directly using this?
+Ans: No
+ 
+Quick memory trick:
+Static – call by class/interface name, never by object.
+ 
+
+ 
+What is inner class in Java?
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Inheritance and Overriding
+================================
+
+Excellent Example:
+===============
+
+import java.lang.*;
+import java.util.*;
+
+class A
+{
+void display1()
+{
+System.out.println("Display1");
+}
+}
+
+class B extends A
+{
+void display2()
+{
+System.out.println("Display2");
+}
+}
+
+class C extends A
+{
+void display1()
+{
+System.out.println("Display11");
+}
+
+void display3()
+{
+System.out.println("Display3");
+}
+}
+
+interface X 
+{
+void display4();
+}
+
+interface Y 
+{
+void display5();
+}
+
+
+class Z extends A implements X,Y
+{
+public void display4()
+{
+System.out.println("Display4");
+}
+
+public void display5()
+{
+System.out.println("Display5");
+}
+}
+
+
+public class Main
+{
+public static void main(String[] arg)
+{
+C q = new C();
+q.display1();
+Z p = new Z();
+p.display1();
+p.display4();
+p.display5();
+}
+}
+
+
+4.3.	Handling Exceptions: Try, Catch, Finally, Throws, and Throw keywords, Creating Exception Class
+
+Exceptions are errors that show up when something impossible is tried. Like any value divide by 0, infinitive plus infinitive, infinitive minus infinitive, infinitive divide by 0, 0 divide by 0 etc. 
+There are five keywords in Java that we use for handling exceptions. They are:
+Try, catch, finally, throws, throw
+
+Types of exception
+In Java, exceptions are either:
+1.	Checked Exception → must be declared with throws
+2.	Unchecked Exception → extends RuntimeException, no throws needed
+1.	What is a Checked Exception?
+A checked exception is an exception that the Java compiler forces you to handle.
+•	You must either:
+1.	Handle it with a try-catch block, or
+2.	Declare it in the method signature using throws
+•	If you don’t, the code won’t compile.
+________________________________________
+Examples of checked exceptions
+•	IOException (file or input/output errors)
+•	SQLException (database errors)
+•	FileNotFoundException (file not found)
+import java.io.*;
+
+public class Test {
+    public static void main(String[] args) {
+        try {
+            FileReader file = new FileReader("abc.txt"); // may throw FileNotFoundException
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found!");
+        }
+    }
+}
+Here, the compiler forces you to handle FileNotFoundException.
+________________________________________
+Key point
+•	Checked exceptions extend Exception (but not RuntimeException)
+•	They are “checked” at compile time — that’s why the compiler complains if you don’t handle them.
+2.	What is an Unchecked Exception?
+An unchecked exception is an exception that the compiler does NOT force you to handle.
+•	It occurs at runtime.
+•	Usually caused by programming errors, like dividing by zero or using a null reference.
+•	It extends RuntimeException.
+________________________________________
+ Examples
+1.	ArithmeticException – dividing by zero
+int x = 10 / 0; // Throws ArithmeticException at runtime
+2.	NullPointerException – calling a method on null
+String s = null;
+System.out.println(s.length()); // Throws NullPointerException
+3.	ArrayIndexOutOfBoundsException – invalid array access
+int[] arr = {1,2,3};
+System.out.println(arr[5]); // Throws ArrayIndexOutOfBoundsException
+________________________________________
+Key point
+•	You don’t need try-catch for unchecked exceptions, though you can use it if you want.
+•	They are runtime exceptions, unlike checked exceptions which the compiler forces you to handle.
+Example:
+“Try” block defines the exception block, if there is an exception in that block then “catch” block handles that exception and don’t let your software system crash. “Finally” block runs always. “Throws” block is used with method and “throw” is used inside the method and handles the exception.
+Example (try, catch, finally)
+import java.lang.*;
+public class Main
+{
+public static void main(String[] arg)
+{
+try
+{
+int a = 10;
+int b = 0;
+system.out.println(a/b);
+}
+catch(Exception e)   //grammar of catch
+{
+system.out.println(“Error!”);
+}
+finally
+{
+system.out.println(“Completed!!!”);
+}
+}
+}
+
+Example (throws, throw)
+
+import java.lang.*;
+
+class Age
+{
+static void checkAge(int age) throws Exception
+{
+if(age<18)
+{
+throw new Exception ("Invalid Age!");
+}
+System.out.println("Valid Age!");
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+Age a = new Age();
+try
+{
+a.checkAge(15);
+}
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+finally
+{
+System.out.println("Completed!");
+}
+}
+}
+
+
+All Exception Example
+========================
+import java.io.*;
+
+class ExceptionDemo {
+    public static void main(String[] args) {
+
+        // ArithmeticException
+        try {
+            int a = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException: " + e.getMessage());
+        }
+
+        // NullPointerException
+        try {
+            String str = null;
+            System.out.println(str.length());
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException: " + e.getMessage());
+        }
+
+        // NumberFormatException
+        try {
+            int num = Integer.parseInt("abc");
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException: " + e.getMessage());
+        }
+
+        // ArrayIndexOutOfBoundsException
+        try {
+            int[] arr = new int[3];
+            System.out.println(arr[5]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        // ArrayStoreException
+        try {
+            Object[] objs = new String[2];
+            objs[0] = 10; // wrong type
+        } catch (ArrayStoreException e) {
+            System.out.println("ArrayStoreException: " + e.getMessage());
+        }
+
+        // ClassCastException
+        try {
+            Object obj = new Integer(10);
+            String s = (String) obj;
+        } catch (ClassCastException e) {
+            System.out.println("ClassCastException: " + e.getMessage());
+        }
+
+        // StringIndexOutOfBoundsException
+        try {
+            String s = "Hello";
+            System.out.println(s.charAt(10));
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("StringIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        // FileNotFoundException
+        try {
+            FileReader fr = new FileReader("nofile.txt");
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFoundException: " + e.getMessage());
+        }
+
+        // IOException
+        try {
+            FileReader fr = new FileReader("nofile.txt");
+            fr.read();
+        } catch (IOException e) {
+            System.out.println("IOException: " + e.getMessage());
+        }
+
+        // InterruptedException
+        try {
+            Thread.sleep(10); // usually won't throw, but must handle
+        } catch (InterruptedException e) {
+            System.out.println("InterruptedException: " + e.getMessage());
+        }
+
+        // IllegalArgumentException
+        try {
+            Thread t = new Thread();
+            t.setPriority(100); // invalid
+        } catch (IllegalArgumentException e) {
+            System.out.println("IllegalArgumentException: " + e.getMessage());
+        }
+
+        // IllegalStateException
+        try {
+            Thread t = new Thread();
+            t.start();
+            t.start(); // starting again
+        } catch (IllegalThreadStateException e) { // subclass of IllegalStateException
+            System.out.println("IllegalStateException: " + e.getMessage());
+        }
+
+        // UnsupportedOperationException
+        try {
+            java.util.List<String> list = java.util.Collections.unmodifiableList(new java.util.ArrayList<>());
+            list.add("Hello");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("UnsupportedOperationException: " + e.getMessage());
+        }
+    }
+}
+
+Output
+======
+ 
+
+
+Hierarchy of Exceptions
+====================
+Object    //root class not extendable
+  └── Throwable   //extendable from Object class
+        ├── Exception     //extendable from Throwable class
+        │     └── RuntimeException     //extendable from Exception class
+        └── Error     //extendable form Throwable class
+
+Object
+  └── Throwable
+        └── Exception
+
+Does particular classes on other package like "java.util" in a Java are also subclasses of Object?
+Yes — absolutely ✅
+Let’s confirm it carefully and lock it in.
+Key rule in Java
+Every class in Java is a subclass of java.lang.Object, no matter which package it is in.
+That includes classes in:
+•	java.util
+•	java.io
+•	java.sql
+•	java.time
+•	your own packages
+________________________________________
+Example
+import java.util.ArrayList;
+
+ArrayList<String> list = new ArrayList<>();
+Inheritance chain (implified):
+Object
+  └── AbstractCollection
+        └── AbstractList
+              └── ArrayList
+So yes:
+list instanceof Object   // true
+________________________________________
+Important clarification ⚠
+•	This applies to classes
+•	It does not apply to primitive types (int, double, etc.)
+________________________________________
+Exam-friendly sentence
+All Java classes, regardless of the package they belong to, directly or indirectly extend java.lang.Object.
+
+Search: Methods in Exception, methods in ArithmeticExpression etc. 
+++++++++++++++++++++++++++++++++++++
+
+Exception hierarchy in Java
+Exception is a subclass of Throwable:
+Throwable
+   └── Exception
+         ├── IOException
+         │     ├── FileNotFoundException
+         │     └── EOFException
+         ├── SQLException
+         ├── ClassNotFoundException
+         ├── InterruptedException
+         ├── RuntimeException
+         │     ├── ArithmeticException
+         │     ├── NullPointerException
+         │     ├── ArrayIndexOutOfBoundsException
+         │     └── IllegalArgumentException
+         └── ... (other custom exceptions)
+
+What does "Exception" class mean?
+Great question — this is the core idea
+Let’s build it step by step.
+Step 1: Big picture
+In Java, Exception is a class that represents something going wrong while a program runs.
+Just like:
+•	String is a class for text
+•	Integer is a class for numbers
+Exception is a class for errors
+Step 2: Think in categories
+Java doesn’t have just one error. It has many kinds, for example:
+•	dividing by zero
+•	file not found
+•	accessing something that is null
+All of these are objects created from classes that inherit from Exception.
+So:
+Exception   ← parent class
+   ↑
+   ├─ IOException
+   ├─ NullPointerException
+   ├─ ArithmeticException
+
+Step 3: Why catch (Exception e) works
+When you write:
+catch (Exception e)
+You are saying:
+“Catch any object that is an Exception (or a child of it) and store it in e.”
+
+One quick check (answer in words):
+Is Exception a specific error, or a general parent class for many errors?
+Ans: For many errors.
+Exactly right ✅ — Exception is a general parent class for many errors.
+Let’s make it stick with a simple analogy and then wrap up.
+
+Real-life analogy
+Think of Exception like the word “Problem”.
+•	“Problem” (Exception)
+o	Math problem (ArithmeticException)
+o	Network problem (IOException)
+o	Missing thing problem (NullPointerException)
+When you write:
+catch (Exception e)
+you’re saying:
+“If any kind of problem happens, catch it and give me the details in e.”
+Why Java does this
+•	Lets Java organize errors using inheritance
+•	Lets programmers catch specific problems or all problems
+•	Makes error handling safer and clearer
+Tiny recap (say it to yourself):
+Exception is a parent class that represents runtime problems in Java, and e is the object that holds info about what went wrong.
+
+Can't we just write catch{ }?
+Short answer: No — in Java you can’t write just catch { }.
+But let’s understand why, not just the rule.
+Think about this step by step:
+Step 1: What is catch supposed to do?
+A catch block’s job is to catch a specific problem (an exception) that happened in the try block.
+So Java needs to know what kind of problem you’re trying to catch.
+That’s why the syntax is:
+catch (ExceptionType variableName) {
+    // handle it
+}
+
+Why you must write catch (Exception e) (or similar)
+1.	Java needs to know what to catch
+o	catch is meaningless by itself.
+o	Java requires an exception type (like Exception, IOException, etc.).
+o	That’s why catch { } is invalid syntax.
+2.	e is the exception object
+o	Exception e means:
+	Exception → what kind of error
+	e → a variable that holds details about the error
+3.	Why having e is useful
+With e, you can:
+4.	e.getMessage();   // see what went wrong
+5.	e.printStackTrace(); // see where it happened
+Without e, you’d be blind — you wouldn’t know what failed or why.
+6.	Java enforces safety
+Java forces you to be explicit so you don’t accidentally hide serious errors.
+
+Common exceptions you can use with catch
+Exception Name	When it happens
+ArithmeticException	Divide by zero
+NullPointerException	Accessing a null reference
+ArrayIndexOutOfBoundsException	Invalid array index
+NumberFormatException	Converting invalid string to number
+ClassCastException	Invalid type casting
+IOException	Input/output errors (like file not found)
+FileNotFoundException	File not found
+SQLException	Database access errors
+InterruptedException	Thread is interrupted
+IllegalArgumentException	Invalid argument passed to a method
+IllegalStateException	Invalid state for method call
+
+
+1.4. Concurrency: Introduction, Thread States, Writing Multithreaded Programs, Thread Properties, Thread Synchronization, Thread Priorities 
+Concurrency in Java (definition)
+Concurrency in Java is the ability of a Java program to execute multiple threads (paths of execution) so that more than one task can progress at the same time.
+Important:
+•	They overlap in time
+•	They don’t have to run at the exact same instant
+Example analogy
+•	Program = a whole office building
+•	Thread (path of execution) = a single worker inside the office doing a task
+•	Multiple workers (threads) can work at the same time in the same building (program).
+________________________________________
+Key points
+1.	Every Java program has at least one thread — the main thread.
+2.	Threads allow parallel execution — e.g., GUI responsive while downloading a file.
+3.	In Java, you can create threads by:
+a.	Extending Thread class
+b.	Implementing Runnable interface 
+a.	Example (Extending Thread class)
+// Step 1: Create a class that extends Thread
+class MyThread extends Thread {
+
+    // Step 2: Override the run() method
+    public void run() {
+        System.out.println("Thread is running");
+    }
+}
+
+// Step 3: Use the thread
+public class Main {
+    public static void main(String[] args) {
+
+        MyThread t1 = new MyThread(); // create thread object
+        t1.start();                  // start the thread
+    }
+}
+
+b.	Example (Implementing Runnable interface)
+// Step 1: Implement Runnable
+class MyTask implements Runnable {
+
+    // Step 2: Implement run()
+    public void run() {
+        System.out.println("Thread is running using Runnable");
+    }
+}
+
+// Step 3: Use Thread to start it
+public class Main {
+    public static void main(String[] args) {
+
+        MyTask task = new MyTask();     // task object
+        	//task.start();  // this will not work, explanation is given below
+Thread t1 = new Thread(task);   // thread object
+        t1.start();                     // start thread
+    }
+}
+
+
+Explanation of above thread example with Runnable
+========================================================
+Step 1: Look at what you did
+
+MyTask task = new MyTask();   // ✅ task is Runnable
+task.start();                 // ❌ Error
+Problem: task is a Runnable object.
+
+Runnable interface does NOT have a start() method.
+Only Thread objects have the start() method.
+
+Step 2: Correct way using Runnable
+You must wrap your Runnable in a Thread:
+MyTask task = new MyTask();   // Runnable object
+Thread t1 = new Thread(task); // Thread object
+t1.start();                   // ✅ Correct: starts the thread
+•	Now start() is called on the Thread, which will internally call task.run().
+________________________________________
+Step 3: Why this design exists
+•	Java separates task definition (Runnable) from thread execution machinery (Thread class).
+•	This allows your task to extend another class (since Java doesn’t allow multiple inheritance) and still run as a thread.
+________________________________________
+✅ Key takeaway
+You cannot call start() on a Runnable object. Only Thread objects have start().
+
+Starting point of thread run() method
+===============================
+
+ 
+
+ 
+ 
+
+w 
+
+
+Important questions related thread
+======================================
+Question No. 1
+Is above example single threaded?
+Good question — let’s think it through together 👌
+Step 1: What makes a program multi-threaded?
+A program is multithreaded when more than one thread is running.
+Now look at the example:
+•	The main thread is always there (Java starts it automatically)
+•	We also created one new thread using new Thread(task).start()
+👉 So how many threads are running?
+________________________________________
+Step 2: Reason it out
+•	Main thread ✔️
+•	One worker thread (t1) ✔️
+That makes two threads.
+________________________________________
+Final answer
+❌ Not single-threaded
+✅ Multi-threaded (but with only ONE additional thread)
+
+
+Question No. 2
+Is public static void main(String[] arg) a thread?
+Nice question — this clears up a very common confusion 👍
+Let’s take it step by step.
+________________________________________
+Step 1: Important distinction
+Ask yourself:
+-	Is main() itself a thread, or is it run by a thread?
+-	A thread executes a method, not the other way around.
+________________________________________
+Step 2: Correct idea
+❌ main() is NOT a thread
+✅ main() is a method
+But…
+👉 The JVM creates a thread called the main thread, and
+👉 that main thread executes the main() method
+________________________________________
+Step 3: Simple way to remember 🧠
+•	Thread → path of execution
+•	main() → code that runs on the main thread
+So:
+main thread → runs → main() method
+________________________________________
+Step 4: Tiny mental test
+If you print this inside main():
+System.out.println(Thread.currentThread().getName());
+It will print:
+main
+That shows the method is running on a thread named main.
+
+Question No. 3
+Therefore its all happening in JVM?
+Exactly! 
+Let’s break it down carefully.
+________________________________________
+Step 1: Where threads live
+All threads in Java — whether the main thread, a thread from extends Thread, or a thread from implements Runnable — are managed by the JVM.
+•	JVM = Java Virtual Machine
+•	JVM creates, schedules, and runs threads on the underlying OS
+So all the stuff we wrote (main(), run(), etc.) is executed inside the JVM, which in turn maps it to real CPU threads.
+________________________________________
+Step 2: What JVM does for threads
+When you call start():
+1.	JVM creates a new thread at the OS level
+2.	JVM calls the run() method in that thread
+3.	JVM schedules threads concurrently
+4.	JVM ends the thread when run() finishes
+Even the main thread is created and managed by JVM automatically.
+________________________________________
+Step 3: Summary
+•	All Java code → runs inside JVM
+•	Threads (main, t1, etc.) → paths of execution inside JVM
+•	JVM interacts with the OS to actually run the threads
+Think of JVM as a thread manager and executor. 🧠
+
+Question No. 4
+run( ) seems to be normal methods that we create in any class. So. when we create a class object and access the method in that class through object then is it also a thread?
+Ans: This is a super important distinction! Let’s think carefully.________________________________________
+Step 1: Normal method vs thread method
+When you write a normal class method:
+class MyClass {
+    void myMethod() {
+        System.out.println("Hello");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.myMethod();  // calling like normal
+    }
+}
+•	myMethod() runs on the main thread
+•	No new thread is created
+•	It’s just code executed sequentially
+________________________________________
+Step 2: run() in threads
+Compare with a thread:
+class MyTask implements Runnable {
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyTask task = new MyTask();
+        Thread t = new Thread(task);
+        t.start();  // <--- new thread!
+    }
+}
+•	run() is not a thread by itself
+•	Only when start() is called on a Thread object, JVM creates a new thread, which executes run()
+•	If you just call task.run() directly → it’s like a normal method, no new thread is created
+________________________________________
+Step 3: Key rule to remember 🧠
+A method (even run()) is NOT a thread by itself.
+Only a Thread object executing that method via start() becomes a thread.
+
+
+
+=====================
+
+Simple examples of threads 
+Think of a Java program that:
+•	Downloads a file
+•	Plays music
+•	Responds to user input
+•	All without freezing.
+That’s concurrency.
+Concurrency vs Parallelism (very important)
+Concurrency	 Parallelism
+Tasks overlap in time	                       Tasks run at same time
+Possible on single CPU	                       Needs multiple cores
+About structure	                       About hardware
+Java supports both, but concurrency is the base idea.
+________________________________________
+How Java achieves concurrency
+Java uses:
+•	Threads
+•	Thread scheduling
+•	Synchronization tools
+Main concept to remember:
+One program → multiple threads
+________________________________________
+Why concurrency is needed
+•	Better performance
+•	Responsive applications
+•	Efficient CPU usage
+________________________________________
+Quick check
+Can concurrency exist on a single-core processor?
+(Answer Yes or No — then we’ll continue 👍)
+Ans: Yes
+
+Parallelism vs Concurrency
+•	Concurrency: tasks overlap in time (can switch back and forth)
+•	Parallelism: tasks literally run at the same exact time
+________________________________________
+Single CPU situation
+•	A single-core CPU can only execute one instruction at a time
+•	It can switch between tasks quickly → gives the illusion of doing multiple tasks at once
+•	✅ This is concurrency, not true parallelism
+________________________________________
+True parallelism
+•	Needs multiple cores (multi-core CPU)
+•	Each core can run a thread simultaneously
+________________________________________
+Quick answer to your question
+No, true parallelism cannot occur on a single CPU.
+But concurrency can.
+
+“Overlap in time” ✅
+•	Means tasks are active during the same overall period, but not necessarily at the exact same instant.
+•	On a single CPU, the CPU switches between tasks rapidly, so it looks like they are happening together.
+________________________________________
+Example (single CPU)
+Time: 0ms   1ms   2ms   3ms   4ms   5ms
+Task A:  ████
+Task B:      ████
+•	Tasks take turns on the CPU
+•	They overlap in the timeline, but only one is actually running at any instant
+________________________________________
+2️⃣ True Parallelism (multi-core CPU)
+Core 1: ████  Task A
+Core 2: ████  Task B
+•	Both run exactly at the same time
+•	This is parallelism, not just overlap
+________________________________________
+Quick way to remember
+•	Concurrency = “tasks share the same time period” (can be interleaved)
+•	Parallelism = “tasks literally run at the same moment”
+
+What are Thread States?
+Thread States are core to understanding concurrency. Thread states describe the current condition of a thread during its life cycle (born to death of thread inside the JVM).
+In Java, a thread can be in one of 6 states.
+________________________________________
+The 6 Thread States (Java)
+1. NEW
+•	Thread object is created
+•	start() has not been called yet
+Thread t = new Thread(); // NEW
+________________________________________
+2. RUNNABLE
+•	Thread is ready to run or running
+•	CPU decides when it actually runs
+t.start(); // RUNNABLE
+________________________________________
+3. BLOCKED
+•	Thread is waiting to acquire(obtain) a lock
+•	Another thread is using the resource
+Note: sleep(), wait(), join() are always used with try, catch.
+________________________________________
+4. WAITING
+•	Thread waits indefinitely
+•	Until another thread signals it
+Example methods:
+•	wait()
+•	join()
+
+Note: sleep(), wait(), join() are always used with try, catch.
+________________________________________
+5. TIMED_WAITING
+•	Thread waits for a fixed time
+Example methods:
+•	sleep(1000)
+•	join(1000)
+Note: sleep(), wait(), join() are always used with try, catch.
+________________________________________
+6. TERMINATED (DEAD)
+•	Thread has finished execution
+•	run() method ends
+________________________________________
+Easy memory trick 
+N R B W T T
+New → Runnable → Blocked → Waiting → Timed Waiting → Terminated
+________________________________________
+Why Thread States matter
+They help you:
+•	Debug multithreaded programs
+•	Understand performance issues
+•	Avoid deadlocks
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ 
+
+
+Thread Blocked Example
+
+  
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+VERY IMPORTANT
+
+java.lang.System
+java.lang.String
+java.lang.Runnable
+java.lang.Thread
+Fundamental Core Classes
+These are the most essential classes in Java (Core language classes)
+•	Object – the root superclass of all Java classes Oracle Docs
+•	Class – represents class metadata at runtime Oracle Docs
+•	String – for text data Oracle Docs
+•	StringBuffer / StringBuilder – mutable character sequences Android Developers
+•	System – system-level operations (I/O, environment) Oracle Docs
+•	Runtime – access to runtime environment Oracle Docs
+________________________________________
+Threads & Concurrency
+•	Thread – thread of execution Android Developers
+•	ThreadGroup – groups threads together Android Developers
+•	ThreadLocal – thread specific variables Android Developers
+________________________________________
+ Exceptions & Errors
+•	Throwable – base for all errors/exceptions Android Developers
+•	Error – serious problems not usually handled jtcindia.org
+•	Exception – problems that programs might catch jtcindia.org
+•	RuntimeException – unchecked exceptions jtcindia.org
+•	Various specific exceptions like NullPointerException, IllegalArgumentException, etc. (subclasses of Throwable) Oracle Docs
+________________________________________
+Wrapper Classes (for primitives)
+Java lets you treat primitive values as objects:
+•	Boolean, Byte, Short, Integer, Long, Float, Double, Character Oracle Docs
+•	Void – placeholder for the type void Oracle Docs
+________________________________________
+Math & Utilities
+•	Math – standard math operations Oracle Docs
+•	StrictMath – more strictly accurate math functions Android Developers
+•	Comparable – ordering interface Oracle Docs
+•	CharSequence – readable char sequences Oracle Docs
+•	Cloneable – marker interface for clone support Oracle Docs
+•	Iterable – for each loop support Oracle Docs
+________________________________________
+Other Utility/Support Types
+•	ClassLoader – loads classes at runtime Oracle Docs
+•	Process / ProcessBuilder – launch and control external processes Android Developers
+•	Package – metadata about a package Oracle Docs
+•	SecurityManager / RuntimePermission – legacy security controls Android Developers
+•	StackTraceElement, StackWalker – stack inspection tools Android Developers
+________________________________________
+Notes
+•	java.lang includes interfaces too (e.g., Runnable, Comparable). Oracle Docs
+•	In total, the java.lang package has 30+ classes and interfaces depending on the Java version (e.g., enum related types like Enum). slideshare.net
+•	All of these are available without an import statement because java.lang is implicitly imported.
+ Interfaces in java.lang 
+
+Interface	
+Purpose
+Appendable	For objects you can append characters/char sequences to (e.g., StringBuilder). Oracle Docs
+
+AutoCloseable	For objects that can be closed (e.g., with try with resources). Oracle Docs
+
+CharSequence	Represents readable sequences of characters (like String). Oracle Docs
+
+Cloneable	Marks that a class supports field by field cloning via Object.clone(). Oracle Docs
+
+Comparable<T>	For objects that can be ordered/sorted. Oracle Docs
+
+Iterable<T>	Allows using an object in the enhanced for loop (for (x : collection)). Oracle Docs
+
+Readable	Represents a source of characters to read. Oracle Docs
+
+Runnable	Can be executed by a Thread. Oracle Docs
+
+Thread.UncaughtExceptionHandler	Handles exceptions not caught by a thread. BestProg
+
+________________________________________
+🧠 Notes
+•	These are the standard public interfaces in the core java.lang package (e.g., Java SE 8 API). Oracle Docs
+•	Some interfaces are nested inside other classes, like Thread.UncaughtExceptionHandler. BestProg
+•	This list does not include interfaces added in specialized sub packages like java.lang.invoke or java.lang.module — those are in different packages. 
+All of these belong to java.lang:
+•	Exceptions
+o	Throwable
+o	Error
+o	Exception
+o	RuntimeException
+•	Core language classes
+o	Class
+o	String
+o	StringBuffer
+o	StringBuilder
+•	System / JVM
+o	System
+o	Runtime
+•	Multithreading
+o	Thread
+o	ThreadGroup
+o	ThreadLocal
+
+
+Writing multithreading programs in Java?
+Perfect! Let’s go step by step and learn how to write multithreading programs in Java. I’ll guide you through concepts + examples + best practices so it’s crystal clear.
+________________________________________
+Step 1: Ways to create a thread
+Option 1: Extend Thread class
+1.	Create a subclass of Thread
+2.	Override run() method
+3.	Create an object of your class and call start()
+Example:
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        System.out.println("Thread running: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        MyThread t2 = new MyThread();
+
+        t1.start();  // starts new thread
+        t2.start();  // starts another thread
+    }
+}
+✅ Output: Threads run concurrently, order may vary.
+Output
+=====
+Thread running: Thread-0
+Thread running: Thread-1
+
+
+Example 2:
+========
+class MyTask extends Thread
+{
+public void run() 
+{
+System.out.println(Thread.currentThread().getName() + " is running.");
+System.out.println(Thread.currentThread().getId() + " is ID of " + Thread.currentThread().getName() + ".");
+System.out.println(Thread.currentThread().getName() + " is " + Thread.currentThread().getState() + ".");
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+MyTask task1 = new MyTask();
+MyTask task2 = new MyTask();
+
+//Thread t1 = new Thread(task);
+//Thread t2 = new Thread(task);
+
+task1.start();
+task2.start();
+}
+}
+
+Output
+=====
+ 
+
+
+Example 3
+========
+class MyTask extends Thread
+{
+    public void run() 
+{
+System.out.println(Thread.currentThread().getName() + " is running.");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+	
+System.out.println(Thread.currentThread().getId() + " is ID of " + Thread.currentThread().getName() + ".");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+System.out.println(Thread.currentThread().getName() + " is " + Thread.currentThread().getState() + ".");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+}
+}
+public class Main
+{
+public static void main(String[] arg)
+{
+
+MyTask task1 = new MyTask();
+MyTask task2 = new MyTask();
+
+//Thread t1 = new Thread(task);
+//Thread t2 = new Thread(task);
+
+task1.start();
+task2.start();
+}
+}
+
+Output
+======
+ 
+
+
+Example 4
+========
+qqqqqqqqqclass MyTask extends Thread
+{
+    public synchronized void run() 
+   {
+        System.out.println(Thread.currentThread().getName() + " is running.");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+	System.out.println(Thread.currentThread().getId() + " is ID of " + Thread.currentThread().getName() + ".");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+	System.out.println(Thread.currentThread().getName() + " is " + Thread.currentThread().getState() + ".");
+try { Thread.sleep(5000); } catch (InterruptedException e) {}   
+}
+}
+
+
+public class Main
+{
+public static void main(String[] arg)
+{
+
+MyTask task1 = new MyTask();
+MyTask task2 = new MyTask();
+
+//Thread t1 = new Thread(task);
+//Thread t2 = new Thread(task);
+
+task1.start();
+task2.start();
+
+ThreadGroup group = task1.getThreadGroup();
+System.out.println(group.getName());
+
+}
+}
+
+Output
+======
+ 
+
+Option 2: Implement Runnable interface
+1.	Create a class that implements Runnable
+2.	Implement run() method
+3.	Wrap the object in a Thread and call start()
+Example:
+class MyTask implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("Thread running via Runnable: " + Thread.currentThread().getName());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyTask task = new MyTask();
+        Thread t1 = new Thread(task);
+        Thread t2 = new Thread(task);
+
+        t1.start();
+        t2.start();
+    }
+}
+✅ Advantage: Your class can extend another class (since Java doesn’t allow multiple inheritance).
+________________________________________
+Step 2: Thread methods you should know
+Method	Purpose
+start()	Creates a new thread and calls run()
+run()	Contains the code executed by the thread
+sleep(ms)	Pauses the thread for given milliseconds
+join()	Waits for another thread to finish
+setName(name)	Sets the thread’s name
+getName()	Returns thread name
+currentThread()	Returns the currently running thread
+________________________________________
+Step 3: Example with multiple threads
+class Counter implements Runnable {
+    private String name;
+
+    Counter(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void run() {
+        for(int i = 1; i <= 5; i++) {
+            System.out.println(name + ": " + i);
+            try { Thread.sleep(500); } catch (InterruptedException e) {}
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread t1 = new Thread(new Counter("Thread 1"));
+        Thread t2 = new Thread(new Counter("Thread 2"));
+
+        t1.start();
+        t2.start();
+    }
+}
+•	Threads interleave output, showing concurrent execution.
+________________________________________
+Step 4: Best practices
+1.	Prefer Runnable over extending Thread (more flexible).
+2.	Avoid shared mutable data without synchronization.
+3.	Use Executors and thread pools for large programs instead of creating hundreds of threads manually.
+
+
+
+
+Thread Properties
+
+These are the main attributes you can get or set for a thread.
+________________________________________
+1.	Thread Name
+•	Every thread has a name (default or custom)
+•	Helps identify threads during debugging
+Thread t = new Thread();
+t.setName("MyThread");
+System.out.println(t.getName());
+
+
+Important
+
+Step 1: Recall what the main thread is
+•	Every Java program starts with the main thread.
+•	Its name is "main" by default.
+•	It’s just a normal (user) thread, so you can treat it like any other thread.
+________________________________________
+Step 2: How to get the current thread
+Java has a static method:
+Thread.currentThread()
+•	Returns a reference to the thread that is currently executing.
+________________________________________
+Step 3: How to get its name
+Once you have the thread object, call:
+Thread.currentThread().getName();
+•	For the main thread, this will return: "main"
+________________________________________
+Example:
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName());
+    }
+}
+Output:
+main
+________________________________________
+2.	Thread ID
+•	Each thread has a unique ID assigned by the JVM
+•	Read-only
+System.out.println(t.getId());
+________________________________________
+3.	Thread Priority
+•	Threads have priority values: MIN_PRIORITY (1) → NORM_PRIORITY (5) → MAX_PRIORITY (10)
+•	Higher priority threads may get more CPU time (not guaranteed)
+t.setPriority(Thread.MAX_PRIORITY);
+System.out.println(t.getPriority());
+________________________________________
+4.	Thread State
+•	Thread can be in one of 6 states:
+NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+System.out.println(t.getState());
+________________________________________
+5.	Daemon Threads
+•	Daemon threads are background threads (like garbage collection)
+•	JVM exits when only daemon threads remain
+t.setDaemon(true);
+System.out.println(t.isDaemon());
+
+
+
+Step 1: Recall the idea
+A daemon thread in Java:
+•	Runs in the background
+•	Provides services to user threads (main)
+•	Automatically stops when all user threads finish
+Examples you already know:
+🧹 Garbage Collector, background monitoring threads
+________________________________________
+Step 2: Simple Java example (focus on the idea)
+class DaemonExample extends Thread {
+    public void run() {
+        while (true) {
+            System.out.println("Daemon thread running...");
+        }
+    }
+
+    public static void main(String[] args) {
+        DaemonExample t = new DaemonExample();
+        t.setDaemon(true);   // makes it a daemon thread
+        t.start();
+
+        System.out.println("Main thread ends");
+    }
+}
+________________________________________
+Step 3: What’s happening here?
+•	setDaemon(true) → marks the thread as a daemon
+•	When main (a user thread) finishes,
+•	The JVM terminates the daemon thread automatically
+Even though the daemon thread has an infinite loop, it does not keep the JVM alive.
+Quick check (your turn 👇)
+Which line in this code makes the thread a daemon thread?
+t.setDaemon(true); 
+✅ Exactly right! Well done.
+t.setDaemon(true);
+This line tells the JVM that t is a daemon thread.
+________________________________________
+Quick reinforcement
+Remember this rule (very important for exams 👇):
+🔑 setDaemon(true) must be called before start()
+Otherwise, Java throws an IllegalThreadStateException.
+________________________________________
+One-line exam answer you can use
+A daemon thread in Java is a background thread that provides services to user threads and terminates automatically when all user threads finish.
+________________________________________
+Mini-check (last one 😊)
+ Name one real daemon thread used by the JVM.
+Ans: Garbage Collector (GC)
+________________________________________
+Why this is correct
+•	The Garbage Collector runs in the background
+•	It frees unused memory
+•	It does not prevent the JVM from exiting
+➡️ So it is a daemon thread
+________________________________________
+Quick memory trick 🧠
+Daemon = background helper
+GC = background cleaner 🧹
+So: GC is a daemon thread
+
+________________________________________
+6.	Thread Group
+•	Threads can belong to a group for easier management
+ThreadGroup group = t.getThreadGroup();
+System.out.println(group.getName());
+________________________________________
+What is a ThreadGroup? Is it a class?
+Step 1: Direct answer (short)
+Yes, ThreadGroup is a class in Java.
+It belongs to:
+java.lang.ThreadGroup
+________________________________________
+Step 2: What kind of class is it?
+Think carefully about this question:
+👉 Does a ThreadGroup do work (run code), or does it manage things?
+(Pause and think for a second.)
+________________________________________
+Step 3: Correct idea
+A ThreadGroup:
+•	is a container / manager class
+•	groups multiple threads
+•	allows you to manage them as one unit
+It does not:
+•	extend Thread
+•	implement Runnable
+•	execute code itself
+Only threads execute code.
+________________________________________
+One-line definition (exam-friendly)
+ThreadGroup is a Java class used to group multiple threads so they can be managed together.
+
+Example of ThreadGroup in Java?
+Step 1: Look at this simple code
+class MyTask extends Thread {
+    MyTask(ThreadGroup group, String name) {
+        super(group, name);
+    }
+
+    public void run() {
+        System.out.println(Thread.currentThread().getName()
+                + " is running in " 
+                + Thread.currentThread().getThreadGroup().getName());
+    }
+}
+
+public class ThreadGroupDemo {
+    public static void main(String[] args) {
+
+        ThreadGroup tg = new ThreadGroup("MyGroup");
+
+        MyTask t1 = new MyTask(tg, "Thread-1");
+        MyTask t2 = new MyTask(tg, "Thread-2");
+
+        t1.start();
+        t2.start();
+    }
+}
+________________________________________
+Step 2: What’s happening (conceptually)
+•	ThreadGroup tg = new ThreadGroup("MyGroup");
+ Creates a thread group named MyGroup
+•	super(group, name);
+ Puts the thread inside that thread group
+•	t1.start(); t2.start();
+ Starts both threads, both belong to the same group
+•	Output will show that both threads are running in MyGroup
+________________________________________
+Key takeaway (very important)
+•	ThreadGroup does NOT run code
+•	Threads run code
+•	ThreadGroup is just a container to organize and manage threads
+________________________________________
+Is object lock acquired automatically when "thread object" is created? 
+Short answer (hold this thought)
+ No. An object lock is not acquired automatically when a thread object is created.
+Now let’s understand when a lock is acquired.
+________________________________________
+Step 1: What is an object lock?
+In Java:
+•	Every object has a lock (monitor)
+•	But that lock is idle most of the time
+Important idea:
+A lock exists whether or not threads use it
+________________________________________
+Step 2: When is the lock actually acquired?
+A lock is acquired only when a thread enters:
+•	a synchronized method, or
+•	a synchronized(obj) block
+Example conceptually:
+•	Creating a thread ❌ no lock
+•	Calling start() ❌ no lock
+•	Entering synchronized code ✅ lock acquired
+________________________________________
+Step 3: Key clarification (very important)
+A Thread object and a lock object are different things.
+•	Creating a Thread object → just creates an object
+•	A thread acquires a lock on some object only when it tries to enter synchronized code on that object
+The lock might be:
+•	this
+•	some shared object
+•	a class object (for static synchronized)
+________________________________________
+One-line exam-ready answer
+Object lock is acquired only when a thread enters a synchronized method or block, not when a thread object is created.
+________________________________________
+What is the difference between a "Normal class object" and "Thread class object"?
+Objects vs Threads 
+________________________________________
+Step 1: Start with what’s common
+Think first:
+Are both a normal class object and a Thread class object objects stored on the heap?
+(Answer yes/no in your head.)
+Yes — both are normal Java objects.
+So the difference is not “object vs non-object.”
+________________________________________
+Step 2: Key thinking question (very important)
+When you create an object using:
+new MyClass();
+what happens after creation?
+Now compare with:
+new Thread();
+what extra capability does this object have?
+________________________________________
+Step 3: Core difference (conceptual)
+Here’s the real distinction:
+Normal class object	Thread class object
+Represents data + behavior	                    Represents a unit of execution
+Cannot run independently	                    Can run concurrently
+Methods run only when called	run() executes when start() is called
+No separate call stack	                    Has its own call stack
+Lives only in main thread	                     Runs in a separate thread
+________________________________________
+Step 4: Most important rule 
+This line is crucial for exams and interviews:
+Creating a Thread object does NOT create a new thread.
+Only this does:
+t.start();  // creates a new call stack
+Calling:
+t.run();    // just a normal method call
+❌ No new thread.
+________________________________________
+Step 5: Lock confusion cleared
+•	A normal object has a lock
+•	A Thread object also has a lock
+But neither lock is used automatically
+Locks are used only with synchronized.
+________________________________________
+One-line exam-ready difference
+A normal class object represents data and behavior, while a Thread class object represents an independent path of execution with its own call stack.
+________________________________________
+Quick check (one line)
+What method actually starts a new thread of execution: run() or start()?
+Ans: Start
+
+Does "normal object" lock also need "synchronized code" to acquire lock?
+Yes — exactly 
+But let’s make sure you understand why, not just memorize it.
+________________________________________
+Step 1: One clear rule (very important)
+Any object’s lock — normal object or Thread object — is acquired only by synchronized code.
+There is no automatic lock acquisition.
+________________________________________
+Step 2: Think it through
+Ask yourself:
+If I just create an object like this:
+MyClass obj = new MyClass();
+Did any thread say “I want exclusive access to this object”?
+❌ No — so no lock is taken.
+________________________________________
+Step 3: When does a normal object’s lock get acquired?
+Only when a thread enters:
+synchronized(obj) {
+    // critical section
+}
+or
+synchronized void method() {
+    // lock on 'this'
+}
+At that moment:
+•	the thread requests the object’s lock
+•	if free → lock is acquired
+•	if not → thread waits
+________________________________________
+Step 4: Key sentence to remember (exam gold ⭐)
+In Java, object locks are passive; they are acquired only on demand by synchronized code.
+________________________________________
+Step 5: Quick comparison (to cement it)
+Situation	Lock acquired?
+Object created	❌ No
+Thread created	❌ No
+start() called	❌ No
+Enter synchronized block	✅ Yes
+________________________________________
+When is "object lock released" in Java?
+Great — this is the other half of locking
+Let’s reason it out carefully.
+________________________________________
+Step 1: Recall how a lock is acquired
+You already know:
+An object lock is acquired only when a thread enters synchronized code.
+So now ask yourself the mirror question:
+ When does a thread stop needing exclusive access?
+________________________________________
+Step 2: Core rule (very important)
+An object lock is released automatically when a thread exits the synchronized block or synchronized method.
+“Exit” can happen in three ways.
+________________________________________
+Step 3: The 3 situations when a lock is released
+1.	Normal completion
+synchronized(obj) {
+    // code finishes normally
+}
+✔ Lock released when control leaves the block
+________________________________________
+2.	Exception occurs
+synchronized(obj) {
+    int x = 10 / 0;  // exception
+}
+✔ Lock released even if an exception occurs
+(This is guaranteed by Java.)
+________________________________________
+3.	Return statement
+synchronized(obj) {
+    return;
+}
+✔ Lock released before returning
+________________________________________
+Step 4: Very important clarification 
+Locks are NOT released when:
+•	sleep() is called ❌
+•	yield() is called ❌
+•	thread is paused in execution ❌
+Only exiting synchronized code releases the lock.
+(We’ll talk about wait() separately — that’s a special case.)
+________________________________________
+One-line exam-ready answer
+An object lock is released automatically when a thread exits the synchronized block or method, whether normally or due to an exception.
+________________________________________
+Quick check (answer yes/no)
+ If a thread calls Thread.sleep() inside a synchronized block, is the object lock released?
+Ans: ???
+Do sleep(), yield(), wait() methods cause "thread waiting" state?
+________________________________________
+Step 1: sleep()
+•	Purpose: Pauses the thread for a specified time.
+•	Thread state: Goes to TIMED_WAITING.
+•	Important: The thread keeps any locks it holds.
+•	Waiting type: Time-based waiting, not “waiting for a resource”.
+✅ Example: Thread.sleep(1000); → thread pauses 1 second, then becomes runnable again.
+________________________________________
+Step 2: yield()
+•	Purpose: Suggests to the scheduler to let other threads of same priority run.
+•	Thread state: Still RUNNABLE — it doesn’t go to waiting!
+•	Important: It’s just a hint. No lock release, no guaranteed pause.
+✅ Think of it as saying: “Hey CPU, if someone else wants a turn, please run them first.”
+________________________________________
+Step 3: wait()
+•	Purpose: Used inside a synchronized block to wait for a condition.
+•	Thread state: Goes to WAITING (or TIMED_WAITING if timed).
+•	Important: Releases the object lock while waiting!
+•	Resumes only when notify() or notifyAll() is called.
+✅ Example:
+synchronized(obj) {
+    obj.wait();  // releases lock, waits for notify
+}
+________________________________________
+Step 4: Quick summary table (exam-friendly)
+Method	Thread state	Releases lock?	Notes
+sleep(ms)	TIMED_WAITING	No	Time-based pause
+yield()	RUNNABLE	No	Hint to scheduler
+wait()	WAITING / TIMED_WAITING	Yes	Waits for notify
+________________________________________
+Quick check (one-line)
+Which of these releases the object lock while waiting: sleep(), yield(), or wait()?
+
+Incorrect Example for “object lock” synchronized(t1)
+============================================
+
+import java.lang.*;
+
+class MyTest implements Runnable
+{
+public void run()   //thread starting point
+{
+System.out.println("Hello! Thread");
+}
+}
+
+
+public class Main
+{
+public static void main(String[] arg) 
+{
+MyTest obj = new MyTest();   //thread object created
+Thread t1 = new Thread(obj);
+t1.start();  //new thread created
+synchronized(t1) 
+{
+    t1.sleep(2000);
+}
+System.out.println("Successfully executed all operations !!!");
+
+}
+}
+
+
+Explanation of errors in above program
+=================================
+
+What's wrong with below code?
+import java.lang.*; 
+class MyTest implements Runnable 
+{ 
+public void run() //thread starting point
+ { System.out.println("Hello! Thread"); 
+}
+ }
+public class Main 
+{ 
+public static void main(String[] arg) 
+{ 
+MyTest obj = new MyTest(); //thread object created 
+Thread t1 = new Thread(obj); 
+t1.start(); //new thread created 
+synchronized(t1) 
+{ 
+t1.sleep(2000); 
+} 
+System.out.println("Successfully executed all operations !!!"); 
+}
+} 
+Ah! - there’s a classic threading mistake here. Let’s analyze carefully, step by step.
+________________________________________
+Step 1: The synchronized(t1) block
+synchronized(t1) {
+    t1.sleep(2000);
+}
+•	You’re synchronizing on t1, which is okay, but not necessary here.
+•	Problem: sleep() is a static method, inherited from Thread, and it always affects the current thread, not the thread object you call it on.
+So:
+t1.sleep(2000);
+❌ This does not pause t1. It pauses the main thread for 2 seconds.
+________________________________________
+Step 2: Correct usage of sleep()
+•	You should call:
+Thread.sleep(2000);  // pauses the current thread
+•	Or, if you want t1 to sleep, you must put sleep() inside the run() method of that thread.
+________________________________________
+Step 3: Optional issue: unnecessary synchronized
+•	Synchronizing on t1 here is pointless because sleep() does not require a lock.
+•	sleep() does not release or acquire locks — it just pauses the current thread.
+________________________________________
+Step 4: Corrected version
+public class Main {
+    public static void main(String[] arg) throws InterruptedException {
+        MyTest obj = new MyTest();
+        Thread t1 = new Thread(obj);
+        t1.start();  // new thread runs
+
+        Thread.sleep(2000);  // pause main thread, not t1
+
+        System.out.println("Successfully executed all operations !!!");
+    }
+}
+✅ Notes:
+•	Added throws InterruptedException because sleep() throws it.
+•	Removed unnecessary synchronized.
+________________________________________
+Step 5: Key conceptual takeaway
+•	Thread.sleep() pauses the CURRENT thread, not the thread object you call it on.
+•	Only wait() requires an object lock and releases it.
+________________________________________
+Quick check for you:
+👉 In your original code, which thread was actually sleeping: the main thread or the t1 thread?
+Show above example with "synchronized(t1)"?
+Absolutely — we can keep synchronized(t1), but we need to understand its role carefully.
+________________________________________
+Key point before coding
+•	synchronized(t1) acquires the lock on t1
+•	sleep() does not release the lock, so the main thread holds t1’s lock while sleeping
+•	t1 thread runs independently, nothing stops it
+This is mostly a demonstration — in real programs, this synchronized here is unnecessary.
+________________________________________
+Example with synchronized(t1)
+class MyTest implements Runnable {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + ": Hello! Thread started");
+        try {
+            Thread.sleep(1000);  // thread pauses itself
+        } catch (InterruptedException e) {
+            System.out.println(Thread.currentThread().getName() + " interrupted");
+        }
+        System.out.println(Thread.currentThread().getName() + ": Hello! Thread finished");
+    }
+}
+
+public class Main {
+    public static void main(String[] arg) throws InterruptedException {
+        MyTest obj = new MyTest();
+        Thread t1 = new Thread(obj, "T1");
+        t1.start();  // new thread created
+
+        synchronized(t1) {
+            System.out.println(Thread.currentThread().getName() + ": Main thread sleeping while holding t1 lock");
+            Thread.sleep(2000);  // main thread sleeps
+        }
+
+        System.out.println(Thread.currentThread().getName() + ": Successfully executed all operations !!!");
+    }
+}
+________________________________________
+Step 1: What happens
+1.	t1.start() → starts a new thread “T1”
+2.	Main thread enters synchronized(t1) → acquires t1’s lock
+3.	Main thread calls Thread.sleep(2000) → main thread pauses, t1 still runs independently
+4.	Main thread wakes up → releases t1 lock → prints final message
+________________________________________
+Step 2: Important notes
+•	Main thread holds t1 lock while sleeping, but t1 thread does not need that lock, so it runs freely.
+•	Using synchronized(t1) here does not control the other thread.
+•	sleep() never releases the lock.
+
+
+Example to set Daemon Threads
+===========================
+import java.lang.*;
+
+class MyTest implements Runnable
+{
+public void run()
+{
+System.out.println("Hello! Nepal");
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+MyTest obj = new MyTest();
+Thread t1 = new Thread(obj);
+Thread t2 = new Thread(obj);
+Thread t3 = new Thread(obj);
+
+t1.setDaemon(true);
+t2.setDaemon(true);
+t3.setDaemon(true);
+
+t1.start();
+t2.start();
+t3.start();
+
+System.out.println("Hello! Thread");
+
+}
+}
+
+Example: Display all daemon threads in Java
+public class DaemonThreadDisplay {
+    public static void main(String[] args) {
+
+        // Get all active threads
+        Thread.getAllStackTraces().keySet().forEach(t -> {
+            if (t.isDaemon()) {
+                System.out.println("Daemon Thread: " + t.getName());
+            }
+        });
+    }
+}
+________________________________________
+What this code is doing (step by step)
+•	Thread.getAllStackTraces() → gets all running threads
+•	keySet() → gives the Thread objects
+•	t.isDaemon() → checks whether a thread is a daemon
+•	t.getName() → prints the thread name
+When you run this, you’ll typically see output like:
+•	Reference Handler
+•	Finalizer
+•	Signal Dispatcher
+•	GC Thread
+These are JVM background (daemon) threads.
+________________________________________
+Key learning point 🔑
+✔ You don’t create most daemon threads
+✔ The JVM creates them, and you can inspect them
+✔ This is how you “see what’s going on in the background”
+
+Example to create our own daemon thread and see that daemon thread in Java
+________________________________________
+Step 1: What we want to prove
+We want to:
+1.	Create our own daemon thread
+2.	Mark it as daemon
+3.	Display it while the program is running
+4.	Observe that it stops when main finishes
+________________________________________
+Step 2: Example – create & view your own daemon thread
+class MyDaemon extends Thread {
+    public void run() {
+        while (true) {
+            System.out.println("My daemon thread is running");
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+            }
+        }
+    }
+}
+
+public class DaemonDemo {
+    public static void main(String[] args) {
+
+        MyDaemon t = new MyDaemon();
+        t.setDaemon(true);   // make it daemon
+        t.start();
+
+        // Display running daemon threads
+        Thread.getAllStackTraces().keySet().forEach(thread -> {
+            if (thread.isDaemon()) {
+                System.out.println("Daemon thread detected: " + thread.getName());
+            }
+        });
+
+        System.out.println("Main thread ends");
+    }
+}
+________________________________________
+Explanation of above program line by line
+==============================================
+Explain above code line by line?
+Perfect — let’s walk through the code line by line, slowly and clearly.
+I’ll explain what each line does and why it’s there.
+________________________________________
+1.	Class declaration
+class MyDaemon extends Thread {
+•	Creates a class MyDaemon
+•	It extends Thread, so it becomes a thread
+________________________________________
+2.	run() method
+public void run() {
+•	This method contains the code executed by the thread
+•	JVM calls run() after start() is invoked
+________________________________________
+3.	Infinite loop
+while (true) {
+•	Keeps the daemon thread running continuously
+•	Helps us see the daemon thread in action
+________________________________________
+4.	Print message
+System.out.println("My daemon thread is running");
+•	Displays a message to show the daemon thread is active
+________________________________________
+5.	Sleep the thread
+Thread.sleep(500);
+•	Pauses the thread for 500 milliseconds
+•	Prevents flooding the console
+•	Makes output readable
+________________________________________
+6.	Catch block
+} catch (InterruptedException e) {
+}
+•	Handles possible interruption during sleep
+•	Empty because interruption handling is not our focus here
+________________________________________
+7.	End of thread class
+}
+}
+•	Ends run() method and MyDaemon class
+________________________________________
+Now the main class 👇
+8.	Main class
+public class DaemonDemo {
+•	This is the main program
+•	JVM starts execution from here
+________________________________________
+9.	Main method
+public static void main(String[] args) {
+•	Entry point of the program
+•	This is a user thread
+________________________________________
+Create thread object
+MyDaemon t = new MyDaemon();
+•	Creates a thread object
+•	Thread is not running yet
+________________________________________
+1.1.  Make it daemon
+t.setDaemon(true);
+•	Marks the thread as a daemon thread
+•	❗ Must be called before start()
+________________________________________
+1.2.  Start the thread
+t.start();
+•	JVM creates a new thread
+•	Calls the run() method in background
+________________________________________
+1.3.	Display daemon threads
+Thread.getAllStackTraces().keySet().forEach(thread -> {
+•	Gets all running threads in JVM
+•	Iterates through each thread
+________________________________________
+1.4.	Check daemon status
+if (thread.isDaemon()) {
+•	Checks whether the thread is a daemon
+________________________________________
+1.5.	Print daemon thread name
+System.out.println("Daemon thread detected: " + thread.getName());
+•	Displays the name of each daemon thread
+•	Includes JVM threads + your own daemon thread
+________________________________________
+1.6.	End main method
+System.out.println("Main thread ends");
+•	Prints message
+•	After this line:
+-  main thread finishes
+ - JVM exits
+ - daemon thread stops automatically
+________________________________________
+Final takeaway
+•	Daemon threads run in background
+•	JVM kills them automatically when no user threads remain
+•	This code proves that behavior
+
+Further Explanation of above program’s line "if (thread.isDaemon())"
+=========================================================
+From where the word "thread" come from in line "if (thread.isDaemon())" in above program? 
+________________________________________
+The line in question
+Thread.getAllStackTraces().keySet().forEach(thread -> {
+________________________________________
+Step 1: What does forEach do?
+•	keySet() gives a collection of Thread objects
+•	forEach(...) goes one by one through that collection
+So Java needs a temporary variable to represent:
+“the current Thread I’m looking at right now”
+________________________________________
+Step 2: Where does thread come from?
+thread is a lambda parameter
+thread -> { ... }
+This means:
+•	thread is a variable name chosen by us
+•	Its type is Thread
+•	For each iteration, thread refers to one Thread object
+You could rename it:
+.forEach(t -> {
+    if (t.isDaemon()) {
+        System.out.println(t.getName());
+    }
+});
+Same meaning ✅ — only the name changed.
+________________________________________
+Step 3: Connect to what you already know
+This is similar to a for-each loop:
+for (Thread thread : Thread.getAllStackTraces().keySet()) {
+    if (thread.isDaemon()) {
+        System.out.println(thread.getName());
+    }
+}
+ The thread variable here is the same idea as in the lambda.
+________________________________________
+Key takeaway
+•	thread is not predefined
+•	It is a local variable
+•	Created automatically by the lambda expression
+•	Represents one Thread object at a time
+
+
+
+
+
+Step 3: What you should observe
+•	"My daemon thread is running" prints only while main is alive
+•	After main ends:
+- JVM terminates
+- Your daemon thread stops automatically
+You’ll also see JVM daemon threads like:
+•	Reference Handler
+•	Finalizer
+________________________________________
+Step 4: Key rules to remember (exam gold ⭐)
+•	setDaemon(true) must be before start()
+•	Daemon threads do not keep JVM alive
+•	Used for background services
+
+7.	Alive Check
+•	Check if thread is running or not
+System.out.println(t.isAlive());
+________________________________________
+Summary Table
+Property	                                  Methods	             Description
+Name	              getName(), setName()	             Thread identifier
+ID	              getId()	             Unique thread ID
+Priority	              getPriority(), setPriority()	             Thread scheduling hint
+State	              getState()	             Current thread state
+Daemon	              setDaemon(), isDaemon()	             Background thread flag
+Group	              getThreadGroup()	             Thread group
+Alive	              isAlive()	             Checks if thread is running
+
+Example
+=============
+import java.lang.*;
+
+class MyTest extends Thread
+{
+public void run()
+{
+System.out.println("Hello! Thread");
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+MyTest t1 = new MyTest();
+t1.setName("Thread-1");
+System.out.println(t1.getState());
+t1.setPriority(Thread.MIN_PRIORITY);
+t1.start();
+System.out.println(t1.getState());
+System.out.println(t1.getName());
+System.out.println(t1.getId());
+System.out.println(t1.getPriority());
+System.out.println(t1.getState());
+}
+}
+
+Output
+======
+ 
+
+
+Example
+========
+import java.lang.*;
+class MyTest extends Thread
+{
+public void run()
+{
+System.out.println("Hello! Thread");
+}
+}
+
+public class Main
+{
+public static void main(String[] arg)
+{
+Thread mainThread = Thread.currentThread();
+MyTest t1 = new MyTest();
+t1.setName("MyThread-1");
+System.out.println(t1.getState());
+t1.setPriority(Thread.MIN_PRIORITY);
+
+t1.start();
+
+System.out.println(t1.getState());
+System.out.println(t1.getName());
+System.out.println(t1.getId());
+System.out.println(t1.getPriority());
+System.out.println(t1.getState());
+System.out.println(Thread.currentThread().getName());
+System.out.println(Thread.currentThread().getId());
+System.out.println(Thread.currentThread().getPriority());
+System.out.println(Thread.currentThread().getState());
+Thread.currentThread().setName("MyMainThread");
+System.out.println(Thread.currentThread().getName());
+Thread.currentThread().setPriority(Thread.MIN_PRIORITY);  
+System.out.println(Thread.currentThread().getPriority());
+}
+}
+
+Output
+======
+ 
+Quick check 🧠
+If a thread is a daemon, what happens when all non-daemon threads finish?
+(Answer in one line)
+It will still run.
+Not quite — here’s the clarification:
+•	If a thread is a daemon thread, the J7VM does not wait for it to finish.
+•	As soon as all non-daemon threads finish, the JVM exits, and any remaining daemon threads stop immediately.
+✅ So a daemon thread may not complete if only daemon threads are left.
+________________________________________
+Quick memory trick 🧠
+“Daemon threads = background helpers; JVM doesn’t wait for them.”
+•	Example: garbage collector, background logging threads
+
+What is Thread Synchronization?
+•	Thread synchronization = coordination between threads to avoid conflicts
+•	When multiple threads access shared resources (like variables, files, or objects), race conditions can occur.
+•	Synchronization ensures that only one thread at a time can access the shared resource.
+________________________________________
+Why synchronization is needed
+Example problem (without synchronization):
+class Counter {
+    int count = 0;
+
+    void increment() {
+        count++;  // not atomic, can cause wrong results if multiple threads run concurrently
+    }
+}
+•	If Thread 1 reads count=0 and Thread 2 also reads count=0, they both increment → count becomes 1 instead of 2. They could interleave (to arrange by alternating layers) and happen at a same time, multiple threads may block each other, leading to wrong result. So, to avoid this, we have to use keyword “synchronized” as in below example.
+________________________________________
+
+How to synchronize in Java
+Method 1: synchronized method
+class Counter {
+    int count = 0;
+
+    // only one thread can execute this at a time
+    synchronized void increment() {
+        count++;
+    }
+}
+•	Any thread calling increment() will lock the object until done. Only one thread at a time could execute, multiple threads don’t block each other.
+________________________________________
+Method 2: synchronized block
+class Counter {
+    int count = 0;
+
+    void increment() {
+        synchronized(this) {  // lock only this block
+
+
+            count++;
+        }
+    }
+}
+•	More fine-grained control, only locks critical section instead of the whole method. Example 1 and example 2 both works as same.
+________________________________________
+Key points
+Concept	                   Notes
+Lock (Monitor)	                   Each object has a lock; synchronized acquires it
+Critical section	                   Part of code that must not be accessed by multiple threads simultaneously
+Thread-safe	                   Class is safe for concurrent use
+Deadlock	                   When two threads wait forever for each other’s locks
+________________________________________
+Quick check
+If two threads call a synchronized method on the same object, can they execute it at the same time?
+(Answer Yes or No)
+No
+Exactly ✅ — they cannot execute a synchronized method at the same time on the same object.
+•	When one thread enters a synchronized method, it locks the object.
+•	Any other thread trying to call a synchronized method on that same object will wait until the lock is released.
+________________________________________
+
+4.4.	Byte Stream Classes, Character Stream Classes, Random Access File, Reading and Writing Objects.
+
+What is a stream in Java?
+In Java, a stream is a sequence of data elements that flows from a source to a destination. It is an abstraction for input and output — reading from or writing to a file, memory, network, etc.
+Think of it as a pipe: data goes in or out one piece at a time, without worrying about the underlying storage.
+________________________________________
+1. Types of streams in Java
+a) Based on data type
+1.	Byte Streams (InputStream / OutputStream)
+o	Handle raw binary data (bytes).
+o	Classes: FileInputStream, FileOutputStream, BufferedInputStream, BufferedOutputStream
+2.	FileInputStream fis = new FileInputStream("data.bin");
+3.	int b = fis.read(); // reads one byte
+4.	fis.close();
+5.	Character Streams (Reader / Writer)
+o	Handle text data (characters).
+o	Classes: FileReader, FileWriter, BufferedReader, PrintWriter
+6.	FileReader fr = new FileReader("data.txt");
+7.	int c = fr.read(); // reads one character
+8.	fr.close();
+________________________________________
+b) Based on direction
+1.	Input Stream – reads data from a source
+2.	Output Stream – writes data to a destination
+________________________________________
+c) Based on functionality
+•	Filter Streams: Enhance other streams (e.g., BufferedReader, BufferedOutputStream)
+•	Data Streams: Read/write primitive types easily (DataInputStream, DataOutputStream)
+•	Object Streams: Read/write objects (ObjectInputStream, ObjectOutputStream)
+________________________________________
+2. Key points
+•	Streams do not store data; they just transport it.
+•	Streams can be chained: e.g., wrap FileInputStream in BufferedInputStream for efficiency.
+•	Java treats all I/O as streams, whether it’s a file, console, or network.
+________________________________________
+3. Analogy
+•	Water pipe analogy:
+o	Source → Pipe → Destination
+o	Byte/Character = water molecules
+o	Buffered stream = pipe with a tank to make flow efficient
+________________________________________
+Summary
+A stream in Java is a sequence of data that flows from a source (input) to a destination (output). Streams abstract the details of where data comes from or goes to, allowing uniform handling of I/O.
+
+Important Summary Table  
+File Type	                                                   Exception Handling Needed?
+Text file	                                              ✅ Yes
+Binary file	                                              ✅ Yes
+RandomAccessFile	                                              ✅ Yes
+Object streams	                                              ✅ Yes
+Any I/O operation	                                              ✅ Yes
+You must use either try-catch or throws, but not necessarily both.
+
+
+
+
+ 
+
+ 
+Byte Stream Classes and Examples
+=====================================
+Writing to a binary data file using FileOutputStream (also needs try-catch or throws)
+===================================================================================
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class SimpleFileOutputStream {
+    public static void main(String[] args) {
+        try {
+            // Create a FileOutputStream for "output.txt"
+            FileOutputStream fos = new FileOutputStream("output.txt");
+
+            // Convert string to bytes and write to file
+            String data = "Hello, FileOutputStream!";
+            fos.write(data.getBytes());
+
+            // Close the stream
+            fos.close();
+
+            System.out.println("Data written successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Reading from a binary data file using FileInputStream (also needs try-catch or throws)
+====================================================================================
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class SimpleFileInputStream {
+    public static void main(String[] args) {
+        try {
+            // Open the file "input.txt"
+            FileInputStream fis = new FileInputStream("input.txt");
+
+            int b;
+            // Read bytes until end of file (-1)
+            while ((b = fis.read()) != -1) {
+                System.out.print((char) b); // cast byte to char for printing
+            }
+
+            // Close the stream
+            fis.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+} 
+
+FileWriter Example (uses write( ) method to write)
+=======================================================
+
+import java.lang.*;
+import java.io.*;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Create a FileWriter object for "example.txt"
+            FileWriter writer = new FileWriter("example.txt");
+
+            // Write some content to the file
+            writer.write("Hello, world!\n");
+            writer.write("This is a second line.\n");
+            writer.write("Java FileWriter example.\n");
+
+            // Flush and close the writer
+            writer.flush();
+            writer.close();
+
+            System.out.println("Data written to example.txt successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Output
+======
+ 
+
+ 
+PrintWriter Example (used println( ) method to write)
+===========================================================
+
+What is FileWriter?
+•	FileWriter is a class in java.io used to write characters to a text file.
+•	It writes text data (characters), not binary data.
+•	Can create a new file if it doesn’t exist or overwrite an existing file.
+•	Connot compile without try-catch or throws. You have to use either one.
+Package:
+import java.io.FileWriter;
+________________________________________
+Basic Syntax
+FileWriter fw = new FileWriter("file.txt");
+•	"file.txt" → path of the file to write.
+•	Throws IOException if something goes wrong.
+
+Not Working Example:
+=================
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Test {
+    public static void main(String[] args) {
+        FileWriter writer = new FileWriter("example.txt"); // ❌ compile error
+        writer.write("Hello");
+        writer.close();
+    }
+}
+
+Working Example
+===============
+________________________________________
+Writing to a File using FileWriter (needs try-catch or throws)
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterExample {
+    public static void main(String[] args) {
+        try {
+            FileWriter fw = new FileWriter("example.txt"); // overwrites file
+            fw.write("Hello, World!\n");
+            fw.write("Writing with FileWriter in Java.");
+            fw.close(); // always close the stream
+            System.out.println("File written successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+ Key Points:
+•	write(String s) → writes a string.
+•	write(char[] cbuf) → writes a character array.
+•	Always close the FileWriter with fw.close().
+
+OR
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class NoTryExample {
+    public static void main(String[] args) throws IOException {
+        FileWriter writer = new FileWriter("example.txt");
+        writer.write("Hello without try-catch!");
+        writer.close();
+    }
+}
+
+Writing to a File using FileWriter (needs try-catch or throws)
+===================================================================
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Create a PrintWriter object for a file named "output.txt"
+            PrintWriter writer = new PrintWriter("output.txt");
+
+            // Write some lines to the file
+
+            writer.println("Hello, world!");
+            writer.println("This is a second line.");
+            writer.println(42); // You can even print numbers directly
+
+            // Always flush and close the writer
+            writer.flush();
+            writer.close();
+
+            System.out.println("Data written to output.txt successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+________________________________________
+Appending to a File using FileWriter (also needs try-catch or throws)
+By default, FileWriter overwrites the file. To append, use the constructor with true:
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main
+{
+    public static void main(String[] args) throws Exception 
+{
+    	FileWriter writer = new FileWriter("example.txt", true);
+writer.write("Hello");
+writer.close();
+      }
+}
+ 
+
+Appending to a File using PrintWriter (also needs try-catch or throws)
+
+import java.io.*;
+import java.io.IOException;
+
+public class Main{
+    public static void main(String[] args) throws Exception {
+       PrintWriter writer = new PrintWriter(new FileWriter("example.txt", true));
+writer.println("Hello");
+writer.close();
+  
+    }
+}
+
+________________________________________
+Reading from a data file using FileReader (also needs try-catch or throws)
+=================================================================================
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            FileReader reader = new FileReader("input.txt"); // open file
+            int ch;
+            while ((ch = reader.read()) != -1) {             		// read until EOF
+                System.out.print((char) ch);               		 // print character
+            }
+            reader.close();                                  			// close file
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Combining with BufferedWriter (Better Performance)
+BufferedWriter bw = new BufferedWriter(new FileWriter("example.txt", true));
+bw.write("BufferedWriter makes writing faster.\n");
+bw.close();
+•	BufferedWriter buffers output, so it’s faster for large writes.
+________________________________________
+✅ Quick Comparison: FileReader vs FileWriter
+Feature	FileReader	FileWriter
+Direction	Read from file	Write to file
+Data type	Characters (text)	Characters (text)
+Overwrite?	N/A	Yes (default)
+Append?	N/A	Optional (true)
+What is FileReader?
+•	FileReader is a class in java.io used to read character files.
+•	It reads text data (characters), not binary data.
+•	Often used for reading .txt or other text-based files.
+Package:
+import java.io.FileReader;
+________________________________________
+Basic Syntax
+FileReader fr = new FileReader("file.txt");
+•	"file.txt" → path to the file you want to read.
+•	Throws FileNotFoundException if the file doesn’t exist.
+________________________________________
+Reading a File Character by Character
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderExample {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("example.txt");
+            int i;
+            while ((i = fr.read()) != -1) { // read() returns int; -1 = EOF
+                System.out.print((char)i);   // convert int to char
+            }
+            fr.close(); // always close the stream
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+Key Points:
+•	read() returns one character at a time (as an int).
+•	Returns -1 when the end of the file is reached.
+•	Always close the FileReader to free resources.
+
+
+Byte Stream Classes
+====================
+What are Byte Streams?
+•	Byte streams handle data 8 bits (1 byte) at a time.
+•	They are subclasses of InputStream and OutputStream in java.io.
+•	Used for all types of files, not just text.
+________________________________________
+Hierarchy of Byte Streams
+java.io.InputStream (abstract)
+   ├─ FileInputStream
+   ├─ BufferedInputStream
+   ├─ DataInputStream
+   └─ ObjectInputStream
+     
+java.io.OutputStream (abstract)
+   ├─ FileOutputStream
+   ├─ BufferedOutputStream
+   ├─ DataOutputStream
+   └─ ObjectOutputStream
+________________________________________
+Common Byte Stream Classes
+Class	              Purpose
+FileInputStream	              Read bytes from a file
+FileOutputStream	              Write bytes to a file
+BufferedInputStream	              Adds buffer to input for efficiency
+BufferedOutputStream	              Adds buffer to output for efficiency
+DataInputStream	              Read primitive data types (int, float, etc.) as bytes
+DataOutputStream	              Write primitive data types as bytes
+ObjectInputStream	              Read serialized objects from a file
+ObjectOutputStream	              Write serialized objects to a file
+________________________________________
+Example: Writing & Reading Bytes
+Writing bytes to a file
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class ByteWriteExample {
+    public static void main(String[] args) {
+        try {
+            FileOutputStream out = new FileOutputStream("data.bin");
+            out.write(65); // writes byte 'A' (ASCII 65)
+            out.write(66); // writes byte 'B'
+            out.close();
+            System.out.println("Bytes written successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+Reading bytes from a file
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ByteReadExample {
+    public static void main(String[] args) {
+        try {
+            FileInputStream in = new FileInputStream("data.bin");
+            int b;
+            while ((b = in.read()) != -1) { // read byte by byte
+                System.out.println((char)b); // convert byte to char
+            }
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+Output:
+A
+B
+________________________________________
+Key Points  
+•	Use byte streams for binary data
+•	Use character streams (Reader/Writer) for text data
+•	Always close streams to free resources (close() or try-with-resources)
+•	Buffered streams are faster than basic streams for large files
+Byte Stream Classes (Further)
+==============================
+Step 1: Big idea (no memorizing yet)
+In Java, byte streams are used to handle raw binary data.
+Think of things like:
+•	images
+•	audio 
+•	video 
+•	any file where Java shouldn’t interpret characters
+All byte stream classes are based on two abstract parent classes.
+Step 2: Core classes (the foundation)
+•	InputStream → read bytes
+•	OutputStream → write bytes
+Everything else is a child of one of these.
+Step 3: Check your understanding
+One question:
+ If you want to read data from a file, would you use InputStream or OutputStream?
+Ans: InputStream
+
+Step 4: Important InputStream subclasses
+Now let’s see how InputStream is actually used.
+Some common subclasses are:
+•	FileInputStream → reads bytes from a file
+•	ByteArrayInputStream → reads bytes from a byte array
+•	BufferedInputStream → improves performance by buffering data
+Think of it like this:
+•	InputStream = idea of reading bytes
+•	Subclasses = where and how those bytes come from
+Step 5: Concept check (no code yet)
+One question:
+Which subclass would you use to read bytes directly from a file on disk?
+FileInputStream
+Exactly right ✅
+Step 6: The other half — OutputStream
+Just like reading has InputStream, writing has:
+•	OutputStream → writes bytes
+Common subclasses:
+•	FileOutputStream → writes bytes to a file
+•	ByteArrayOutputStream → writes bytes to a byte array
+•	BufferedOutputStream → writes with buffering for speed
+So now we have the pair:
+•	FileInputStream → read bytes from a file
+•	FileOutputStream → write bytes to a file
+Step 7: Big-picture connection
+Byte streams are great for non-text data.
+But when we deal with text, Java gives us something better…
+Before we switch, quick check 
+One question:
+Why do you think byte streams are not ideal for reading text files?
+Good for non text data.
+Yes — that’s the key idea 
+Byte streams are good for non-text data, but not ideal for text.
+
+Example
+=======
+Read an image file as bytes (images are non-text, so we use byte streams).
+Example (Byte Stream – reading an image)
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class ReadImage {
+    public static void main(String[] args) throws IOException {
+
+        FileInputStream fis = new FileInputStream("photo.jpg");
+
+        int byteData;
+        while ((byteData = fis.read()) != -1) {
+            // each byte of the image is read here
+        }
+
+        fis.close();
+    }
+}
+
+Code Explanation
+================
+What’s happening (conceptual)
+•	FileInputStream → opens the image file
+•	read() → reads one byte at a time
+•	-1 → means end of file
+•	We don’t interpret the data as characters (very important!)
+Step 1: What does read() return?
+In this line from Example 1:
+byteData = fis.read();
+ read() returns an int, not a byte.
+________________________________________
+Step 2: Why not return byte?
+Because read() needs to return two kinds of values:
+1.	Actual byte data → values from 0 to 255
+2.	End of file signal → -1
+A byte in Java can only store:
+-128 to 127
+So -1 would clash with real data ❌
+________________________________________
+Step 3: Why int byteData is needed
+An int can safely hold:
+•	0–255 → valid byte data
+•	-1 → end of file
+That’s why we write:
+int byteData;
+and check:
+while ((byteData = fis.read()) != -1)
+________________________________________
+Step 4: Simple memory trick 🧠
+Byte stream reads bytes, but returns int to signal EOF
+
+Example (Byte Stream – reading an image and displaying)
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.awt.*;
+import java.awt.image.*;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Step 1: Open FileInputStream
+            FileInputStream fis = new FileInputStream("photo.jpg");
+
+            // Step 2: Read bytes into a BufferedImage
+            BufferedImage image = ImageIO.read(fis); // converts bytes to image
+            fis.close(); // close the stream
+
+            // Step 3: Display the image in a JFrame
+            JFrame frame = new JFrame("Display Image");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JLabel label = new JLabel(new ImageIcon(image));
+            frame.getContentPane().add(label, BorderLayout.CENTER);
+
+            frame.pack(); // fit window to image
+            frame.setVisible(true);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+Output
+=====
+ 
+
+Example, Read Image and display on monitor
+Important idea first:
+To display an image, Java must understand the image format (PNG/JPG).
+So we still read bytes, but we let Java decode them for us.
+________________________________________
+Step 1: Key classes involved
+•	File → points to the image file
+•	ImageIO → reads image bytes and converts them
+•	BufferedImage → stores the image in memory
+•	JFrame + JLabel → shows the image on the screen
+________________________________________
+Step 2: Example – Read image and display it
+import java.awt.Image;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+
+public class DisplayImage {
+    public static void main(String[] args) throws Exception {
+
+        // Read image from file (byte-based internally)
+        BufferedImage img = ImageIO.read(new File("photo.jpg"));
+
+        // Put image into a label
+        JLabel label = new JLabel(new ImageIcon(img));
+
+        // Create window
+        JFrame frame = new JFrame("Image Display");
+        frame.add(label);
+        frame.setSize(img.getWidth(), img.getHeight());
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
+________________________________________
+Step 3: Connect back to byte streams (important!)
+•	Images are non-text data
+•	Internally, ImageIO.read() uses byte streams
+•	We do NOT use Reader / Writer here ❌
+Code Explanation
+==============
+1.	java.awt.Image
+What it is:
+•	An abstract representation of an image
+•	Part of AWT (older GUI toolkit)
+What it does:
+•	Holds image data in memory
+•	Can be drawn, scaled, or processed
+•	Does not display itself
+Think of it as:
+“I am the image data, but I don’t know how to show myself.”
+Example concept (no deep code):
+Image img;
+________________________________________
+2.	javax.swing.ImageIcon
+What it is:
+•	A Swing helper class that wraps an image
+•	Used to display images in Swing components
+What it does:
+•	Takes an Image (or image file)
+•	Makes it displayable in:
+o	JLabel
+o	JButton
+o	etc.
+Think of it as:
+“I package the image so Swing can show it.”
+Example concept:
+ImageIcon icon = new ImageIcon(img);
+________________________________________
+3.	How they work together (important!)
+In the display example you saw:
+1.	ImageIO.read()
+→ reads image bytes and returns a BufferedImage
+2.	BufferedImage
+→ is-a Image
+3.	ImageIcon
+→ wraps the Image
+4.	JLabel
+→ displays the ImageIcon on screen
+Flow (exam-friendly):
+ImageIO → BufferedImage → Image → ImageIcon → JLabel
+________________________________________
+4.	Key comparison (remember this!)
+Class	Purpose
+Image	                      Represents image data
+ImageIcon	                       Displays image in Swing
+  
+
+Character Stream Classes
+=====================
+Character stream classes are used in text data files. The content in a text data file are readable by humans. 
+Important Points
+Operation	       Classes / Methods Used	Notes
+Create file	   File.createNewFile()	Returns true if file is created
+Write file	   FileWriter, BufferedWriter	Use close() to save changes
+Read file	FileReader, BufferedReader, Scanner	Read line by line or character by character
+Delete file	   File.delete()	Returns true if deletion successful
+Check existence	   File.exists()	Returns true if file exists
+
+ Why Java created Character Stream Classes
+Text isn’t just bytes — it has:
+•	characters
+•	encodings (Unicode, UTF-8, etc.)
+
+So Java introduced character streams to handle text correctly.
+The foundation of character streams
+Just like byte streams had two parents, character streams also have two abstract parent classes:
+•	Reader → reads characters
+•	Writer → writes characters
+Think of it as:
+InputStream  → bytes
+Reader       → characters
+Important character stream subclasses
+Here are the main ones you should remember:
+Readers
+•	FileReader → reads characters from a file
+•	BufferedReader → reads efficiently + readLine()
+Writers
+•	FileWriter → writes characters to a file
+•	BufferedWriter → writes efficiently
+
+Packages for File Handling
+In Java, file operations are mostly in the java.io and java.nio.file packages:
+•	java.io.File → to represent files and directories
+•	java.io.FileReader / FileWriter → to read/write text files
+•	java.io.BufferedReader / BufferedWriter → efficient reading/writing
+•	java.nio.file.Files → newer API for reading/writing files
+•	java.nio.file.Paths → represents file paths
+________________________________________
+Basic File Operations
+a) Creating a file
+import java.io.File;
+import java.io.IOException;
+
+public class FileExample {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+            if (file.createNewFile()) {
+                System.out.println("File created: " + file.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+________________________________________
+b) Writing to a file
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteFileExample {
+    public static void main(String[] args) {
+        try {
+            FileWriter writer = new FileWriter("example.txt");
+            writer.write("Hello, Java File Handling!\n");
+            writer.write("This is a second line.");
+            writer.close(); // always close to save
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+________________________________________
+c) Reading from a file
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ReadFileExample {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+            Scanner reader = new Scanner(file);
+            while (reader.hasNextLine()) {
+                String line = reader.nextLine();
+                System.out.println(line);
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+________________________________________
+d) Deleting a file
+File file = new File("example.txt");
+if (file.delete()) {
+    System.out.println("Deleted the file: " + file.getName());
+} else {
+    System.out.println("Failed to delete the file.");
+}
+
+e) Buffered Writer
+BufferedWriter is used to wrap another Writer (like FileWriter) and buffer the data, making writes more efficient.
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BufferedWriterExample {
+    public static void main(String[] args) {
+        String fileName = "output.txt";
+
+        // Using try-with-resources to automatically close the writer
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
+
+            // Write text lines
+            bw.write("Hello, world!");
+            bw.newLine();  // adds a newline
+            bw.write("This is a BufferedWriter example.");
+            bw.newLine();
+            bw.write("It writes text efficiently to a file.");
+
+            System.out.println("Data written successfully!");
+
+        } catch (IOException e) {
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
+    }
+}
+
+
+e) Buffered Reader
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BufferedReaderExample {
+    public static void main(String[] args) {
+        String fileName = "input.txt";
+
+        // Using try-with-resources to automatically close the reader
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            
+            String line;
+            // Read file line by line
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error reading the file: " + e.getMessage());
+        }
+    }
+}
+________________________________________
+
+Random Access File
+===============
+
+Sequential access files (text & binary)
+✅ Write sequentially
+✅ Read sequentially
+❌ Random (direct) reading not possible
+You must start at the beginning and move forward record by record.
+➡️ So:
+Write sequentially and read sequentially in sequential access files ✔️
+________________________________________
+Random access files
+✅ Write sequentially (if you don’t move the file pointer)
+✅ Read sequentially
+✅ Read randomly using seek()
+✅ Write randomly using seek()
+Example:
+RandomAccessFile raf = new RandomAccessFile("data.dat", "rw");
+
+// sequential write
+raf.writeInt(10);
+raf.writeInt(20);
+
+// random read
+raf.seek(0);
+int x = raf.readInt();
+➡️ So:
+Write sequentially and read randomly in random access files ✔️
+(but remember: random writing is also possible)
+________________________________________
+Final corrected statement (exam-perfect)
+Sequential access files allow only sequential reading and writing, whereas random access files allow both sequential and random reading and writing.
+
+A Random Access File (RAF) allows you to:
+•	Read and write data in a file
+•	Jump to any position in the file (random access)
+Unlike FileInputStream or FileReader which read sequentially (start → end), RAF lets you go directly to a specific byte or record.
+________________________________________
+Key Class
+java.io.RandomAccessFile
+Constructor syntax:
+RandomAccessFile raf = new RandomAccessFile("file.txt", "mode");
+•	"r" → read only
+•	"rw" → read and write
+________________________________________
+Important Methods
+Method	What it does
+read()	Reads next byte
+readLine()	Reads next line
+write()	Writes bytes
+seek(long pos)	Moves file pointer to pos
+getFilePointer()	Returns current pointer position
+length()	Returns file size in bytes
+Tip: seek() is what makes it “random access.”
+________________________________________
+Concept Example (Pseudo-code)
+RandomAccessFile raf = new RandomAccessFile("data.txt", "rw");
+
+// Move to byte 50
+raf.seek(50);
+
+// Read a line from there
+String s = raf.readLine();
+
+// Move to end of file and write
+raf.seek(raf.length());
+raf.writeBytes("Hello!");
+Key idea: You can jump anywhere, read or write, without touching other data.
+Reading and Writing Objects
+=======================
+1.	Big Idea
+Normally, Java files store bytes or text. But sometimes, you want to store entire objects (with their fields and state) in a file and read them back later.
+This is called serialization (writing objects) and deserialization (reading objects).
+________________________________________
+2.	Key Classes
+•	ObjectOutputStream → writes objects to a file
+•	ObjectInputStream → reads objects from a file
+•	FileOutputStream / FileInputStream → used internally for actual file writing
+Important: The object class must implement:
+java.io.Serializable
+________________________________________
+3.	How it Works (Conceptually)
+1.	Serialization: Java converts an object into bytes → stores in file
+2.	Deserialization: Java reads bytes → reconstructs the object
+Think of it as saving and loading a game state.
+________________________________________ 
+4.	Example Concept (Full working example)    
+
+import java.io.*;
+
+class Student implements Serializable {
+private static final long serialVersionUID = 1L;  	// serialVersionUID is a version number for a 
+// Serializable class. UID – Unique Identifier
+
+    int id;
+    String name;
+
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+        Student studentObject = new Student(1, "Alice");
+
+        // Writing object
+        FileOutputStream fos = new FileOutputStream("student.dat");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+        oos.writeObject(studentObject);
+        oos.close();
+
+        // Reading object
+        FileInputStream fis = new FileInputStream("student.dat");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        Student s = (Student) ois.readObject();
+        ois.close();
+
+        System.out.println(s.id + " " + s.name);
+    }
+}
+
+Output
+=====
+ 
+Key points:
+•	Cast is required when reading objects
+•	Only fields of Serializable objects are saved
+•	Transient fields (if any) are not saved
+
+
+Very Important Notes:
+Package: import java.io
+Classes	Methods
+Binary Data File and Object Serialization
+FileOutputStream	getBytes(), write() 
+FileInputStream	read()
+DataOutputStream	writeInt(), writeDouble(), writeBoolean()
+DataInputStream	readInt(), readDouble(), readBoolean()
+ObjectOutputStream	writeObject()
+ObjectInputStream	readObject()
+Text Data File
+File	createNewFile(), delete()
+FileWriter	write()
+FileReader	read()
+PrintWriter	println(), print(), printf()
+BufferedWriter	write()
+BufferedReader	read()
+Random Access File
+RandomAccessFile	write(), read(), seek(), getFilePointer(), length()
+
+
+
 
