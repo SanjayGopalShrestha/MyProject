@@ -171,6 +171,8 @@ Interface Modifiers
 Interface - package-private (default), public
 Elements of Class - package-private (default), private, protected, public
 
+List of Packages
+=============
 import java.lang.*;
 import java.util.*;
 import java.time.*;
@@ -179,23 +181,17 @@ import java.net.*;
 import java.sql.*;
 import java.awt.*;
 import javax.swing.*;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.application.*;
+import javafx.scene.*;
+import javafx.stage.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.layout.Region;
-import javafx.event.Event;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.DriverManager;
-//import java.io.File; 
-import javafx.stage.FileChooser;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import javafx.event.*;
+import java.sql.*;
+import javafx.stage.*;
+import java.rmi.*;
 import org.omg.CORBA.*;
 import org.omg.PortableServer.*;	//POA, POAHelper
-import java.util.Properties;
 
 
 interface Polygon
