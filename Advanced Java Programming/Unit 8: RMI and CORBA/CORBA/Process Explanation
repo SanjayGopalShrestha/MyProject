@@ -43,6 +43,12 @@ HelloPOA.java
 HelloPOATie.java
 */ 
 
+idl File
+========
+
+1. Hello.idl
+============
+
 module HelloApp {
     interface Hello {
         string sayHello();
@@ -52,9 +58,9 @@ module HelloApp {
 
 //Defines a single remote method.
 
-  
-2. Generate Java Stubs
-======================
+/*  
+Generate Java Stubs
+===================
 
 File						Type					Purpose
 ========================================================================
@@ -65,13 +71,13 @@ HelloHolder.java			Class					OUT/INOUT wrapper
 HelloOperations.java		Interface				Method definitions
 HelloPOA.java				Abstract Class			Server skeleton
 HelloPOATie.java			Class					Tie adapter
+*/
 
+Server Implementation
+=====================
 
-3. Server Implementation
-========================
-
-HelloImpl.java
-==============
+2. HelloImpl.java
+=================
 
 import HelloApp.*;
 
@@ -82,8 +88,11 @@ public class HelloImpl extends HelloPOA {
 }
 
 
-Server.java
+Server Code
 ===========
+
+3. Server.java
+==============
 
 import org.omg.CORBA.*;
 import org.omg.PortableServer.*;	//POA, POAHelper
@@ -122,11 +131,11 @@ public class Server {
 }
 
 
-4. Client
-=========
-
-Client.java
+Client Code
 ===========
+
+4. Client.java
+==============
 
 import HelloApp.*;
 import org.omg.CORBA.*;
@@ -159,8 +168,7 @@ public class Client {
 }
 
 
-
-
+/*
 import HelloApp.*;
 import org.omg.CORBA.*;
 import org.omg.CosNaming.*;
@@ -175,8 +183,7 @@ public class Client {
         System.out.println(hello.sayHello());
     }
 }
-
-
+*/
 
 5. How to Run
 =============
