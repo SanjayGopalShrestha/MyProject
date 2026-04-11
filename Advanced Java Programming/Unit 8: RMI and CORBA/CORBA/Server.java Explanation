@@ -1,7 +1,7 @@
 3. Server.java
 ==============
 import org.omg.CORBA.*;
-import org.omg.PortableServer.*;	//POA, POAHelper
+import org.omg.PortableServer.*;	//POA, POAHelper 
 import java.util.Properties;
 
 public class Server {
