@@ -119,8 +119,8 @@ through POAs and object references).
 
 That said, you can think of a logical structure around the ORB like this:
 
-🔷 Logical Structure of ORB in CORBA
-
+Logical Structure of ORB in CORBA
+==================================
 Application (Client/Server)
         │
         └── ORB
@@ -136,7 +136,8 @@ Application (Client/Server)
               │
               └── Transport Layer (IIOP, etc.)
 
-🔶 Key Points
+Key Points
+==========
 
 1. ORB is the Root (No Parent)
 ==============================
