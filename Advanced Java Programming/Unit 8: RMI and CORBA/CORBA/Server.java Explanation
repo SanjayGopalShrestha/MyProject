@@ -25,8 +25,9 @@ public class Server {
             
 	        String ior = orb.object_to_string(ref);
 	        System.out.println("IOR: " + ior);
-
-            // Register object with ORB
+			//"ior" stands for Interruptable Object Reference
+            
+			// Register object with ORB
             //rootpoa.activate_object(helloImpl);  //Register is already done, no need here
 
             System.out.println("CORBA Server is running...");
