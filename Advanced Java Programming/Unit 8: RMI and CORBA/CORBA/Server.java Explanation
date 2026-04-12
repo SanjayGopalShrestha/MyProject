@@ -1,7 +1,7 @@
 3. Server.java
 ==============
 import org.omg.CORBA.*;
-import org.omg.PortableServer.*;	//POA, POAHelper 
+import org.omg.PortableServer.*;	//POA, POAHelper
 import java.util.Properties;
 
 public class Server {
@@ -21,9 +21,12 @@ public class Server {
 
             // Create HelloImpl object
             HelloImpl helloImpl = new HelloImpl();  //HelloImpl.java implemented
-			org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);  //Register is already done here
+	        org.omg.CORBA.Object ref = rootpoa.servant_to_reference(helloImpl);  //Register is already done here
             
-			// Register object with ORB
+	        String ior = orb.object_to_string(ref);
+	        System.out.println("IOR: " + ior);
+
+            // Register object with ORB
             //rootpoa.activate_object(helloImpl);  //Register is already done, no need here
 
             System.out.println("CORBA Server is running...");
