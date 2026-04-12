@@ -40,6 +40,117 @@ Server.java Explanation
 =======================
 ✅org.omg.CORBA.*;
 ================
+
+List the classes inside "org.omg.CORBA" package in CORBA Java?
+
+The org.omg.CORBA package in Java (part of the older CORBA support in Java SE, largely deprecated since Java 9 and removed in later versions) contains many core classes and interfaces used for CORBA operations.
+
+Here’s a representative list of key classes and interfaces from org.omg.CORBA:
+
+Core Classes
+============
+Any
+TypeCode
+✅ORB
+Context
+ContextList
+Environment
+ExceptionList
+NVList
+NamedValue
+Policy
+Request
+ServerRequest
+
+Object & Reference Handling
+===========================
+Object (CORBA object interface)
+LocalObject
+ObjectHelper
+ObjectHolder
+
+Exceptions (System Exceptions)
+==============================
+All extend SystemException, including:
+
+UNKNOWN
+BAD_PARAM
+NO_MEMORY
+IMP_LIMIT
+COMM_FAILURE
+INV_OBJREF
+NO_PERMISSION
+INTERNAL
+MARSHAL
+INITIALIZE
+NO_IMPLEMENT
+BAD_TYPECODE
+BAD_OPERATION
+NO_RESOURCES
+NO_RESPONSE
+PERSIST_STORE
+BAD_INV_ORDER
+TRANSIENT
+FREE_MEM
+INV_IDENT
+INV_FLAG
+INTF_REPOS
+BAD_CONTEXT
+OBJ_ADAPTER
+DATA_CONVERSION
+OBJECT_NOT_EXIST
+TRANSACTION_REQUIRED
+TRANSACTION_ROLLEDBACK
+INVALID_TRANSACTION
+
+User Exception Support
+======================
+UserException
+UnknownUserException
+
+Portable Streams
+================
+InputStream
+OutputStream
+
+Holders (used for out/inout parameters)
+=======================================
+Examples:
+=========
+AnyHolder
+BooleanHolder
+CharHolder
+ShortHolder
+IntHolder
+LongHolder
+FloatHolder
+DoubleHolder
+StringHolder
+ObjectHolder
+TypeCodeHolder
+
+Other Utility Interfaces & Classes
+===================================
+ARG_IN
+ARG_OUT
+ARG_INOUT
+CompletionStatus
+DefinitionKind
+IDLType
+StructMember
+UnionMember
+ValueMember
+TCKind
+
+Important Note
+==============
+The org.omg.CORBA package was deprecated in Java 9 and removed in Java 11.
+Modern Java applications typically use alternatives like:
+✅REST APIs
+gRPC
+Messaging systems
+
+
 Why is CORBA in uppercase?
 ==========================
 Just like PortableServer, the name comes from the CORBA specification (OMG IDL).
@@ -68,6 +179,62 @@ org.omg indicates that the package comes from standards defined by the Object Ma
 CORBA is a middleware standard for enabling communication between systems written in different languages.
 In short
 org = organization, just part of the standard naming hierarchy used in Java packages.
+
+
+What "args" is it using in this code "ORB orb = ORB.init(args, props);"?
+========================================================================
+In the statement:
+ORB orb = ORB.init(args, props);
+
+What is args?
+
+args is the command-line arguments passed to your Java program.
+
+It is the same args you see in the main method:
+
+public static void main(String[] args)
+
+Why does CORBA ORB use args?
+============================
+The ORB uses args to extract configuration parameters provided at runtime, especially those related to CORBA 
+setup.
+
+These arguments usually include ORB-specific options, such as:
+
+ORB host
+ORB port
+Initial naming service location
+
+Common CORBA arguments examples
+===============================
+When running a CORBA client/server, you might pass:
+
+java MyClient -ORBInitialHost localhost -ORBInitialPort 1050
+
+So in this case:
+
+args = ["-ORBInitialHost", "localhost", "-ORBInitialPort", "1050"];
+
+The ORB reads these values to configure itself.
+
+What about props?
+================
+Along with args, props is a java.util.Properties object that can also contain configuration:
+
+Properties props = new Properties();
+props.put("org.omg.CORBA.ORBInitialHost", "localhost");
+props.put("org.omg.CORBA.ORBInitialPort", "1050");
+
+So configuration can come from:
+
+args (command-line)
+props (programmatic)
+
+Simple summary
+==============
+args → runtime command-line parameters
+Used by ORB to configure networking and services
+Same args from main(String[] args)
 
 
 ✅import org.omg.PortableServer.*;	//POA, POAHelper
