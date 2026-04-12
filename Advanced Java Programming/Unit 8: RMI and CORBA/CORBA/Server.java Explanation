@@ -38,7 +38,7 @@ public class Server {
 
 Server.java Explanation
 =======================
-org.omg.CORBA.*;
+✅org.omg.CORBA.*;
 ================
 In the Java package name org.omg.CORBA, the parts expand like this:
 org → stands for “organization”
@@ -58,7 +58,7 @@ In short
 org = organization, just part of the standard naming hierarchy used in Java packages.
 
 
-import org.omg.PortableServer.*;	//POA, POAHelper
+✅import org.omg.PortableServer.*;	//POA, POAHelper
 ==============================
 
 What “PortableServer” means
@@ -88,7 +88,7 @@ Important Classes & Interfaces
 ==============================
 Here are some core components:
 
-1. POA
+1. ✅POA
 Central class of the package
 Responsible for:
 Activating objects
@@ -124,12 +124,12 @@ Important Note (Modern Java)
 
 So today, it's mostly:
 - Used in legacy systems
-- Replaced by technologies like:
+- ✅Replaced by technologies like:
     REST APIs
     gRPC
     Web services
 
-import java.util.Properties;
+✅import java.util.Properties;
 ============================
 Properties is part of the java.util package and is designed to:
 Store, read, and write configuration settings as key–value pairs (both stored as strings).
@@ -141,7 +141,7 @@ Specialized for configuration
 Has built-in methods like load() and store()
 
 
-what is ORB and what is its function?
+✅what is ORB and what is its function?
 =====================================
 An ORB (Object Request Broker) is the core component of the CORBA architecture (used by the 
 org.omg.CORBA package in Java). It acts like a middleman that enables communication between 
@@ -214,7 +214,7 @@ ORB orb = ORB.init(args, null);
 
 // Access RootPOA via ORB
 org.omg.CORBA.Object obj =
-    orb.resolve_initial_references("RootPOA");
+    ✅orb.resolve_initial_references("RootPOA");
 
 Important Clarification
 ========================
@@ -313,7 +313,7 @@ rootpoa.the_POAManager().activate();
 
 Step-by-Step Explanation
 ========================
-1. orb.resolve_initial_references("RootPOA")
+1. ✅orb.resolve_initial_references("RootPOA")
 orb = Object Request Broker
 It is the core of CORBA that handles communication between client and server
 
@@ -324,7 +324,7 @@ Think of it as:
 
 “Give me access to the main object manager”
 
-2. POAHelper.narrow(...)
+2. ✅POAHelper.narrow(...)
 - The returned object is generic (Object)
 - narrow() converts it into a POA type, narrow method is used for type-safe casting of generic object references.
 
@@ -370,7 +370,7 @@ Here’s a clear list of the commonly used POA methods, grouped by purpose:
 		destroy(boolean etherealize_objects, boolean wait_for_completion)
 
 2. POA Manager Access
-		the_POAManager()
+		✅the_POAManager()
 
 	Returns the POA manager that controls request processing (activate, hold, discard, etc.)
 
@@ -382,7 +382,7 @@ Here’s a clear list of the commonly used POA methods, grouped by purpose:
 
 4. Reference Creation
 	Convert servants into CORBA object references:
-		servant_to_reference(Servant servant)
+		✅servant_to_reference(Servant servant)
 		servant_to_id(Servant servant)
 		id_to_reference(byte[] id)
 		id_to_servant(byte[] id)
@@ -409,7 +409,7 @@ Here’s a clear list of the commonly used POA methods, grouped by purpose:
 
 8. Request Processing Control
 		Indirectly controlled via POAManager, but relevant:
-		(via POAManager) activate(), hold_requests(), discard_requests(), deactivate()
+		(via POAManager) ✅activate(), hold_requests(), discard_requests(), deactivate()
 
 Key Idea
 		The POA is responsible for:
