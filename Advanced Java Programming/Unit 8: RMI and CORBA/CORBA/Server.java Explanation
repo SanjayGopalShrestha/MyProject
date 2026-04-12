@@ -40,6 +40,18 @@ Server.java Explanation
 =======================
 ✅org.omg.CORBA.*;
 ================
+Why is CORBA in uppercase?
+==========================
+Just like PortableServer, the name comes from the CORBA specification (OMG IDL).
+CORBA = Common Object Request Broker Architecture
+It’s an acronym → so it is written in ALL CAPS
+
+When mapped to Java:
+====================
+The IDL module CORBA becomes a Java package
+The name is preserved → hence uppercase
+
+
 In the Java package name org.omg.CORBA, the parts expand like this:
 org → stands for “organization”
 omg → Object Management Group
