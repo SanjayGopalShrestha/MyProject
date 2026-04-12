@@ -112,6 +112,91 @@ Even though it looks like a class, it's actually a namespace (package).
 	It is capitalized because it comes from CORBA IDL naming conventions
 	Java keeps the original name instead of converting it to lowercase
 
+
+Which are classes and which are interfaces among PortableServer package?
+========================================================================
+
+The org.omg.PortableServer package contains a mix of classes and interfaces. Here’s a clear classification:
+
+Interfaces in PortableServer
+============================
+These define behavior (contracts):
+
+POA
+POAManager
+ServantManager
+ServantActivator
+ServantLocator
+AdapterActivator
+
+These are interfaces because:
+
+They define operations
+Actual behavior is implemented by the ORB or your code
+
+Classes in PortableServer
+=========================
+These provide implementations or utility support:
+
+✅ Core Classes
+		Servant
+		DynamicImplementation
+
+✅ Helper / Utility Classes
+		POAHelper
+		POAManagerHelper
+		ServantHelper
+		ServantActivatorHelper
+		ServantLocatorHelper
+		AdapterActivatorHelper
+
+✅ Holder Classes (used for out/inout parameters)
+		POAHolder
+		POAManagerHolder
+		ServantLocatorHolder
+		ServantActivatorHolder
+		AdapterActivatorHolder
+
+Key Understanding:
+
+Interfaces
+==========
+Used to:
+
+Define CORBA object behavior
+Be implemented or used by the ORB
+
+Example:
+POA rootPOA; // interface reference
+
+Classes
+=======
+Used to:
+
+Provide base implementations (Servant)
+Assist with narrowing (POAHelper)
+Handle parameter passing (Holder classes)
+
+Most Important for Exams
+========================
+Focus on:
+Interfaces:
+==========
+POA
+POAManager
+ServantManager
+
+Classes:
+========
+Servant
+POAHelper
+
+Simple Memory Trick
+===================
+“Manager & Adapter = Interfaces”
+“Helper & Holder = Classes”
+
+
 What “PortableServer” means
 ===========================
 “Portable” means:
