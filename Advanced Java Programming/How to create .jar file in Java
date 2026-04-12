@@ -1,0 +1,99 @@
+How .jar files are created in Java?
+===================================
+
+A .jar (Java ARchive) file is basically a compressed package (like a ZIP) that bundles compiled Java classes, resources, and metadata into one file for easy distribution and execution.
+
+Here’s how .jar files are created step by step:
+
+1. Write and Compile Java Code
+===============================
+First, you write your Java program:
+
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello, JAR!");
+    }
+}
+
+Then compile it using the Java compiler:
+
+javac Hello.java
+
+This generates:
+
+Hello.class
+
+2. Create the JAR File
+======================
+Use the jar tool (comes with the JDK):
+
+jar cf hello.jar Hello.class
+c → create
+f → file name
+
+Now you have:
+
+hello.jar
+
+3. (Optional) Make It Executable
+================================
+To run a JAR directly, you need a manifest file specifying the main class.
+
+Create manifest.txt:
+Main-Class: Hello
+
+(Important: leave a newline at the end)
+
+Create JAR with manifest:
+=========================
+jar cfm hello.jar manifest.txt Hello.class
+
+4. Run the JAR File
+===================
+java -jar hello.jar
+
+Output:
+
+Hello, JAR!
+
+5. What’s Inside a JAR?
+=======================
+A .jar file contains:
+
+.class files (compiled code)
+Resources (images, configs, etc.)
+META-INF/MANIFEST.MF (metadata)
+
+You can inspect it with:
+
+jar tf hello.jar
+
+6. Real-World Build Tools
+=========================
+In practice, developers rarely create JARs manually. Tools automate it:
+
+Maven
+Gradle
+
+Example (Maven):
+
+mvn package
+
+Example (Gradle):
+
+gradle build
+
+These tools:
+
+Compile code
+Run tests
+Package .jar
+Manage dependencies
+
+7. Types of JARs
+================
+Simple JAR → only your classes
+
+
+Executable JAR → has Main-Class
+Fat JAR (Uber JAR) → includes dependencies
