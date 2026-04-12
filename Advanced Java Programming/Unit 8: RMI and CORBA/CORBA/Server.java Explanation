@@ -325,8 +325,8 @@ Think of it as:
 “Give me access to the main object manager”
 
 2. POAHelper.narrow(...)
-The returned object is generic (Object)
-narrow() converts it into a POA type
+- The returned object is generic (Object)
+- narrow() converts it into a POA type, narrow method is used for type-safe casting of generic object references.
 
 Similar to:
 (TypeCasting)
@@ -355,11 +355,12 @@ After activation:
 Server starts responding
 Simple Analogy
 =============
-Code Part	Real-Life Meaning
-ORB	Post office system 
-POA	Mail handling office
-POA Manager	Office manager
-activate()	“Start working” signal
+Code Part			Real-Life Meaning
+=========			=================
+ORB					Post office system 
+POA					Mail handling office
+POA Manager			Office manager
+activate()			“Start working” signal
 
 In One Line
 ===========
