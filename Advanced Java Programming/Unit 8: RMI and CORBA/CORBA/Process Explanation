@@ -120,6 +120,8 @@ public class Server {
 	    	String ior = orb.object_to_string(ref);
 	    	System.out.println("IOR: " + ior);
 			//IOR = Interoperable Object Reference
+			//An IOR (Interoperable Object Reference) is:
+			//A string that uniquely identifies a CORBA object and allows a client to connect to it.
 
             // Register object with ORB
             //rootpoa.activate_object(helloImpl);  //Register is already done, no need here
