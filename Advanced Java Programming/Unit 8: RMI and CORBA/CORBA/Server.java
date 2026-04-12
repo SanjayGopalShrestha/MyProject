@@ -23,7 +23,8 @@ public class Server {
             
 	    	String ior = orb.object_to_string(ref);
 	    	System.out.println("IOR: " + ior);
-
+			//IOR = Interoperable Object Reference
+			
             // Register object with ORB
             //rootpoa.activate_object(helloImpl);  //Register is already done, no need here
 
