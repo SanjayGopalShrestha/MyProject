@@ -61,6 +61,57 @@ org = organization, just part of the standard naming hierarchy used in Java pack
 ✅import org.omg.PortableServer.*;	//POA, POAHelper
 ==============================
 
+What is PortableServer?
+
+In this import:
+import org.omg.PortableServer.*;
+
+PortableServer is a package, not a class.
+
+Why is it written in Capital Letters?
+In Java:
+Packages are usually lowercase (e.g., java.util, org.omg)
+Classes are uppercase (e.g., String, System)
+
+But CORBA (OMG standard) does not strictly follow typical Java naming conventions.
+
+The name PortableServer comes from the CORBA specification, where:
+
+It represents a module (in IDL – Interface Definition Language)
+When mapped to Java, that module becomes a package
+The original name is preserved → hence PascalCase (Capitalized)
+
+What’s inside PortableServer?
+=============================
+The package contains important classes/interfaces like:
+
+POA
+POAHelper
+POAManager
+Servant
+ServantManager
+AdapterActivator
+
+Example usage:
+==============
+POA rootPOA = POAHelper.narrow(
+    orb.resolve_initial_references("RootPOA")
+);
+
+Analogy
+
+Think of it like:
+
+CORBA IDL module → PortableServer
+Java package → PortableServer (same name preserved)
+
+Even though it looks like a class, it's actually a namespace (package).
+
+✅ Final Answer
+	PortableServer is a package
+	It is capitalized because it comes from CORBA IDL naming conventions
+	Java keeps the original name instead of converting it to lowercase
+
 What “PortableServer” means
 ===========================
 “Portable” means:
