@@ -31,6 +31,89 @@ public class Client {
 
 Code Explanation
 ================
+List the methods of ORB?
+
+In CORBA, the ORB (Object Request Broker) is the core component that enables communication between clients and distributed objects. It provides several methods for initialization, object reference handling, and request processing.
+
+Here’s a clear list of the commonly used ORB methods, grouped for easier understanding:
+
+1. ORB Initialization
+	Used to start the ORB:
+
+	init()
+	✅init(String[] args, Properties props)
+
+	Initializes the ORB instance.
+
+2. Initial References
+	Used to obtain references to core CORBA services:
+
+	resolve_initial_references(String name)
+	list_initial_services()
+
+	Example: "RootPOA", "NameService"
+
+3. Object String Conversion
+	Convert object references to/from strings:
+	object_to_string(org.omg.CORBA.Object obj)
+	✅string_to_object(String str)
+
+	Useful for storing/transferring object references.
+
+4. Dynamic Invocation Support
+	create_list(int count)
+	create_named_value(String name, Any value, int flags)
+	create_exception_list()
+	create_context_list()
+	get_default_context()
+
+5. Any Type Handling
+	Methods to work with CORBA’s universal container type (Any):
+	create_any()
+
+6. TypeCode Creation
+	Used for describing data types dynamically:
+		get_primitive_tc(TCKind kind)
+		create_struct_tc(...)
+		create_union_tc(...)
+		create_enum_tc(...)
+		create_alias_tc(...)
+		create_exception_tc(...)
+		create_interface_tc(...)
+		create_string_tc(int bound)
+		create_sequence_tc(int bound, TypeCode element_type)
+		create_array_tc(int length, TypeCode element_type)
+
+7. Request Processing
+	Control ORB event loop:
+		run()
+		shutdown(boolean wait_for_completion)
+		work_pending()
+		perform_work()
+
+8. Policy & Environment
+		get_service_information(short service_type, ServiceInformationHolder info)
+		create_policy(int type, Any val)
+ 
+Key Idea
+========
+The ORB is responsible for:
+	Initializing CORBA environment
+	Locating objects
+	Converting object references
+	Handling requests and communication
+
+✅ Most Important Methods (for exams/interviews)
+	Focus on these:
+		init()
+		resolve_initial_references()
+		object_to_string()
+		string_to_object()
+		run()
+		shutdown()
+
+
+
 // Using corbaloc (no naming service)
 org.omg.CORBA.Object obj = orb.string_to_object(
     "corbaloc:iiop:localhost:1050/Hello"
