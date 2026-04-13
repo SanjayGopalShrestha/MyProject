@@ -76,11 +76,13 @@ Client App                         Servant (HelloImpl)
     POA (Portable Object Adapter) → Manages server objects
     ORB → Core communication engine
 
-
-
 6. Key Advantages
 =================
     Language-independent (IDL-based)
     Platform-independent
     Supports distributed systems
+
+
+
+
 
