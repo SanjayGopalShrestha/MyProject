@@ -1,0 +1,104 @@
+Architecture of RMI?
+====================
+    The architecture of Java RMI (Remote Method Invocation) describes how Java objects in different JVMs communicate over a network as if they were local.
+
+RMI Architecture (Java)
+=======================
+1. Core Idea
+============
+    RMI allows a client to invoke methods on a remote object running in another JVM.
+
+2. Main Components
+==================
+
+Client Side
+===========
+    Client Application
+    Calls methods on remote objects.
+    Stub (Proxy)
+    Acts as a local representative of the remote object.
+    Converts method calls into network requests.
+    RMI Runtime (Client)
+    Handles communication and object serialization.
+
+Server Side
+===========
+    Skeleton (older versions) / RMI Runtime
+    Receives requests and dispatches them to the implementation.
+    (In modern Java, skeletons are no longer explicitly used.)
+    Remote Object (Implementation Class)
+    Implements the remote interface.
+    Example: HelloImpl
+    RMI Runtime (Server)
+    Handles incoming requests and responses.
+
+Shared Components
+=================
+    Remote Interface
+    Defines methods that can be called remotely.
+    Must extend java.rmi.Remote.
+    RMI Registry
+    A naming service where remote objects are registered.
+    Clients look up objects using a name.
+
+3. Communication Flow
+=====================
+    Server creates remote object and registers it in RMI Registry
+    Client looks up object from registry
+    Registry returns stub to client
+    Client invokes method on stub
+    Stub sends request to RMI runtime
+    Request reaches server JVM
+    Server runtime calls actual method on remote object
+    Result is returned back to client
+
+4. Simple Diagram (Conceptual)
+==============================
+Client Side                          Server Side
+-------------                       ----------------
+Client App                          Remote Object
+     |                                   ^
+     v                                   |
+    Stub --------------------------> RMI Runtime
+     |                                   ^
+     v                                   |
+ RMI Runtime  <-------------------->  RMI Runtime
+                  Network
+           RMI Registry (Naming Service)
+
+5. Key Features
+===============
+    Uses Java-to-Java communication only
+    Uses serialization to pass objects
+    Built on top of TCP/IP
+    Supports passing objects as parameters
+
+6. Important Classes / Interfaces
+=================================
+    java.rmi.Remote
+    java.rmi.server.UnicastRemoteObject
+    java.rmi.Naming
+    rmiregistry
+
+7. Advantages
+=============
+    Simple to use for Java developers
+    Object-oriented communication
+    Built-in security and serialization
+
+8. CORBA vs RMI (Quick Insight)
+===============================
+    Feature	                RMI	                  CORBA
+    Language	              Java only	            Multi-language
+    Interface	              Java interface	      IDL
+    Protocol	              JRMP	                IIOP
+    Complexity	            Simpler	              More complex
+
+Note: 
+====
+JRMP: Java Remote Method Protocol
+IIOP: Internet Inter-ORB Protocol
+
+
+
+
