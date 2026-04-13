@@ -88,11 +88,12 @@ Client App                          Remote Object
 
 8. CORBA vs RMI (Quick Insight)
 ===============================
-    Feature	                RMI	                  CORBA
-    Language	              Java only	            Multi-language
-    Interface	              Java interface	      IDL
-    Protocol	              JRMP	                IIOP
-    Complexity	            Simpler	              More complex
+    Feature	                RMI	                      CORBA
+    ===============================================================
+    Language	            Java only	              Multi-language
+    Interface	            Java interface	          IDL
+    Protocol	            JRMP	                  IIOP
+    Complexity	            Simpler	                  More complex
 
 Note: 
 ====
