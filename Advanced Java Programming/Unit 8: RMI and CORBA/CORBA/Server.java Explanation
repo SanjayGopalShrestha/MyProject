@@ -56,13 +56,39 @@ Core Classes
 Any
 TypeCode
 ✅ORB
-Context
-ContextList
-Environment
-ExceptionList
-NVList
-NamedValue
-Policy
+			List the methods inside ORB class?
+			==================================
+					
+			Initialization Methods
+			======================							
+			static ORB init(String[] args, java.util.Properties props)
+			👉Used to start and configure the ORB.
+
+			Object Conversion Methods
+			=========================
+			String object_to_string(Object obj)
+			Object string_to_object(String str)
+			👉 Convert CORBA object references to/from strings.
+
+			Request / Invocation Methods
+			============================
+			Request get_default_context()
+			Request create_request(...)
+			👉 Used for dynamic method invocation.
+
+			Service Methods
+			===============
+			Object resolve_initial_references(String name)
+			👉 Access CORBA services like Naming Service.
+
+			ORB Lifecycle Methods
+			=====================			
+			void connect(Object obj) (deprecated)
+			void disconnect(Object obj) (deprecated)
+			void run()
+			void shutdown(boolean wait_for_completion)
+
+
 Request
 ServerRequest
 
