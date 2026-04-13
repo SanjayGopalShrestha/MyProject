@@ -1,0 +1,84 @@
+Architcture of CORBA Java?
+=========================
+
+The architecture of CORBA in Java explains how distributed objects communicate across networks using the Object Request Broker (ORB). Here’s a clear breakdown of the main components and how they interact.
+
+CORBA Java Architecture
+========================
+1. Core Idea: ORB (Object Request Broker)
+=========================================
+    The ORB is the middleware that handles communication between client and server objects.
+    It lets a client call methods on remote objects as if they were local.
+
+2. Main Components
+==================
+    Client Side
+    ===========
+    Client Application
+    Calls methods on remote CORBA objects.
+    Stub (Client Proxy)
+    Generated from IDL.
+    Converts method calls into a format the ORB can send.
+    ORB (Client Side)
+    Sends the request to the server.
+
+    Server Side
+    ===========
+    Skeleton (Server-side proxy)
+    Also generated from IDL (e.g., HelloPOA).
+    Receives requests and calls actual implementation.
+    Servant (Implementation Class)
+    Your class (e.g., HelloImpl.java) that implements methods.
+    ORB (Server Side)
+    Receives requests and routes them to the servant.
+ 
+    Shared Components
+    =================
+    IDL (Interface Definition Language)
+    Language-neutral interface definition (e.g., Hello.idl).
+    IDL Compiler (idlj)
+    Generates Java bindings (stubs & skeletons).
+    Object Adapter (POA – Portable Object Adapter)
+    Connects ORB with servant objects.
+    Handles object lifecycle, activation, and request dispatching.
+    Naming Service
+    Allows clients to find server objects by name.
+
+3. Communication Flow
+======================
+    Client calls method on stub
+    Stub sends request to client ORB
+    ORB transmits request over network
+    Server ORB receives request
+    Request goes to POA
+    POA forwards to skeleton
+    Skeleton invokes method on servant (HelloImpl)
+    Result is sent back the same path
+
+4. Simple Diagram (Conceptual)
+==============================
+Client Side                         Server Side
+-------------                      ----------------
+Client App                         Servant (HelloImpl)
+     |                                   ^
+     v                                   |
+   Stub  ------------------------>   Skeleton (HelloPOA)
+     |                                   ^
+     v                                   |
+   ORB  <------------------------>      ORB
+                  Network
+                  (IIOP)
+           POA + Naming Service
+
+5. Key Technologies
+===================
+    IIOP (Internet Inter-ORB Protocol) → Communication protocol used by CORBA
+    POA (Portable Object Adapter) → Manages server objects
+    ORB → Core communication engine
+
+6. Key Advantages
+=================
+    Language-independent (IDL-based)
+    Platform-independent
+    Supports distributed systems
+
