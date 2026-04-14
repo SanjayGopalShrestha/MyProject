@@ -1,28 +1,27 @@
 /*
-- Save Hello.idl in e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\Hello.idl
-- idl Hello.idl (creates HelloApp module in bin folder and .java files - stub, skeleton, helper etc. in HelloApp module (folder, package))
-- create HelloImpl.java (compile and run with full -cp, creates HelloImpl.class) in "\bin" folder
-- Run NameServer (in new cmd):
-E:\jtest>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" org.jacorb.naming.NameServer -DOAPort=1050
-- compile all .java files in HelloApp module (javac *.java)
-- It will create the .class files of all .java files in HelloApp
-- Copy all .class files in "\bin" folder from HelloApp
-- Create Server progrm in \bin folder (eg: Server.java)
-- Now compile Sever program with full -cp (in new cmd)
-E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server.java
+- Download "jacorb-3.9-binary.zip" (https://www.jacorb.org/download.html) and extract it in a folder, eg: e:\jtest\CORBAProject\jacorb\jacorb-3.9
+- Also download required .jar files (glassfish-corba-csiv2-idl-4.2.1.jar, glassfish-corba-internal-api-4.2.1.jar,
+  glassfish-corba-omgapi-4.2.1.jar, glassfish-corba-orb-4.2.1.jar, pfl-basic-4.1.2.jar) and save it in a 
+  separate folder like - "E:\jtest\CORBAProject\corba_lib" 
+- Create and Save Hello.idl in e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\Hello.idl (Hello.idl program is below given)
+- To Run: Type "e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\idl Hello.idl" (creates HelloApp module in bin 
+  folder and .java files like - stub, skeleton, helper etc. in HelloApp module (folder, package))
+- Now change directory to "HelloApp" in "bin" folder and run all .java file in "HelloApp". 
+  "e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\HelloApp>javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" *.java
+- It will create the .class files for all .java files in "HelloApp" folder
+- Now change directory to "bin" folder 
+- create HelloImpl.java (program given below, compile and run with full -cp, creates HelloImpl.class) in "\bin" folder
+- Run NameServer (in new cmd), It is optional (required only if you are using Name Service)
+  To run Name Server in new cmd: Type - e:\jtest\CORBAProject\jacorb\jacorb-3.9\bin\>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" org.jacorb.naming.NameServer -DOAPort=1050
+- Create Server progrm in \bin folder (eg: Server.java, given below)
+- Now compile Sever.java program with full -cp (in new cmd)
+  E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server.java
 - Now run Server program with full -cp 
-E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
-- It will successfully run and gives an output: 
-WARNING Warning - unknown codeset (Cp1252) - defaulting to ISO-8859-1
-WARNING Warning - unknown codeset (Cp1252) - defaulting to ISO-8859-1
-INFO Initialising ORB with ID:
-INFO InterceptorManager started with 0 Server Interceptors, 0 Client Interceptors and 1 IOR Interceptors
-INFO oid: 00 01 16 15 4B 1E 41 15 24 22 10 06 30 46 38 14 14 1B 48 4C ....K.A.$"..0F8...HL1B                                                          .object is activated
-CORBA Server is running...
+  E:\jtest\CORBAProject\jacorb\jacorb-3.0\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
+- It will successfully run (output is shown in output file) 
 - Create Client Program in \bin folder (eg: Client.java)
-- Move Hello.class and HelloHelper.class to HelloApp module
-- Compile it with full -cp
-- Run it with full -cp
+- Compile it with full -cp (in new cmd)
+- Run it with full -cp (it will connect to Server.java and gets message from server and displays, out is shown in output file)
 
 1. IDL File
 ===========
@@ -43,11 +42,11 @@ HelloPOA.java
 HelloPOATie.java
 */ 
 
-idl File
-========
+/* idl File
+   ========  */
 
-1. Hello.idl
-============
+/* 1. Hello.idl
+   ============ */
 
 module HelloApp {
     interface Hello {
@@ -73,11 +72,11 @@ HelloPOA.java				Abstract Class			Server skeleton
 HelloPOATie.java			Class					Tie adapter
 */
 
-Server Implementation
-=====================
+/* Server Implementation
+   ===================== */
 
-2. HelloImpl.java
-=================
+/* 2. HelloImpl.java
+   ================= */
 
 import HelloApp.*;
 
@@ -88,11 +87,11 @@ public class HelloImpl extends HelloPOA {
 }
 
 
-Server Code
-===========
+/* Server Code
+   =========== */
 
-3. Server.java
-==============
+/* 3. Server.java
+   ============== */
 
 import org.omg.CORBA.*;
 import org.omg.PortableServer.*;	//POA, POAHelper
@@ -137,11 +136,11 @@ public class Server {
 }
 
 
-Client Code
-===========
+/* Client Code
+   =========== */
 
-4. Client.java
-==============
+/* 4. Client.java
+   ============== */
 
 import HelloApp.*;
 import org.omg.CORBA.*;
@@ -201,6 +200,7 @@ public class Client {
 }
 */
 
+/*
 5. How to Run
 =============
 Start Name Service:
@@ -209,24 +209,20 @@ Start Name Service:
 //For JDK 11.0
 E:\jtest>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" org.jacorb.naming.NameServer -DOAPort=1050
 
-Compile all Java files:
-javac *.java
-
-Run the Server:
+Run the Server (new terminal(cmd)):
 //java Server -ORBInitialPort 1050 (For JDK 8.0)
 
 //For JDK 11.0
 E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
 
-Run the Client (new terminal):
+Run the Client (new terminal(cmd)):
 //java Client -ORBInitialPort 1050 (JDK 8.0)
 
 //For JDK 11.0
 E:\jtest\CORBAProject\jacorb\jacorb-3.9\bin>java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Client
 
 Output:
-Hello CORBA!
-
+Server says: Hello CORBA!
 
 Most Simplest
 =============
@@ -249,7 +245,6 @@ Important Notes:
         - JacORB
         - OpenORB
 
-
 Choose a CORBA implementation
 =============================
 Popular open-source options:
@@ -259,22 +254,6 @@ JacORB – a widely used Java CORBA implementation
 OpenORB – another Java CORBA ORB
     Website: http://openorb.sourceforge.net/
 
-Add the library to your project
-===============================
-If you use Maven, for JacORB:
-
-<dependency>
-    <groupId>org.jacorb</groupId>
-    <artifactId>jacorb</artifactId>
-    <version>3.12</version> <!-- check latest version -->
-</dependency>
-
-For Gradle:
-
-implementation 'org.jacorb:jacorb:3.12'
-
-If not using a build tool, download the JARs and add them to your classpath.
-
 Replace removed JDK CORBA packages
 ==================================
 The JDK removed:
@@ -283,38 +262,8 @@ javax.rmi.CORBA
 org.omg.CORBA
 
 With JacORB, these are replaced by JacORB’s own classes, but JacORB also provides org.omg.CORBA compatible packages, so you can often reuse your existing CORBA code with minor adjustments.
-
-4. Initialize and run ORB
-
-Example using JacORB:
-
-import org.omg.CORBA.ORB;
-
-public class CorbaServer {
-    public static void main(String[] args) {
-        // Initialize the ORB
-        ORB orb = ORB.init(args, null);
-
-        // Your CORBA object setup goes here
-        System.out.println("CORBA ORB initialized with JacORB on JDK 11+");
-    }
-}
+*/
  
-Compile and run
-===============
-Make sure JacORB JARs are on the classpath:
 
-javac -cp jacorb.jar MyCorbaApp.java
-java -cp .:jacorb.jar MyCorbaApp
-
-On Windows, use ; instead of : as the path separator.
-
-Download From: 
-==============
-https://www.jacorb.org/download.html
-
-Download:
-=========
-jacorb-3.9-binary.zip
 
 
