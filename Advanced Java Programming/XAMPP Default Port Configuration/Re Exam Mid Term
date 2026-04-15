@@ -1,0 +1,33 @@
+
+St. Lawrence College
+(Institute of Science and Technology)
+Chuchepati, Chabahil
+Mid Term Re-Exam
+Advanced Java Programming
+
+
+Bachelor Level/ Fourth Year/ Seven Semester/ Science
+Computer Science and Information Technology- (CSc.403)
+(Advance Java Programming)
+Candidates are required to their answer in their own words as far as practicable. The figures in the margin indicate full marks.
+
+Group A
+Attempt any TWO questions.								[2x10=20]
+
+1.	Define inheritance. Discuss the benefits of using inheritance. Discuss multiple inheritances with suitable example.								[1+2+7]
+2.	What do we need event handling? Discuss the process of handling events with example. Differentiate event listener interface with adapter class.				[3+4+3]
+3.	Write a program swing components to find simple interest. Use text fields for inputs and output. Your program should display output if the user clicks a button.			[10]
+
+   Group B
+Attempt any EIGHT questions.							[8x5=40]
+
+4.	Write an Object Oriented Program to find area and area of rectangle.		[5]
+5.	Write a simple java program that writes roll, name and address of a student in a data file.	[5]
+6.	Discuss grid layout with example.						[5]
+7.	What is action event? Discuss. 							[5]
+8.	How do you execute SQL statement in JDBC?					[5]
+9.	Discuss any three classes to handle files in java. 					[5]
+10.	Why multithreading is important in programming? Discuss.			[5]
+11.	Discuss any 3 exception classes in java.						[5]
+12.	Discuss the role of event listeners to handle events with suitable example.	[5]
+13.	What are the benefits of using swing components?  Explain			[5]                                                                  
