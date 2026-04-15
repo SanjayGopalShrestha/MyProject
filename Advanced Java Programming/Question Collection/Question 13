@@ -1,0 +1,71 @@
+Tribhuvan University
+
+Institute of Science and Technology
+
+2081
+
+Bachelor Level / seventh-semester / Science
+
+Computer Science and Information Technology( CSC409 )
+
+Advanced Java Programming
+
+Full Marks: 60 + 20 + 20
+
+Pass Marks: 24 + 8 + 8
+
+Time: 3 Hours
+
+Candidates are required to give their answers in their own words as far as practicable.
+
+The figures in the margin indicate full marks.
+
+Group A
+
+Attempt any TWO questions
+
+1
+What is the task of the Listener interface? Write a socket program for a file server that makes a collection of files available for transmission to clients. When a client connects to the server, the server first reads a one-line command from the client. The command string can be of the form “GET <filename>”, where <filename> is a file name. The server checks whether the requested file actually exists. If so, it first sends the word “OK” as a message to the client. Then it sends the contents of the file and closes the connection. Otherwise, it sends “ERROR” to the client as message and closes the connection. Assume that there is no sub directories.
+
+2
+Differentiate between path and class path in Java. When do you prefer anonymous inner class? Consider the following program and answer the given questions.
+class A {
+ class B {
+ public void test() {
+int i = 0;
+while (i<=100){
+System.out.println(i);
+ i = i + 2; 
+}
+                                    }
+}
+ }
+Name the list of class file created after compiling above program
+Rewrite the above program using for loop
+3
+What are the tasks of sliders and scroll pane? Explain any four types of layout manager.
+Group B
+
+Attempt any EIGHT questions
+
+4
+How does JavaFX hyperlink control format text that functions as button? Illustrate with an example.
+5
+Describe any two types of events.
+6
+How do you write an IDL file and generate the stub and skeleton code for CORBA implementation? Explain.
+7
+Design a simple form that takes name, password, hobbies and gender as input.
+8
+Assume that a text file named “ONE.TXT” contains a paragraph of text. Write a program to copy the word that starts with vowel from “ONE.TXT” to another file “TWO.TXT”.
+
+9
+What do you mean by SQL escape? Describe about scrollable and updateable result sets.
+
+10
+Explain the life cycle of servlets.
+
+11
+Write a program in JSP to display the string taken in one page in another page.
+12
+How do you insert pop-up menu? Distinguish between GET and POST request.
