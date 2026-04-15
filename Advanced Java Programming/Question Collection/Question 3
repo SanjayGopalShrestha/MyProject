@@ -1,0 +1,20 @@
+2070
+
+                                                                                        Section A (2*10=20)
+Attempt any two questions. 
+1.) What is interface? How can you use the concept of interface to achieve multiple inheritance? Discuss with suitable example. 
+2.) Write a program using swing component to multiply two numbers. Use text fields for input and output. Your program should display the result when the user press a button. 
+3.) What is RMI? How can you use RMI to develop a program that runs in different machine? Discuss with suitable example. 
+
+Section B 
+Attempt any eight questions. (8*5=40) 
+4.) What is JDBC? How do you execute SQL queries in JDBC? 
+5.) What is java beans? How is it different from java class? 
+6.) Write a simple java program to read from and write to files. 
+7.) Discuss different methods used in life cycle of servelet. 
+8.) Discuss border layout with suitable example. 
+9.) Why multithreading is important in programming? Discuss . 
+10.)Discuss any 5 exception classes in java. 
+11.)Discuss the role of event listeners to handle events with suitable example. 
+12.)What is socket? How can you communicate two programs in a network using TCP Socket? 
+13.)Write a simple JSP program to display “Lalitpur, Nepal” 10 times. 
