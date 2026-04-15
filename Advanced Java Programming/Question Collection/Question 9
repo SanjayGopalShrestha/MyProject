@@ -1,68 +1,36 @@
-ribhuvan University
-
+Tribhuvan University
 Institute of Science and Technology
-
 2078
 
 Bachelor Level / seventh-semester / Science
-
 Computer Science and Information Technology( CSC409 )
-
 Advanced Java Programming
 
 Full Marks: 60 + 20 + 20
-
 Pass Marks: 24 + 8 + 8
-
 Time: 3 Hours
 
 Candidates are required to give their answers in their own words as far as practicable.
-
 The figures in the margin indicate full marks.
 
-Section A
+                                                                                        Section A
 
 Attempt any two questions.
+1. Compare AWT with Swing. Write a GUI program using components to find sum and difference of two numbers. Use two text fields for giving input and a label for output. The program should display sum if user presses mouse and difference if user release mouse.
+2. Explain life-cycle of servlet in detail. Create a simple servlet that reads and displays data from HTML form. Assume form with two fields username and password.
+3. Explain RMI architecture layers in detail. Write a Java programs using RMI to find product of two numbers.
 
-1
-Compare AWT with Swing. Write a GUI program using components to find sum and difference of two numbers. Use two text fields for giving input and a label for output. The program should display sum if user presses mouse and difference if user release mouse.
-
-2
-Explain life-cycle of servlet in detail. Create a simple servlet that reads and displays data from HTML form. Assume form with two fields username and password.
-
-3
-Explain RMI architecture layers in detail. Write a Java programs using RMI to find product of two numbers.
-
-Section B
+                                                                                        Section B
 
 Attempt any eight questions.
-
-4
-What is package? How can you create your own package in Java? Explain with example.
-
-5
-Why do we need swing components ? Explain the uses of check boxes and radio buttons in GUI programming.
-
-6
-How can we use listener interface to handle events? Compare listener interface with adapter class.
-
-7
-What is row set? Explain cached row set in detail.
-
-8
-What is Java Mail API ? How can you use this API to send email messages?
-
-9
-Compare JavaFX with swing. Explain HBox and BBox layouts of JavaFX.
-
-10
-What is servlet? Write a simple JSP file to display “Tribhuwan University” five times.
-
-11
-Why CORBA is important? Compare CORBA with RMI.
-
-12
-Write short notes on:
-
+4. What is package? How can you create your own package in Java? Explain with example.
+5. Why do we need swing components ? Explain the uses of check boxes and radio buttons in GUI programming.
+6. How can we use listener interface to handle events? Compare listener interface with adapter class.
+7. What is row set? Explain cached row set in detail.
+8. What is Java Mail API ? How can you use this API to send email messages?
+9. Compare JavaFX with swing. Explain HBox and BBox layouts of JavaFX.
+10. What is servlet? Write a simple JSP file to display “Tribhuwan University” five times.
+11. Why CORBA is important? Compare CORBA with RMI.
+12. Write short notes on:
 a. JDBC drivers
 b. Java server pages
