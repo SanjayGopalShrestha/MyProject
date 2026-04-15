@@ -1,0 +1,73 @@
+Tribhuvan University
+
+Institute of Science and Technology
+
+2077
+
+Bachelor Level / seventh-semester / Science
+
+Computer Science and Information Technology( CSC409 )
+
+Advanced Java Programming
+
+Full Marks: 60 + 20 + 20
+
+Pass Marks: 24 + 8 + 8
+
+Time: 3 Hours
+
+Candidates are required to give their answers in their own words as far as practicable.
+
+The figures in the margin indicate full marks.
+
+Group A
+
+Attempt any two questions.
+
+1
+What is the significance of stub and skeleton In RMI? Create a RMI application such that a client sends an Integer number to the server and the server return the factorial value of that integer. Give a clear specification for every step.
+
+2
+You are hired by a reputed software company which is going to design an application for “Movie Rental System”. Your responsibility is to design a schema named MRS and create a table named Movie(id, Tille, Genre, Language, Length). Write a program to design a GUI form to take input for this table and insert the data into table after clicking the OK button
+
+3
+Describe the responsibility of Serializable interface. Write a program to read an input string from the user and write the vowels of that string in VOWEL.TXT and consonants in CONSOLNANT.TXT
+
+Group B
+
+Attempt any eight question.
+
+4
+A non-empty array A of length n is called on array of all possibilities if it contains all numbers between 0 and A.length-1 inclusive. Write a method named is All Possibilities that accepts an integer array and returns 1 if the array is an array of all possiblities, otherwise it returns 0.
+
+5
+Define event delegation model. Why do we need adapter class in event handling?
+
+6
+What is the task of Layout manager? Describe about default layout manager.
+
+7
+When does the finally block is mandatory in while handling exception? Describe with a suitable scenario.
+
+8
+Explain the life cycle of a servlet.
+
+9
+What is the task of manifest file? Write the procedure to create it.
+
+10
+Why multiple inheritance is not allowed in Java using classes? Give an example.
+
+11
+How forms can be created and processed using JSP? Make it clear with your own assumptions.
+
+12
+Why synchronization in essential in multithreading? Describe.
+
+13
+Write short notes on:
+
+a. JAVA beans and JAR file
+
+b. MVC design pattern
+
