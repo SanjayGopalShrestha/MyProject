@@ -1,13 +1,13 @@
 2070
 
-                                                                                        Section A (2*10=20)
-Attempt any two questions. 
+                                                                                  Section A                                                                                  
+Attempt any two questions.                                                                                                                                       (2*10=20)
 1.) What is interface? How can you use the concept of interface to achieve multiple inheritance? Discuss with suitable example. 
 2.) Write a program using swing component to multiply two numbers. Use text fields for input and output. Your program should display the result when the user press a button. 
 3.) What is RMI? How can you use RMI to develop a program that runs in different machine? Discuss with suitable example. 
 
-Section B 
-Attempt any eight questions. (8*5=40) 
+                                                                                  Section B 
+Attempt any eight questions.                                                                                                                                     (8*5=40) 
 4.) What is JDBC? How do you execute SQL queries in JDBC? 
 5.) What is java beans? How is it different from java class? 
 6.) Write a simple java program to read from and write to files. 
