@@ -1,0 +1,35 @@
+Tribhuvan University
+Institute of Science and Technology
+Model Set-I
+
+Bachelor Level / seventh-semester / Science
+Computer Science and Information Technology( CSC409 )
+Advanced Java Programming
+
+Full Marks: 60 + 20 + 20
+Pass Marks: 24 + 8 + 8
+Time: 3 Hours
+
+Candidates are required to give their answers in their own words as far as practicable.
+The figures in the margin indicate full marks.
+
+                                                                                    Group A
+
+Attempt any TWO questions
+1. What are the uses of final modifier? Explain each use of the modifier with suitable example.
+2. Write a java program to create login form with user id, password, ok button, and cancel button. Handle key events such that pressing ‘l’ performs login and pressing ‘c’ clears text boxes and puts focus on user id text box. Assume user table having fields Uid and Password in the database named account.
+3. Discuss various scopes of JSP objects briefly. Create a HTML file with principal, time and rate. Then create a JSP file that reads values from the HTML form, calculates simple interest and displays it
+
+                                                                                    Group B
+
+Attempt any EIGHT questions.
+4. Write a java program that writes objects of Employee class in the file named emp.doc. Create Employee class as of your interest.
+5. What are layout managers? Explain Gridbag layout with suitable example.
+6. What is the use of action command in event handling? Explain with example.
+7. What causes SQL exception? How it can be handled? Explain with example.
+8. Write a java program using TCP such that client sends number to server and displays its factorial. The server computes factorial of the number received from client.
+9. How JavaFx differs from Swing? Explain steps of creating GUI using javaFx.
+10. What are different ways of writing servlet programs? Write a sample Servlet program using any one way.
+11. How CORBA differs from RMI? Discuss the concepts of IDL briefly.
+12. When thread synchronization is necessary? Explain with suitable example.
+
