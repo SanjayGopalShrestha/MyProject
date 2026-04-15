@@ -1,0 +1,22 @@
+2073
+Group A
+Attempt any TWO questions.								[2x10=20]
+
+1.	What is multithreading? How can you write multithreaded program in java? Discuss with suitable example.
+2.	What is java Bean? How is it different from other java classes? Discuss property design patterns with suitable of each.
+3.	What is socket? How can you write java programs that communicate with each other using TCP sockets? Discuss with suitable example.
+Group B
+Attempt any EIGHT questions.							[8x5=40]
+
+4.	Write an object oriented program to find area and perimeter of rectangle.		[5]
+5.	Write a simple java program that reads data from one files and writes the data to another fle.[5]
+6.	Discuss border layout with example.						[5]
+7.	Why is it important to handle events? List any five event classes.			[2.5+2.5]
+8.	What is JDBC? How do you execute SQL statements in JDBC?			[2+3]
+9.	What is JSP? Discuss with suitable example.					[5]
+10.	What InetAddress class? Discuss.						[2+3]
+11.	Discuss the process of sending email messages using java?			[5]
+12.	What RMI? Discuss architecture of RMI.					[1+4]
+13.	Write short notes on:								[2.5+2.5]
+a.	Interface
+b.	Servlet  
