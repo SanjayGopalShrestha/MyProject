@@ -1,0 +1,81 @@
+Tribhuvan University
+
+Institute of Science and Technology
+
+2080
+
+Bachelor Level / seventh-semester / Science
+
+Computer Science and Information Technology( CSC409 )
+
+Advanced Java Programming
+
+Full Marks: 60 + 20 + 20
+
+Pass Marks: 24 + 8 + 8
+
+Time: 3 Hours
+
+Candidates are required to give their answers in their own words as far as practicable.
+
+The figures in the margin indicate full marks.
+
+GROUP A
+
+Attempt any TWO questions
+
+1
+Why do we need to synchronize the thread? Justify with an example. An array with an odd number of elements is said to be centered if all elements (except the middle one) are strictly greater than the value of the middle element. Note that only arrays with an odd number of elements have a middle element. Write a function that accepts an integer array and returns 1 if it is a centered array, otherwise it returns 0.
+
+2
+How does JSP differ from Servlet and show the life cycle of Servlet? How do you create and read the cookies and session using JSP? Illustrate with an example.
+
+3
+Describe any two types of Layout manager. Using swing components, design a form with three buttons with captions “RED,” “BLUE,” and “GREEN,” respectively. Then write a program to handle the event such that when the user clicks the button, the color of that button will be the same as its caption.
+
+Group B
+
+Attempt any EIGHT questions.
+
+4
+List the steps to create an RMI application. Differentiate between RMI and CORBA.
+
+5
+Write a JavaFX application with components, buttons, text fields, and labels, arranged in a VBox or HBox layout.
+
+6
+Assume a table MOVIE(id, title, genre). Now, using JDBC, perform the following queries:
+a. Add any three records to the MOVIE table.
+b. Using a prepared statement, update the genre to “Comedy” having the title “Jatra”.
+
+7
+When do we need an internal frame? How do you create a table using Swing?
+
+8
+What do you mean by JSP implicit objects? Discuss Java Mail API.
+
+9
+Describe the role of Result Sets. What is wrong in the following code?
+
+ 
+
+public class Point {
+
+   int p;
+
+   public void setP(int p) {
+
+      p = p;
+
+   }
+
+}
+
+10
+Write a TCP client-server system in which the client program sends two integers to a server program, which returns the greatest among them.
+
+11
+Suppose that 9 integers are written in a file named “magic.txt” in the arrangement of 3 × 3 separated by space. Write a program to check whether the integers in all rows, all columns, and both diagonals sum to the same constant or not.
+
+12
+Write a program to create a menu named “File” with menu items “New,” “Save,” and “Exit”.
