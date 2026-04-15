@@ -5,25 +5,25 @@ Computer Science and Information Technology- (CSc.403)
 Candidates are required to their answer in their own words as far as practicable. The figures in the margin indicate full marks.
                                                                             
                                                                             Group A
-Attempt any TWO questions.								                                                                                                                              [2x10=20]
+Attempt any TWO questions.								                                                                                                                          [2x10=20]
 
-1.	Define inheritance. Discuss the benefits of using inheritance. Discuss multiple inheritances with suitable example.								                                  [1+2+7]
-2.	What do we need event handling? Discuss the process of handling events with example. Differentiate event listener interface with adapter class.				              [3+4+3]
-3.	Write a program swing components to find simple interest. Use text fields for inputs and output. Your program should display output if the user clicks a button.	  [10]
+1.	Define inheritance. Discuss the benefits of using inheritance. Discuss multiple inheritances with suitable example.								                              [1+2+7]
+2.	What do we need event handling? Discuss the process of handling events with example. Differentiate event listener interface with adapter class.				          [3+4+3]
+3.	Write a program swing components to find simple interest. Use text fields for inputs and output. Your program should display output if the user clicks a button.[10]
                                                                           
                                                                            
                                                                             Group B
-Attempt any EIGHT questions.							                                                                                                                              [8x5=40]
+Attempt any EIGHT questions.							                                                                                                                           [8x5=40]
 
-4.	Write an object oriented program to find area and perimeter of rectangle.		                                                                                        [5]
-5.	Write a simple java program that reads data from one file and writes the data to another file.											                                                [5]
-6.	Discuss grid layout with example.						                                                                                                                        [5]
-7.	What is action event? Discuss. 							                                                                                                                        [5]
-8.	How do you execute SQL statement in JDBC?					                                                                                                                  [5]
-9.	What is socket? How can you write java programs that communicate with each other using TCP socket?										                                              [1+4]
-10.	Write a java program using servlet to display ''Tribhuvan University''.		                                                                                          [5]
-11.	Discuss property design patterns for java Beans.					                                                                                                          [5]
-12.	What is Corba? How is it different from RMI?					                                                                                                              [2+3]
-13.	Write a short Notes on:								                                                                                                                              [2.5+2.5] 
+4.	Write an object oriented program to find area and perimeter of rectangle.		                                                                                     [5]
+5.	Write a simple java program that reads data from one file and writes the data to another file.											                                             [5]
+6.	Discuss grid layout with example.						                                                                                                                     [5]
+7.	What is action event? Discuss. 							                                                                                                                     [5]
+8.	How do you execute SQL statement in JDBC?					                                                                                                               [5]
+9.	What is socket? How can you write java programs that communicate with each other using TCP socket?										                                           [1+4]
+10.	Write a java program using servlet to display ''Tribhuvan University''.		                                                                                       [5]
+11.	Discuss property design patterns for java Beans.					                                                                                                       [5]
+12.	What is Corba? How is it different from RMI?					                                                                                                           [2+3]
+13.	Write a short Notes on:								                                                                                                                           [2.5+2.5] 
 a.	Multithreading
 b.	JSP
