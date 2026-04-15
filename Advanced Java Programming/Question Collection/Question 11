@@ -1,65 +1,35 @@
 Tribhuvan University
-
 Institute of Science and Technology
-
 2079
 
 Bachelor Level / seventh-semester / Science
-
 Computer Science and Information Technology( CSC409 )
-
 Advanced Java Programming
 
 Full Marks: 60 + 20 + 20
-
 Pass Marks: 24 + 8 + 8
-
 Time: 3 Hours
 
 Candidates are required to give their answers in their own words as far as practicable.
-
 The figures in the margin indicate full marks.
 
-Section A
+                                                                                Section A
 
 Attempt any two questions.
+1. Explain feature of object-oriented programming. Create a class Distance with private variables feet of type integer and inches of type floating point. Use suitable constructor, and methods for adding and comparing two distance objects. [Hint: 1 feet = 12 inches]
+2. Why do we need layout management? Explain any two layout managers with example. Write a simple GUI program that displays “Hello World” in a text field. The program should display output if user clicks a button.
+3. Define JSP. What are the benefits of using JSP? Create a HTML file with two text fields to first name and last name. Create a JSP file that reads data from the HTML form and display full name.
 
-1
-Explain feature of object-oriented programming. Create a class Distance with private variables feet of type integer and inches of type floating point. Use suitable constructor, and methods for adding and comparing two distance objects. [Hint: 1 feet = 12 inches]
-
-2
-Why do we need layout management? Explain any two layout managers with example. Write a simple GUI program that displays “Hello World” in a text field. The program should display output if user clicks a button.
-
-3
-Define JSP. What are the benefits of using JSP? Create a HTML file with two text fields to first name and last name. Create a JSP file that reads data from the HTML form and display full name.
-
-Section B
+                                                                                Section B
 
 Attempt any eight questions.
-
-4
-What is multithreading? How can you create multithreaded program in Java? Explain.
-
-5
-What is grid layout? Compare grid layout with grid bag layout.
-
-6
-Why do we need event handling? Explain the use of action event with example.
-
-7
-Explain JDBC driver types. What is scrollable result set?
-
-8
-Write Java program that send messages with each other using TCP socket.
-
-9
-What is JavaFX? Compare it with swing. Explain FlowPane layout of JavaFX.
-
-10
-Compare JSP with servlet. What are different implicit objects in JSP?
-
-11
-Write short notes on:
-
-Final class
-Result set
+4. What is multithreading? How can you create multithreaded program in Java? Explain.
+5. What is grid layout? Compare grid layout with grid bag layout.
+6. Why do we need event handling? Explain the use of action event with example.
+7. Explain JDBC driver types. What is scrollable result set?
+8. Write Java program that send messages with each other using TCP socket.
+9. What is JavaFX? Compare it with swing. Explain FlowPane layout of JavaFX.
+10. Compare JSP with servlet. What are different implicit objects in JSP?
+11. Write short notes on:
+  a. Final class
+  b. Result set
