@@ -1,0 +1,21 @@
+2072
+
+Section A
+Attempt any two questions.                                                                                                            (2×10=20)
+1.	What is exception handling? Discuss exception handling in detail with suitable example.              (2+8)
+2.	What is layout management? Discuss any three layout management with example of each.          (1+9)
+3.	Write a Java program using JDBC to extract name of those students who lives in Kathmandu  district, assuming that student table has four attributes ( ID, name, district and age )                                       (10)
+Group B
+Attempt any eight questions                                                                                                              (8×5=40)
+4.	Write an object oriented program in Java to find area of circle.                                                              (5)
+5.	Write a simple Java program that reads data from one file and writes the data to the file.   (5)
+6.	What are the benefits of using swing components?  Explain                                                                  (5)
+7.	Discuss any three event classes in Java.                                                                                                  (5)
+8.	Discuss different driver types on JDBC.                                                                                               (5)
+9.	What is socket?  Different TCP socket and UDP socket.                                                                   (2+3)
+10.	What is servlet? Discuss its life cycle.                                                                                                 (1+4)
+11.	What is Java Bean? How is it different from other Java classes?                                                      (2+3)
+12.	What is RMI? How it is different from CORBA?                                                                    (2.5 + 2.5)
+13.	Write short notes on:                                                                                                                    (2.5 + 2.5)
+a.	Multithreading
+b.	RMI architecture
