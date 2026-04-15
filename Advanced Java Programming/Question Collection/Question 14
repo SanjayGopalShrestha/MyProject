@@ -1,0 +1,61 @@
+Tribhuvan University
+
+Institute of Science and Technology
+
+Model-Set-II
+
+Bachelor Level / seventh-semester / Science
+
+Computer Science and Information Technology( CSC409 )
+
+Advanced Java Programming
+
+Full Marks: 60 + 20 + 20
+
+Pass Marks: 24 + 8 + 8
+
+Time: 3 Hours
+
+Candidates are required to give their answers in their own words as far as practicable.
+
+The figures in the margin indicate full marks.
+
+Section A
+
+1
+Why is multithreading important? Explain thread life cycle with proper state diagram. Write a program that reads data of employees from the keyboard and write it into the file emp.doc using proper exception handling with try…catch blocks.
+
+2
+Write a program that divides the frame into five regions by using border layout and then add panels in the east, north and center region. Finally add some descriptive label in the north panel, buttons with icon in the east panel and a sample form in the center panel. You can further subdivide the center panel, if necessary. Prepare a program with three text boxes First Number, Second Number, and Result and four buttons add, subtract, multiply and divide. Handle the events to perform the required operation and display results.
+
+3
+What is Servlet? Create an application where an HTML file displays a form containing field company name, city and ESTD and a save button and when we click on save button it must save records in the database.
+
+Section B
+
+4
+What is the difference between final, finally, and finalize keywords in Java?
+
+5
+How is exception different from error? Differentiate throws and throw keywords. When is the block finally important?
+
+6
+Explain flow layout manager with suitable constructors and demonstrate it by using suitable java code.
+
+7
+Write a program to create a form with employee id, name, salary fields and two buttons add and cancel using appropriate components.
+
+8
+What is an adapter class? Explain advantages of adapter classes over listener interfaces with suitable examples.
+
+9
+What is a prepared statement? When is it useful? Explain its use with suitable java code.
+
+10
+Write the steps for writing client and server programs using TCP with a suitable example.
+
+11
+What is JavaFX? How it is different from swing. Write a JavaFX program to create a form to read two numbers and display their sum on button click.
+
+12
+What is RMI? Discuss stub and skeleton. Explain its role in creating distributed applications.
