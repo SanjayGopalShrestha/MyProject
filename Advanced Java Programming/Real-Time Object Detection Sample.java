@@ -1,6 +1,6 @@
 /*
 
-Real-Time Object Detection Project Code
+-- Real-Time Object Detection Project Code --
 
 Output Link:
 ============
