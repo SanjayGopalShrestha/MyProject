@@ -1,0 +1,39 @@
+Basic Topics of Python
+======================
+- Structure of Python Program
+- Character Set
+- Comment
+- Token
+  - Keywords
+  - Identifiers
+  - Literals
+  - Operators
+  - Punctuators
+- Input/Output in Python
+- Basic Data Types 
+- Data Structure
+  - String
+  - List
+  - Tuple
+  - Set  
+  - Dictionary
+- Function 
+  - Types of Function
+  - Function Parameters and Arguments
+  - Types of Parameters
+  - Import Modules 
+- Class and Object
+  - Encapsulation
+  - Abstraction
+  - Inheritance
+  - Polymorphism
+- Exception Handling
+- File Handling
+
+  
+
+
+
+
+
+
