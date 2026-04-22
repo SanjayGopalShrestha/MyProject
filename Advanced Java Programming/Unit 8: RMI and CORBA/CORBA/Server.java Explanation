@@ -838,3 +838,12 @@ POAManager
 RootPOA is located inside the ORB runtime environment and is accessed using resolve_initial_
 references("RootPOA"); it is not a physical class or file in the Java program.
 
+
+Complete Steps
+==============
+1. Define Properties
+2. Get Root POA and activate manager
+3. Create HelloImple object to serve as servant
+4. Generate IOR (Interoperable Object Reference)
+5. Run ORB
+
