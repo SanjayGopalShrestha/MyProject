@@ -95,7 +95,7 @@ Here’s a clear list of the commonly used ORB methods, grouped for easier under
 
 7. Request Processing
 	Control ORB event loop:
-		run()
+	  ✅run()
 		shutdown(boolean wait_for_completion)
 		work_pending()
 		perform_work()
@@ -217,4 +217,21 @@ narrow() → Hello object
   ↓
 Call methods on server
 
+
+HelloHelper class is an automatically generated utility class that supports working with a CORBA interface like Hello. It’s created by the IDL compiler (e.g., idlj) when you define an interface in IDL.
+===========
+
+🧩 Main Purpose of HelloHelper
+
+The HelloHelper class provides helper methods to handle CORBA object references safely and portably, especially when dealing with generic CORBA types.
+
+🔑 Key Functions
+1. Narrowing (Type Casting CORBA Objects)
+
+CORBA objects are often received as generic org.omg.CORBA.Object.
+HelloHelper.narrow() safely converts it to a Hello type.
+
+Hello helloRef = HelloHelper.narrow(objRef);
+
+👉 This is the most important function—it ensures the object really supports the Hello interface.
 
