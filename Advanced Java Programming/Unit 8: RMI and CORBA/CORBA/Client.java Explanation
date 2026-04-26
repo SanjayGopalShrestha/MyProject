@@ -229,6 +229,8 @@ The HelloHelper class provides helper methods to handle CORBA object references 
 1. Narrowing (Type Casting CORBA Objects)
 
 CORBA objects are often received as generic org.omg.CORBA.Object.
+
+
 HelloHelper.narrow() safely converts it to a Hello type.
 
 Hello helloRef = HelloHelper.narrow(objRef);
