@@ -18,6 +18,169 @@ The figures in the margin indicate full marks.
 Attempt any TWO questions
 1. What are the uses of final modifier? Explain each use of the modifier with suitable example. (Ans: Type the question in ChatGPT.)
 2. Write a java program to create login form with user id, password, ok button, and cancel button. Handle key events such that pressing ‘l’ performs login and pressing ‘c’ clears text boxes and puts focus on user id text box. Assume user table having fields Uid and Password in the database named account.
+Ans: 
+Below is a Java Swing program that creates a simple login form with:
+
+User ID field
+Password field
+OK button (login)
+Cancel button (clear)
+Key event handling:
+Press ‘l’ → login
+Press ‘c’ → clear fields and focus User ID
+
+It also shows database checking from a table account(Uid, Password).
+
+🔹 Java Program (Swing + JDBC)
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class LoginForm extends JFrame implements ActionListener, KeyListener {
+
+    JTextField userId;
+    JPasswordField password;
+    JButton ok, cancel;
+
+    public LoginForm() {
+
+        setTitle("Login Form");
+        setSize(350, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(3, 2));
+
+        JLabel l1 = new JLabel("User ID:");
+        JLabel l2 = new JLabel("Password:");
+
+        userId = new JTextField();
+        password = new JPasswordField();
+
+        ok = new JButton("OK");
+        cancel = new JButton("Cancel");
+
+        add(l1);
+        add(userId);
+        add(l2);
+        add(password);
+        add(ok);
+        add(cancel);
+
+        ok.addActionListener(this);
+        cancel.addActionListener(this);
+
+        userId.addKeyListener(this);
+        password.addKeyListener(this);
+
+        setVisible(true);
+    }
+
+    // Button Actions
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == ok) {
+            login();
+        }
+
+        if (e.getSource() == cancel) {
+            clearFields();
+        }
+    }
+
+    // Login function with database check
+    public void login() {
+        String uid = userId.getText();
+        String pwd = new String(password.getPassword());
+
+        try {
+            // Change URL, username, password as per your DB
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/your_database",
+                    "root",
+                    "password"
+            );
+
+            PreparedStatement ps = con.prepareStatement(
+                    "SELECT * FROM account WHERE Uid=? AND Password=?"
+            );
+
+            ps.setString(1, uid);
+            ps.setString(2, pwd);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(this, "Login Successful!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Invalid Credentials!");
+            }
+
+            con.close();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    // Clear fields
+    public void clearFields() {
+        userId.setText("");
+        password.setText("");
+        userId.requestFocus();
+    }
+
+    // Key events
+    public void keyTyped(KeyEvent e) {
+
+        char c = e.getKeyChar();
+
+        if (c == 'l' || c == 'L') {
+            login();
+        }
+
+        if (c == 'c' || c == 'C') {
+            clearFields();
+        }
+    }
+
+    public void keyPressed(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {}
+
+    public static void main(String[] args) {
+        new LoginForm();
+    }
+}
+
+Important Notes
+===============
+Database Setup
+
+You must have a table like:
+
+CREATE TABLE account (
+    Uid VARCHAR(50),
+    Password VARCHAR(50)
+);
+
+JDBC Driver
+===========
+Make sure MySQL JDBC driver is added:
+mysql-connector-j.jar
+
+Key Features Explained
+======================
+ActionListener → handles button clicks
+KeyListener → handles key press events (l, c)
+JDBC → checks credentials from database
+PreparedStatement → prevents SQL injection
+
+This program demonstrates:
+=========================
+GUI design using Swing
+Event handling (buttons + keyboard)
+Database connectivity using JDBC
+Simple authentication system
+
 3. Discuss various scopes of JSP objects briefly. Create a HTML file with principal, time and rate. Then create a JSP file that reads values from the HTML form, calculates simple interest and displays it
 
                                                                                     Group B
