@@ -31,7 +31,8 @@ Press ‘c’ → clear fields and focus User ID
 
 It also shows database checking from a table account(Uid, Password).
 
-🔹 Java Program (Swing + JDBC)
+Java Program (Swing + JDBC)
+===========================
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
