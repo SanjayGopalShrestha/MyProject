@@ -18,9 +18,7 @@ The figures in the margin indicate full marks.
 Attempt any TWO questions
 1. What are the uses of final modifier? Explain each use of the modifier with suitable example. (Ans: Type the question in ChatGPT.)
 2. Write a java program to create login form with user id, password, ok button, and cancel button. Handle key events such that pressing ‘l’ performs login and pressing ‘c’ clears text boxes and puts focus on user id text box. Assume user table having fields Uid and Password in the database named account.
-Ans: 
-Below is a Java Swing program that creates a simple login form with:
-
+Ans: Below is a Java Swing program that creates a simple login form with:
 User ID field
 Password field
 OK button (login)
