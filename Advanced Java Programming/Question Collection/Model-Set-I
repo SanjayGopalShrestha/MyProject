@@ -16,7 +16,7 @@ The figures in the margin indicate full marks.
                                                                                     Group A
 
 Attempt any TWO questions
-1. What are the uses of final modifier? Explain each use of the modifier with suitable example.
+1. What are the uses of final modifier? Explain each use of the modifier with suitable example. (Ans: Type the question in ChatGPT.)
 2. Write a java program to create login form with user id, password, ok button, and cancel button. Handle key events such that pressing ‘l’ performs login and pressing ‘c’ clears text boxes and puts focus on user id text box. Assume user table having fields Uid and Password in the database named account.
 3. Discuss various scopes of JSP objects briefly. Create a HTML file with principal, time and rate. Then create a JSP file that reads values from the HTML form, calculates simple interest and displays it
 
