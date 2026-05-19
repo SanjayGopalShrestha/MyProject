@@ -1,0 +1,19 @@
+On a Hikvision Smart Board (Interactive Flat Panel), your download location depends 
+on whether you are using the built-in Android OS or a Windows OPS (plug-in PC module).
+Find your files using these steps for your specific system:
+
+1. Built-In Android OS Default Folder: Navigate to the Apps menu, open the File Manager
+(or Explorer), select Internal Storage, and go to the Download folder.
+
+Alternative: Check the pre-installed web browser. Open the browser's settings to verify
+or change the default saving path.
+
+2. Windows OPS (Built-in PC Module)Many Hikvision boards are equipped with an OPS 
+   computer module running Windows. 
+
+Default Folder: Go to C:\Users\[Username]\Downloads using the standard Windows File 
+Explorer. 
+
+Web Browser: If you downloaded files directly from a browser (like Edge or Chrome), 
+press Ctrl + J in the browser to view your download history and find the exact file 
+location.
