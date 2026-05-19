@@ -1,6 +1,17 @@
+Downloaded Files
+================
 On a Hikvision Smart Board (Interactive Flat Panel), your download location depends 
 on whether you are using the built-in Android OS or a Windows OPS (plug-in PC module).
 Find your files using these steps for your specific system:
+
+/*
+OPS in a Windows context stands for Open Pluggable Specification. It is a standardized
+, slot-in computer module that slides directly into the back of interactive flat 
+panels, smart boards, and digital signage displays. Because an OPS module functions 
+as a fully self-contained mini PC, it allows you to run a full Windows operating 
+system directly from your large touchscreen without needing any external laptops, 
+messy cables, or separate power bricks.
+*/
 
 1. Built-In Android OS Default Folder: Navigate to the Apps menu, open the File Manager
 (or Explorer), select Internal Storage, and go to the Download folder.
@@ -17,3 +28,12 @@ Explorer.
 Web Browser: If you downloaded files directly from a browser (like Edge or Chrome), 
 press Ctrl + J in the browser to view your download history and find the exact file 
 location.
+
+Wi-Fi Connection
+================
+Settings/Wireless Network/Select the network name/double click and type the password
+
+Opening Browser
+===============
+Apps/Double Click Browser
+
