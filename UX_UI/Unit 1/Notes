@@ -78,23 +78,22 @@ efficient, and effortless as possible.
 
 Core Components of UI
 =====================
-
-According to detailed design guides on platforms like GeeksforGeeks, a digital 
-interface is built using four main types of elements:
+A digital interface is built using four main types of elements:
 
 Input Controls: 
 Tools that let users input data, including buttons, checkboxes, and text fields.
 
 Navigational Elements: 
 Features that guide users through a system, such as search bars, sliders, and 
-arrows.Informational 
+arrows.
 
-Components: 
+Informational Components: 
 Elements that display status updates to the user, like progress bars 
 and notifications.
 
-Visual Elements: The overall aesthetic styling, which includes typography, color 
-palettes, and imagery.
+Visual Elements: 
+The overall aesthetic styling, which includes typography, color palettes, and 
+imagery.
 
 
 UI (User Interface) Fundamentals
@@ -132,6 +131,7 @@ Reusable elements like:
 •	Forms 
 These keep designs scalable and clean.
 ________________________________________
+
 How UI and UX work together
 •	UX = structure + logic 
 •	UI = visuals + polish 
@@ -144,45 +144,57 @@ Designing a login screen:
 •	UX: Make login fast and simple (few fields, clear flow) 
 •	UI: Make it visually clean, readable, and attractive 
 ________________________________________
-Beginner mindset
-If you’re starting out:
-•	Focus on clarity over creativity 
-•	Solve problems first, decorate later 
-•	Always ask: “Is this easy for the user?”
-
 
 Which programming tool do we use for UX and UI?
-=====================================
+===============================================
 Short answer: UX/UI design itself isn’t primarily done with programming tools—it’s done with design tools. Programming comes in when you build the design into a real product.
 Let’s break it down clearly:
 ________________________________________
 Design tools (no coding needed)
+===============================
 These are what UX/UI designers use most:
 •	Figma → most popular, beginner-friendly 
 •	Adobe XD → similar to Figma 
 •	Sketch → mainly for Mac users 
+
 You use these to:
 •	Design screens 
 •	Create prototypes 
 •	Plan user flows 
 ________________________________________
 Programming tools (for building the UI)
+=======================================
 Once the design is ready, developers use code to build it.
 1. Basic web technologies
 •	HTML → structure (buttons, text, layout) 
 •	CSS → styling (colors, spacing, fonts) 
-•	JavaScript → interactivity (clicks, animations) 
+•	JavaScript → interactivity (clicks, animations)
+•	Java JSP
+• etc.
+
 ________________________________________
 2. Popular frameworks & libraries
 These make UI development faster:
-•	React → very popular for web apps 
-•	Vue.js → beginner-friendly 
-•	Angular → used in large apps 
+•	React → very popular for web apps (JavaScript)
+•	Vue.js → beginner-friendly (JavaScript)
+•	Angular → used in large apps (JavaScript)
 ________________________________________
 3. Mobile app UI tools
-•	Flutter → build Android & iOS apps 
+•	Flutter → build Android & iOS apps (Used with the Dart programming language by Google,
+  developed by Google)
 •	React Native → mobile apps using JavaScript 
 ________________________________________
+4. Desktop 
+java.awt.*;
+java.event.*;
+javax.swing.*;
+javafx.application.*;
+javafx.scene.*;
+javafx.stage.*;
+javafx.scene.control.*;
+javafx.scene.layout.*;
+javafx.event.*;
+
 How they connect
 •	Designers create UI/UX in Figma 
 •	Developers inspect designs and write code 
