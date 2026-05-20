@@ -76,6 +76,7 @@ goal of a well designed UI is to make user interaction as intuitive (natural),
 efficient, and effortless as possible. 
 
 Core Components of UI
+=====================
 
 According to detailed design guides on platforms like GeeksforGeeks, a digital 
 interface is built using four main types of elements:
@@ -87,7 +88,8 @@ Navigational Elements:
 Features that guide users through a system, such as search bars, sliders, and 
 arrows.Informational 
 
-Components: Elements that display status updates to the user, like progress bars 
+Components: 
+Elements that display status updates to the user, like progress bars 
 and notifications.
 
 Visual Elements: The overall aesthetic styling, which includes typography, color 
