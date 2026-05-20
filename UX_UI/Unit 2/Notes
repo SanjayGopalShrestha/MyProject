@@ -91,6 +91,7 @@ curricula.
 Business Collaboration: Facilitating real-time team brainstorming sessions during 
 project kickoffs
 
+
 2.2 User Research: Conduct user research: Interviews, Surveys, Competitive analysis,
 creating user personas, user journey mapping
 ====================================================================================
@@ -98,4 +99,30 @@ User Research is the systematic study of target users and their requirements to 
 realistic contexts and insights to the User-Centered Design process. It uses various
 qualitative and quantitative methods to uncover user problems, behaviors, motivations,
 and needs.
+
+Interview
+==========
+An interview in UX design is a qualitative user research method used to gather deep
+insights into a target user's background, behaviors, motivations, and pain points.
+
+Survey
+======
+A survey is a quantitative and qualitative user research method used to gather 
+structured feedback from a large group of target users. By asking a predefined 
+set of questions, surveys allow design teams to quickly measure user demographics, 
+satisfaction scores, behaviors, and recurring pain points 
+
+Competitive Analysis
+====================
+Competitive analysis in UX design is the strategic practice of identifying, evaluating, 
+and auditing direct and indirect competitors to understand their strengths, 
+weaknesses, product features, and design patterns. 
+
+user journey mapping
+====================
+User Journey Mapping is the practice of creating a timeline graphic to visualize the 
+step-by-step path a user takes to achieve a goal with your product.
+
+
+
 
