@@ -1,0 +1,167 @@
+How to start with UI in Figma?
+==============================
+
+Getting started with UI design in Figma
+=======================================
+Step-by-Step Beginner Guide to UI Design in Figma
+
+1. Create a Figma Account
+=========================
+Go to:
+Figma Official Website (figma.com)
+You can use it:
+In a web browser
+On Windows
+On macOS
+
+2. Understand the Figma Interface
+=================================
+Main areas:
+===========
+Toolbar → shape, frame, text tools
+Layers Panel → list of UI elements
+Canvas → design workspace
+Properties Panel → colors, size, effects
+
+3. Start with a Frame (Screen)
+=============================
+In Figma, a screen/page is called a Frame.
+
+Shortcut:
+Press F
+
+Choose:
+Mobile screen
+Desktop screen
+Tablet screen
+
+Example:
+iPhone 15 frame
+Desktop 1440px frame
+
+4. Learn Basic UI Elements
+===========================
+Practice creating:
+Buttons
+Text fields
+Navigation bars
+Cards
+Icons
+Menus
+Important Tools
+Tool	Shortcut
+Frame	F
+Rectangle	R
+Text	T
+Move	V
+Pen	P
+
+5. Use Auto Layout
+==================
+Auto Layout helps elements resize and align automatically.
+It is one of the most important Figma features.
+
+Example:
+Buttons resize with text
+Lists align automatically
+
+6. Learn Basic Design Principles
+================================
+UI Design Principles
+====================
+Alignment
+Contrast
+Consistency
+Spacing
+Typography
+Visual hierarchy
+
+Example:
+Larger text = more important
+Consistent colors improve usability
+
+7. Use Components
+=================
+Components are reusable UI elements.
+
+Example:
+One button design used everywhere
+
+If you edit the main component:
+All copies update automatically
+
+8. Practice with Small Projects
+===============================
+Start simple:
+Login screen
+Calculator UI
+Music player UI
+To-do app
+Dashboard UI
+
+9. Use Free UI Kits
+===================
+UI kits provide ready-made components.
+
+Search inside Figma Community:
+Mobile UI Kit
+Material Design
+iOS UI Kit
+
+10. Learn Prototyping
+=====================
+Figma can create interactive prototypes.
+
+You can:
+Connect screens
+Add animations
+Simulate app flow
+
+Beginner Learning Path
+======================
+Week 1
+======
+Learn tools
+Create simple shapes/layouts
+Week 2
+======
+Build small screens
+Learn typography/colors
+Week 3
+======
+Learn components and auto layout
+Week 4
+======
+Create full app UI
+
+Recommended Beginner Projects
+=============================
+Difficulty	          Project
+==========            =======
+Easy	                Login Page
+Easy	                Calculator UI
+Medium	              Music App
+Medium	              Food Delivery App
+Advanced	            Admin Dashboard
+
+Helpful Resources
+=================
+Figma Learn Center
+Figma YouTube Channel
+
+Simple Workflow
+===============
+Research → Wireframe → UI Design → Prototype → Test
+
+Important Beginner Tip
+======================
+Do not start by designing complex apps immediately.
+
+First master:
+Frames
+Auto Layout
+Components
+Spacing
+Typography
+
+These are the foundations of professional UI design.
