@@ -184,7 +184,7 @@ ________________________________________
   developed by Google)
 •	React Native → mobile apps using JavaScript 
 ________________________________________
-4. Desktop 
+4. Desktop app UI tools 
 java.awt.*;
 java.event.*;
 javax.swing.*;
@@ -195,27 +195,17 @@ javafx.scene.control.*;
 javafx.scene.layout.*;
 javafx.event.*;
 
-How they connect
+How are they connected
 •	Designers create UI/UX in Figma 
 •	Developers inspect designs and write code 
 •	The final product becomes a working app or website 
 ________________________________________
+
 Important mindset
-If you want to get into UX/UI:
 •	You don’t need programming at the beginning 
 •	Learn design first (layout, usability, user flows) 
-•	Then optionally learn coding to become a UI developer or product designer 
+•	Then, optionally learn coding to become a UI developer or product designer 
 ________________________________________
-Simple path for beginners
-1.	Start with Figma 
-2.	Learn UX/UI fundamentals 
-3.	Then learn HTML + CSS 
-4.	Move to React if interested 
-
-For Desktop App
-===============
-- Java Swing
-- JavaFx
 
 In general, we do not use one particular tool to design and develop the software 
 systems. Depending upon the requirement and types of problems, we can use a variety
