@@ -118,6 +118,19 @@ Charts	                       Chart
 Consistency	                   Design Lint
 Layer Management	             Similayer
 
+Recommended Animation Plugins by Use Case
+=========================================
+Use Case	                      Best Plugin
+========                        ===========
+UI Transitions	                Figmotion
+Micro-interactions	            Motion
+Web/App Animation	              LottieFiles
+UX Flow	                        Autoflow
+Advanced Prototype	            ProtoPie
+Presentation Animation	        Jitter
+GIF Export	                    GIF Export
+Blender Export                  3D animation workflows
+3D animation workflows          Software walkthroughs
 
 
 
