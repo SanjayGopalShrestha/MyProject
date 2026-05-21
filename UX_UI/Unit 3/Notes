@@ -1,9 +1,74 @@
 Unit 2: User Interface design
 3.1 Graphical and web user interfaces
 
+Best Free Figma Plugins
+=======================
+1. Iconify
+
+Best for:
+SVG icons
+UI icons
+Navigation icons
+
+Features:
+Huge icon library
+Material Icons
+Font Awesome
+Heroicons
+SVG support
+
+Widely recommended as one of the best free icon plugins.
+
 Iconify Plugins:
 https://www.figma.com/community/plugin/735098390272716381
 https://www.figma.com/community/plugin/735098390272716381
+
+
+Recommended Plugin Setup for Beginners
+======================================
+Purpose	                  Plugin
+=======                   ======
+Icons	                    Iconify
+Images	                  Unsplash
+UX                        Flow	Autoflow
+Placeholder Content	      Content Reel
+Charts	                  Chart
+Background Removal	      Remove BG
+File Cleanup	            Similayer
+
+How to Install Plugins
+======================
+- Inside Figma
+- Open a file
+- Right-click canvas
+- Plugins → Manage Plugins
+- Search plugin name
+- Click Install
+
+Where to Find Plugins
+=====================
+Figma Community Plugins
+
+Most Popular Plugin Categories
+==============================
+UI Design
+=========
+Iconify
+Content Reel
+Unsplash
+
+UX Design
+=========
+Autoflow
+Wireframe plugins
+Design Systems
+Design Lint
+Similayer
+
+Web UI
+======
+Chart
+Remove BG
 
 
 
