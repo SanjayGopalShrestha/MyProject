@@ -84,7 +84,19 @@ Mock Data	                        Content Reel
 User Profiles	                    UI Faces
 Animations	                      Figmotion
 
-
+Recommended Plugin Stack for Web UI
+===================================
+Task	                        Best Plugin
+====                          ===========
+Icons	                        Iconify
+Hero Images	                  Unsplash
+Placeholder Content	          Content Reel
+User Flow	                    Autoflow
+Dashboards	                  Chart
+Wireframes	                  Wireframe
+Cleanup	                      Similayer
+Consistency Check	            Design Lint
+Website Import	              HTML to Design
 
 
 3.2 Interaction styles: Command line,
