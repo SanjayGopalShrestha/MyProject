@@ -98,6 +98,33 @@ Cleanup	                      Similayer
 Consistency Check	            Design Lint
 Website Import	              HTML to Design
 
+Recommended Plugin Stack For React Developers
+=============================================
+Purpose	                      Plugin
+=======                       ======
+Figma to React	              Locofy.ai
+Responsive Export	            Anima
+UI Components	                Builder.io
+Icons	                        Iconify
+Layout Study	                HTML to Design
+
+For Java GUI Developers 
+=======================
+Purpose	                      Plugin
+=======                       ======
+Window Layout	                 Wireframe
+Flow Design	                   Autoflow
+Charts	                       Chart
+Consistency	                   Design Lint
+Layer Management	             Similayer
+
+
+
+
+
+
+
+
 
 3.2 Interaction styles: Command line,
 Menu selection, Form fill in, Direct manipulation, 
