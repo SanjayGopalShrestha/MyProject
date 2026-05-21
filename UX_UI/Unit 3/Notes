@@ -70,6 +70,20 @@ Web UI
 Chart
 Remove BG
 
+Recommended Plugin Setup for Desktop GUI
+========================================
+GUI Task	                        Recommended Plugin
+========                          ==================
+Icons	                            Iconify
+Window Layouts	                  Wireframe
+Flow Mapping	                    Autoflow
+Charts	                          Chart
+Consistency	                      Design Lint
+Layer Management	                Similayer
+Mock Data	                        Content Reel
+User Profiles	                    UI Faces
+Animations	                      Figmotion
+
 
 
 
