@@ -11,17 +11,20 @@ Team collaboration
 UX workshops
 Diagrams
 Planning sessions
+
 FigJam vs Figma
-Feature	FigJam	Figma
-Mind Mapping	Excellent	Basic
-Brainstorming	Excellent	Limited
-Sticky Notes	Yes	No
-Whiteboard	Yes	No
-UI Design	Basic	Professional
-Prototyping	Minimal	Advanced
-Components	Limited	Full support
-Developer Handoff	Limited	Full
-UX Workshops	Excellent	Moderate
+================
+Feature	              FigJam	          Figma
+=======               ======            ======
+Mind Mapping	        Excellent	        Basic
+Brainstorming	        Excellent	        Limited
+Sticky Notes	        Yes	              No
+Whiteboard	          Yes	              No
+UI Design	            Basic	            Professional
+Prototyping	          Minimal	          Advanced
+Components	          Limited	          Full support
+Developer Handoff	    Limited	          Full
+UX Workshops	        Excellent	        Moderate
 
 Simple Explanation
 ==================
@@ -44,4 +47,17 @@ interface creation tool
 prototyping tool
 
 Used FOR actual UI design and development handoff.
+
+Typical Workflow
+================
+Ideas → FigJam → Figma → Prototype → Development
+
+Example:
+========
+Brainstorm app features in FigJam
+=================================
+Create mind maps and user flows
+Plan screens and navigation
+Move to Figma
+Design actual UI screens
 
