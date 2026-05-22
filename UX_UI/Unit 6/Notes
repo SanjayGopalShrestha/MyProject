@@ -1,1 +1,291 @@
-Notes
+Transition and Animation in Prototypes
+======================================
+
+In UI/UX prototyping, transitions and animations make interfaces feel interactive and realistic.
+
+They are heavily used in:
+=========================
+mobile apps
+websites
+desktop software
+dashboards
+game UI
+smart devices
+
+Tools like Figma and Adobe XD support prototype animations.
+
+1. Transition
+=============
+A transition is the movement between:
+
+screens
+states
+pages
+components
+
+Example:
+========
+Clicking a button opens another screen
+A menu slides in
+A popup fades in
+
+Common Transition Types
+========================
+Transition	                        Description
+==========                          ===========
+Instant	                            Immediate change
+Dissolve/Fade	                      Smooth fade
+Slide In	                          Screen moves
+Push	                              New screen pushes old
+Move In/Out	                        Object motion
+Smart Animate	                      Automatic object animation
+
+2. Animation
+============
+Animation adds:
+===============
+motion
+timing
+feedback
+realism
+
+Example:
+========
+Button bounce
+Loading spinner
+Hover effect
+Expanding cards
+Animated menu
+
+Common UI Animations
+====================
+Animation	                        Purpose
+Hover Animation	                  User feedback
+Ripple Effect	                    Touch interaction
+Loading Spinner	                  Waiting indicator
+Bounce	                          Attention
+Scale Animation	                  Emphasis
+Parallax	                        Depth effect
+Smooth Scroll	                    Natural movement
+
+In Figma Prototyping
+=====================
+
+In Figma you can:
+=================
+connect frames
+add interactions
+choose transition styles
+animate components
+
+Typical Prototype Flow
+======================
+Frame A
+   ↓ click
+Transition
+   ↓
+Frame B
+   ↓ hover
+Animation
+
+
+Smart Animate automatically animates:
+=====================================
+position
+size
+opacity
+rotation
+color
+
+between two frames.
+
+Example:
+=========
+Button expands into dialog
+Card transforms into detail page
+Sidebar smoothly opens
+
+Difference Between Transition and Animation
+===========================================
+Transition	                              Animation
+Moves between screens/states	            Animates objects/elements
+Navigation focused	                      Motion focused
+Usually larger changes	                  Usually smaller interactions
+Screen-level	                            Component-level
+
+Prototype Animation Workflow
+============================
+Wireframe
+   ↓
+UI Design
+   ↓
+Prototype Connections
+   ↓
+Transitions
+   ↓
+Animations
+   ↓
+Interactive Prototype
+
+Common UX Animation Principles
+==============================
+Good animations should be:
+
+fast
+smooth
+meaningful
+non-distracting
+
+Popular timing:
+===============
+150ms–400ms
+
+Common Tools
+============
+Tool                  	  Animation Support
+====                      =================
+Figma	                    Excellent
+Adobe XD	                Good
+Framer	                  Advanced
+ProtoPie	                Very Advanced
+Principle	                Advanced
+After Effects	            Motion Graphics
+
+UX/UI Terms Related to Animation
+================================
+Motion Design
+Microinteractions
+Interaction Design
+State Changes
+Easing
+Keyframes
+Gesture Animation
+Interactive Prototype
+Dynamic UI
+Responsive Motion
+
+Which option do we use in Figma for transition and animation?
+=============================================================
+In Figma, transitions and animations are mainly created in the Prototype tab.
+
+Main Option Used: Prototype Tab
+
+Steps:
+
+Select a frame or object
+Open the right sidebar
+Click Prototype
+Connect one frame to another
+Choose:
+    interaction      
+    transition
+    animation
+
+Important Options Inside Prototype
+==================================
+Option	                  Purpose
+======                    =======
+Navigate                  To	Move to another frame
+Open Overlay	            Popup/modal
+Change To	                Switch component states
+Smart Animate	            Automatic animation
+Instant	                  No animation
+Dissolve	                Fade transition
+Slide In/Out	            Sliding motion
+Push	                    Push transition
+Move In/Out	              Object movement
+
+Most Popular Animation Option
+=============================
+Smart Animate
+
+This is the most commonly used animation feature in Figma.
+
+It automatically animates:
+
+movement
+resizing
+opacity
+rotation
+color changes
+
+between two frames.
+
+Where It Appears
+================
+Example:
+
+Prototype
+   └── Interaction
+          ├── On Click
+          ├── Navigate To
+          └── Animation
+                 ├── Instant
+                 ├── Dissolve
+                 ├── Smart Animate
+                 ├── Move In
+                 └── Slide In
+
+Common Triggers
+================
+Trigger	                    Meaning
+=======                     =======
+On Click	                  Mouse click
+On Drag	                    Drag interaction
+While Hovering	            Hover effect
+Mouse Enter	                Cursor enters
+Mouse Leave	                Cursor exits
+After Delay	                Auto animation
+
+Common Animation Settings
+=========================
+Setting	                    Purpose
+Ease In	                    Starts slow
+Ease Out	                  Ends slow
+Ease In and Out	            Smooth motion
+Linear	                    Constant speed
+Duration	                  Animation speed
+Component                   Animation
+
+For buttons, toggles, menus:
+============================
+Use:
+
+Components
+Variants
+Change To
+Smart Animate
+
+Example:
+========
+Button Default
+   ↓ hover
+Button Hover
+   ↓ click
+Button Pressed
+
+Best Figma Features for Animation
+=================================
+Feature	                      Use
+=======                       ===
+Smart Animate	                General animation
+Interactive Components	      Button states
+Overlays	                    Popups/modals
+Variants	                    UI state changes
+Auto Layout	                  Smooth resizing
+Prototype Connections	        Navigation flow
+
+Professional Workflow
+====================
+Design Frame
+   ↓
+Create Variants
+   ↓
+Prototype Connections
+   ↓
+Smart Animate
+   ↓
+Preview Prototype
+
+
+
