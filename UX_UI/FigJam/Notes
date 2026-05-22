@@ -1,0 +1,47 @@
+FigJam is mainly a collaborative whiteboarding and brainstorming tool, not a full UI design tool.
+
+It is primarily used for:
+=========================
+Mind maps
+Brainstorming
+Sticky notes
+User flows
+Wireframe planning
+Team collaboration
+UX workshops
+Diagrams
+Planning sessions
+FigJam vs Figma
+Feature	FigJam	Figma
+Mind Mapping	Excellent	Basic
+Brainstorming	Excellent	Limited
+Sticky Notes	Yes	No
+Whiteboard	Yes	No
+UI Design	Basic	Professional
+Prototyping	Minimal	Advanced
+Components	Limited	Full support
+Developer Handoff	Limited	Full
+UX Workshops	Excellent	Moderate
+
+Simple Explanation
+==================
+FigJam
+======
+Think of it as:
+===============
+a digital whiteboard
+brainstorming canvas
+collaborative planning board
+
+Used BEFORE actual UI design.
+
+Figma
+=====
+Think of it as:
+
+professional UI/UX design software
+interface creation tool
+prototyping tool
+
+Used FOR actual UI design and development handoff.
+
