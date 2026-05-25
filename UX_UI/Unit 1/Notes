@@ -165,6 +165,7 @@ ________________________________________
 Programming tools (for building the UI)
 =======================================
 Once the design is ready, developers use code to build it.
+
 1. Basic web technologies
 •	HTML → structure (buttons, text, layout) 
 •	CSS → styling (colors, spacing, fonts) 
@@ -174,12 +175,64 @@ Once the design is ready, developers use code to build it.
 • etc.
 
 ________________________________________
-2. Popular frameworks & libraries
+2. Popular web frameworks & libraries
 These make UI development faster:
+For small scale applications:
+•	JQuery → small and simple web apps (JavaScript)
+
+For modern large-scale applications:
 •	React → very popular for web apps (JavaScript)
 •	Vue.js → beginner-friendly (JavaScript)
 •	Angular → used in large apps (JavaScript)
+
+Java Server Pages (JSP) can be used for both small-scale and large-scale web applications
+
+Small-scale web applications
+
+Java + HTML
+Apache Tomcat
+Learning Java web development
+
+Example flow:
+
+Browser → JSP Page → Java Servlet → Database
+
+Large-scale web applications
+
+Large scale web enterprise applications:
+
+Servlet
+Spring Framework
+Hibernate
+
+But modern trend has changed
+============================
+Today, many large modern web apps prefer:
+
+Frontend:
+========
+React (JavaScript)
+Angular (JavaScript)
+Vue.js (JavaScript)
+
+Backend:
+=======
+Spring Boot (Java)
+Node.js (allows JavaScript to run on Servers, Command line, Backend systems)
+Django (Python)
+ASP.NET (Support multiple .NET languages, C#, Visual Basic .NET (VB.NET), F#, today, most ASP.NET 
+development uses C Sharp (C#))
+
+because they separate:
+
+Frontend UI ↔ REST API ↔ Backend
+
+REST API (Representational State Transfer Application Programming Interface) is a standard way 
+for applications to communicate over the internet.
+
+instead of mixing Java code inside HTML pages.
 ________________________________________
+
 3. Mobile app UI tools
 •	Flutter → to build Android & iOS apps (Used with the Dart programming language by Google,
   developed by Google)
