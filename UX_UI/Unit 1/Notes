@@ -456,7 +456,7 @@ guesswork with evidence, helping you:
 - Build products people actually want
 - Improve usability and satisfaction
 - Reduce costly redesigns
-- Identify unmet needs or opportunities
+- Identify unmet (असन्तुष्ट) needs or opportunities
 
 Common Types of User Research
 =============================
@@ -473,10 +473,10 @@ Focuses on why users behave a certain way.
 Focuses on what and how many.
 - Surveys
 - Analytics (clicks, time on page, conversions)
-- A/B testing (A/B testing (also known as split testing) is a randomized controlled
+- A/B testing (also known as split testing) - It is a randomized controlled
   experimentation process where two versions of a digital asset—such as a webpage, 
   email, or advertisement are compared to determine which one performs better against 
-  a specific conversion goal)
+  a specific conversion goal.
 
 Content Strategy
 ================
@@ -488,7 +488,7 @@ Information Architecture
 ========================
 Information Architecture (IA) is the structural blueprint of a website, app, or 
 software that organizes and labels content to help users find information easily. 
-focuses on the structural organization of information, rather than the visual 
+Focuses on the structural organization of information, rather than the visual 
 design or user interface.
 
 Interaction Design
