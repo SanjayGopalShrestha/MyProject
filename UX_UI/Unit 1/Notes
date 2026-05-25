@@ -111,7 +111,7 @@ ________________________________________
 •	Limit to 2–3 font styles 
 ________________________________________
 3. Color theory
-•	Use a consistent color palette 
+•	Use a consistent (मिल्दो) color palette 
 •	Colors should match the brand and emotion 
 •	Ensure contrast for readability 
 ________________________________________
@@ -180,9 +180,9 @@ These make UI development faster:
 •	Angular → used in large apps (JavaScript)
 ________________________________________
 3. Mobile app UI tools
-•	Flutter → build Android & iOS apps (Used with the Dart programming language by Google,
+•	Flutter → to build Android & iOS apps (Used with the Dart programming language by Google,
   developed by Google)
-•	React Native → mobile apps using JavaScript 
+•	React Native → mobile apps using JavaScript (where as React if for web app)
 ________________________________________
 4. Desktop app UI tools 
 java.awt.*;
