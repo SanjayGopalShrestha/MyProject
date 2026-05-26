@@ -48,13 +48,16 @@ Navigation bars
 Cards
 Icons
 Menus
+
 Important Tools
-Tool	Shortcut
-Frame	F
-Rectangle	R
-Text	T
-Move	V
-Pen	P
+===============
+Tool        	Shortcut
+====          ========
+Frame	          F
+Rectangle	      R
+Text	          T
+Move	          V
+Pen	            P
 
 5. Use Auto Layout
 ==================
