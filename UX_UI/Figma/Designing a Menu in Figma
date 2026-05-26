@@ -1,0 +1,130 @@
+How to Design a Menu in Figma
+=============================
+Designing a menu in Figma means creating a structured navigation system (like top 
+bars, sidebars, dropdowns, or mega menus) using frames, components, and layout 
+tools.
+
+Below is a simple step-by-step guide.
+
+1. Create a New Frame (Screen)
+==============================
+Start by creating a frame for your design:
+Press F
+Choose a device size (Desktop / Mobile)
+
+Example:
+Desktop: 1440 × 1024
+Mobile: 390 × 844
+
+2. Add a Navigation Bar Structure
+=================================
+Create a rectangle at the top (for top menu):
+Height: 60–80px
+Full width
+
+Add layout elements:
+Logo (left)
+Menu items (center or right)
+Buttons (login/signup)
+
+Example menu:
+Home | About | Services | Contact
+
+3. Use Auto Layout
+==================
+Auto Layout helps align items properly:
+Select menu items
+Press Shift + A
+Set spacing (e.g., 20px between items)
+
+Benefits:
+Responsive design
+Easy alignment
+Consistent spacing
+
+4. Add Menu Styles
+==================
+Customize the menu:
+Font (e.g., Inter, Roboto)
+Font size (14–18px)
+Colors (hover, active, default states)
+Icons (optional)
+
+Use:
+Fill color for background
+Stroke for borders
+Hover effects for interaction
+
+5. Create Interactive Menu (Prototype)
+======================================
+To make it clickable:
+Go to Prototype tab
+Select menu item
+Drag interaction to another frame
+Set trigger: “On Click” or “While Hovering”
+
+Example:
+Home → Home Screen
+About → About Page
+
+6. Create Dropdown or Flyout Menu (Optional)
+============================================
+Steps:
+Create submenu frame
+Place it under main menu item
+Use “On Hover” interaction
+
+Example:
+Services
+ ├── Web Design
+ ├── App Development
+ └── UI/UX Design
+
+7. Create Sidebar Menu (Optional)
+=================================
+For dashboards:
+Add vertical rectangle (left side)
+Add menu items stacked vertically
+Use icons + text
+
+Example:
+Dashboard
+Analytics
+Settings
+
+8. Use Components
+=================
+Turn menu items into components:
+Select item
+Right-click → Create Component
+
+Benefits:
+Reusable
+Easy updates
+Consistent design
+
+9. Add Hover and Active States
+==============================
+Design different states:
+Default
+Hover (highlight color)
+Active (current page indicator)
+
+10. Test the Prototype
+======================
+Click “Present” to test:
+Navigation flow
+Menu interactions
+Responsiveness
+
+Summary Workflow
+================
+Frame → Layout → Auto Layout → Style → Prototype → Test
+
+Final Tip
+=========
+A good Figma menu design should be:
+Simple
+Consistent
+Easy to navigate
+Responsive
