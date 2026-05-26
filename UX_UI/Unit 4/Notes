@@ -216,10 +216,38 @@ Logically
 Consistently
 In meaningful order
 
+Formatting of Menus: Ordering
 
+Ordering in menu formatting refers to the sequence in which menu items are arranged so users can find commands quickly and naturally.
 
+Good ordering improves:
 
+Navigation speed
+Usability
+User understanding
+Efficiency
 
+Formatting of Menus: Grouping
+
+Formatting of Menus: Grouping
+
+Grouping in menu formatting means arranging related menu items together under a common category or section so users can easily understand and find functions.
+
+It reduces confusion and improves navigation by organizing similar commands.
+
+Meaning of Menu Grouping
+
+Instead of listing all items randomly, related items are placed together.
+
+Example:
+
+File
+ ├── New
+ ├── Open
+ ├── Save
+ └── Exit
+
+Here, all file-related actions are grouped under File.
 
 4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
     menu, iconic menu
