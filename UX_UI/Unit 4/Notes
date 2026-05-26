@@ -42,66 +42,68 @@ Expands the window to full screen.
 Closes the application.
 
 Functions of Menus in User Interfaces
-
+=====================================
 Menus are used to organize commands and improve usability.
 
 Main Functions:
 1. Navigation
-
+=============
 Helps users move between screens or pages.
 
 Example:
-
 Home → Profile → Settings
-2. Command Execution
 
+2. Command Execution
+====================
 Menus allow users to perform actions.
 
 Example:
-
+========
 Save file
 Print document
 Delete item
-3. Organization of Features
 
+3. Organization of Features
+===========================
 Groups related functions together.
 
 Example:
-
+=======
 File menu: Open, Save, Exit
 Edit menu: Cut, Copy, Paste
-4. System Control
 
+4. System Control
+=================
 Controls window or application behavior.
 
 Example:
-
+========
 Minimize
 Maximize
 Close
-5. Quick Access
 
+5. Quick Access
+===============
 Provides shortcuts to frequently used actions.
 
 Example:
-
+========
 Toolbar menus in software like Microsoft Word
 Types of Menus in Interfaces
+============================
 1. System Menu
-
 Controls the window itself (move, close, resize)
 
 2. Application Menu
-
 Contains program functions (file, edit, view)
 
 3. Context Menu
-
 Appears on right-click (copy, paste, delete)
 
 4. Navigation Menu
-
 Used in websites and apps (home, about, contact)
+
+
 4.2 Formatting of menus: Consistency, display, presentation, organization, complexity
     , item arrangement, ordering, grouping
 4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
