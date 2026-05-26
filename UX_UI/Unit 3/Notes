@@ -1,5 +1,55 @@
 Unit 2: User Interface design
+=============================
+
 3.1 Graphical and web user interfaces
+=====================================
+Graphical User Interface (GUI)
+
+A Graphical User Interface (GUI) is a type of interface where users interact with a system using
+graphical elements instead of typing commands.
+
+GUI uses:
+========
+Windows
+Buttons
+Icons
+Menus
+Dialog boxes
+Toolbars
+
+Users interact mainly through:
+==============================
+Mouse
+Touch
+Keyboard
+
+Examples of GUI Applications
+============================
+Microsoft Word
+Adobe Photoshop
+File Explorer
+
+Features of GUI
+===============
+Feature	                      Description
+Windows	                      Separate work areas
+Icons	                        Small graphical symbols
+Menus	                        List of commands
+Buttons	                      Trigger actions
+Drag and Drop	                Move items visually
+
+
+GUI vs Web UI
+============
+Feature	                  GUI	                        Web UI
+=======                   ====                        ======
+Platform	                Desktop OS	                Web Browser
+Internet Needed	          Usually No	                Usually Yes
+Installation	            Required	                  Usually Not
+Speed	                    Faster for heavy apps	      Depends on browser/network
+Technologies	            Java, C#, Qt	              HTML, CSS, JS
+Examples	                Photoshop, VLC	            Gmail, Figma
+
 
 Best Free Figma Plugins
 =======================
@@ -148,18 +198,153 @@ UX Validation	                Attention Insight
 Mock Data	                    Content Reel
 
 
-
-
-
-
 3.2 Interaction styles: Command line,
 Menu selection, Form fill in, Direct manipulation, 
 Antrhorpomorphic
+
 3.3. Principles of UI design
+============================
+Principles of UI Design
+=======================
+1. Clarity
+==========
+The interface should be easy to understand.
+Buttons, icons, and menus should clearly show their purpose.
+Users should know what to do without confusion.
+
+Example:
+=======
+A trash icon for delete
+A search icon for search
+
+2. Consistency
+==============
+Use the same styles and behaviors throughout the interface.
+Same button colors
+Same font styles
+Same navigation patterns
+
+Consistency helps users learn faster.
+
+Example:
+========
+All “Save” buttons should look identical.
+
+3. Simplicity
+=============
+Keep the design clean and avoid unnecessary elements.
+
+Remove clutter
+Use minimal text
+Focus on important actions
+
+Simple interfaces improve usability.
+
+4. Feedback
+===========
+The system should respond to user actions.
+
+Examples:
+=========
+Button changes color when clicked
+Loading spinner appears (A loading spinner is a visual animation that tells users the system is 
+processing something or waiting for data to load)
+Success message after saving
+
+Feedback tells users what is happening.
+
+5. Visibility
+=============
+Important elements should be easy to find.
+
+Menus should be visible
+Important buttons should stand out
+Information hierarchy should be clear
+
+Example:
+========
+“Login” button highlighted prominently
+
+6. Accessibility
+================
+Design should be usable by everyone, including people with disabilities.
+
+Examples:
+=========
+Large readable text
+Good color contrast
+Keyboard navigation
+Screen reader support
+
+Accessibility improves usability for all users.
+
+7. User Control
+===============
+Users should feel in control of the interface.
+
+Examples:
+=========
+Undo button
+Back button
+Cancel option
+
+Avoid forcing users into unwanted actions.
+
+8. Efficiency
+=============
+Tasks should be completed quickly and easily.
+
+Examples:
+=========
+Short navigation paths
+Keyboard shortcuts
+Auto-complete search
+
+Efficient interfaces save time.
+
+9. Visual Hierarchy
+===================
+Arrange elements according to importance.
+
+Methods:
+========
+Larger text for headings
+Bold important buttons
+Use spacing and colors wisely
+
+This guides user attention.
+
+10. Error Prevention and Recovery
+==================================
+Help users avoid mistakes and recover easily.
+
+Examples:
+=========
+Confirmation before deleting
+Form validation (Form validation is the process of checking whether the data entered into a form 
+is correct, complete, and acceptable before submission, it helps prevent errors and improves user
+experience)
+Helpful error messages
+
+Good UI reduces frustration.
+
+
 3.4 Graphical user interface
+============================
+
+
 3.5 UI design process
+=====================
+
+
 3.6 Human considerations in interface and screen design
+=======================================================
+
+
 3.7 Technological considerations in interface design
+====================================================
+
+
 
 
 
