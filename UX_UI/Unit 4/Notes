@@ -317,7 +317,76 @@ Microsoft Word
 Adobe Photoshop
 Windows 11 classic applications
 
+Types of menus: Cascading menu
+==============================
+A Cascading Menu (also called a hierarchical menu) is a type of menu where 
+selecting one option opens another submenu, which may open another submenu, 
+forming a multi-level chain. It “cascades” sideways step by step.
 
+How It Works
+============
+User opens a main menu
+Hover/click on an item
+A submenu appears to the side
+Further submenus may open from that submenu
+
+Example:
+========
+File
+ └── Open
+      └── Recent Files
+           └── Project1.docx
+
+Cascading menus are commonly found in:
+======================================
+Desktop applications
+File systems
+Settings panels
+Complex software tools
+
+Examples:
+=========
+Windows 11 Settings menus
+Adobe Photoshop tool options
+Microsoft Word advanced menus
+
+Types of menus: Popup Menu
+==========================
+A Popup Menu (also called a context menu or right-click menu) is a menu that 
+appears temporarily when the user performs a specific action, usually right-
+clicking or long-pressing an object. It provides quick actions related to the 
+selected item.
+
+How It Works
+============
+User right-clicks on an object (file, text, image)
+A small menu appears near the cursor
+User selects an action
+Menu disappears after selection or clicking outside
+
+Example:
+========
+Right Click Menu:
+------------------
+Open
+Copy
+Paste
+Delete
+Properties
+
+Popup menus are commonly used in:
+================================
+
+Desktop operating systems
+File managers
+Text editors
+Web applications
+
+Examples:
+
+Windows 11 file explorer
+Microsoft Word editing options
+Adobe Photoshop tool actions
 
 
 4.4 Selection of windows and its components, window presentation styles: Tiled win-
