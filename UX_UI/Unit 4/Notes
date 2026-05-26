@@ -461,6 +461,77 @@ Google Chrome navigation icons
 4.4 Selection of windows and its components, window presentation styles: Tiled win-
     dows, overlapping windows, cascading windows
 ===================================================================================
+Window selection means choosing a specific window to work on when multiple windows 
+are open.
+
+How windows are selected:
+========================
+Clicking anywhere inside a window
+Using taskbar (switching apps)
+Using keyboard shortcuts (Alt + Tab)
+Touch selection on mobile systems
+
+Active vs Inactive Window
+=========================
+Type	                 Meaning
+====                     =======
+Active Window	        Currently selected and in use
+Inactive Window	        Open but not currently focused
+
+Example:
+========
+You are typing in Microsoft Word → Word is active
+Google Chrome is open in background → inactive
+
+A window is made up of several standard GUI components.
+
+1. Title Bar
+Located at the top
+Shows application name
+Contains minimize, maximize, close buttons
+
+Example:
+Microsoft Word  |  _  □  ✖
+
+2. Menu Bar
+Contains menus like File, Edit, View
+Provides access to commands
+
+3. Tool Bar
+Contains shortcut icons for common actions
+Example: Save, Print, Undo
+
+4. Work Area (Client Area)
+Main area where content is displayed or edited
+Example: document text area in Word
+
+5. Scroll Bars
+Vertical and horizontal bars
+Used to navigate content
+
+6. Status Bar
+Located at bottom
+Shows status information (page number, zoom level)
+
+7. Borders and Corners
+Used to resize the window
+Drag edges to adjust size
+Illustration of Window Components
+
+3. Types of Windows in Selection Context
+1. Primary Window
+
+Main working window (e.g., document editor)
+
+2. Secondary Window
+
+Supporting window (e.g., settings)
+
+3. Dialog Box
+
+Small popup for input or message
+
+
 
 
 4.5 Types of windows: Primary windows, secondary windows, dialog boxes
