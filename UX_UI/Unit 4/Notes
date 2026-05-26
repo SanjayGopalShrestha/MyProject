@@ -256,6 +256,69 @@ Here, all file-related actions are grouped under File.
 4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
     menu, iconic menu
 ==================================================================================
+A Menu Bar is a horizontal strip (usually at the top of a window or application) 
+that contains a list of main menu options. Each option can be clicked to reveal 
+a dropdown menu with more commands.
+
+It is one of the most common navigation structures in desktop applications.
+
+Where Menu Bars Are Used
+========================
+
+Menu bars are commonly found in:
+Desktop software
+Web applications (less common now)
+IDEs and productivity tools
+
+Example systems:
+================
+Microsoft Word
+Adobe Photoshop
+Windows 11 apps
+
+Structure of a Menu Bar
+Example:
+=======
+File   Edit   View   Insert   Format   Tools   Help
+
+Each item opens a dropdown list of commands.
+
+
+Types of menus: Pull down menu
+==============================
+A Pull-down menu is a type of menu that appears when a user clicks or hovers on a 
+menu title (usually in a menu bar). It “pulls down” a list of related commands 
+from the top. It is widely used in desktop applications and classic GUI systems.
+
+How It Works
+============
+User clicks a menu item in the menu bar (e.g., File)
+A vertical list drops down under it
+User selects an option (e.g., Open, Save)
+
+Example:
+========
+File ▼
+   New
+   Open
+   Save
+   Exit
+
+Pull-down menus are common in:
+==============================
+Desktop applications
+Office software
+Graphics tools
+System applications
+
+Examples:
+========
+Microsoft Word
+Adobe Photoshop
+Windows 11 classic applications
+
+
+
 
 4.4 Selection of windows and its components, window presentation styles: Tiled win-
     dows, overlapping windows, cascading windows
