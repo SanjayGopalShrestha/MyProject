@@ -516,7 +516,53 @@ Shows status information (page number, zoom level)
 7. Borders and Corners
 Used to resize the window
 Drag edges to adjust size
-Illustration of Window Components
+
+Window Presentation Styles
+==========================
+In GUI systems, window presentation style refers to how multiple open windows are 
+arranged and displayed on the screen.
+
+The three main styles are:
+Tiled Windows
+Overlapping Windows
+Cascading Windows
+
+1. Tiled Windows
+================
+In tiled window layout, all open windows are arranged side-by-side without 
+overlapping. Each window occupies a portion of the screen.
+
+How it looks
+============
+Windows are automatically resized
+No window covers another
+Screen is divided into sections
+
+
+2. Overlapping Windows
+======================
+In overlapping window style, windows can be placed on top of each other. The 
+active window appears in front. This is the most common style in modern systems.
+
+How it looks
+============
+Windows overlap freely
+User can move and resize windows
+Active window is in focus
+
+
+3. Cascading Windows
+====================
+In cascading window style, multiple windows are arranged in a stacked diagonal 
+pattern, so that each window is slightly offset from the previous one.
+
+How it looks
+============
+Windows overlap partially
+Each window title bar is visible
+Arranged in a step-like pattern
+
+
 
 3. Types of Windows in Selection Context
 1. Primary Window
