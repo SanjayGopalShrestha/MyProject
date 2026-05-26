@@ -4,7 +4,7 @@ Unit 2: User Interface design
 3.1 Graphical and web user interfaces
 =====================================
 Graphical User Interface (GUI)
-
+==============================
 A Graphical User Interface (GUI) is a type of interface where users interact with a system using
 graphical elements instead of typing commands.
 
@@ -38,6 +38,27 @@ Menus	                        List of commands
 Buttons	                      Trigger actions
 Drag and Drop	                Move items visually
 
+Web User Interface (Web UI)
+===========================
+
+A Web UI is the interface of a website or web application accessed through a 
+browser.
+
+Users interact through:
+=======================
+Web pages
+Forms
+Navigation bars
+Cards
+Buttons
+Responsive layouts
+
+Examples of Web UI
+==================
+Google Docs
+YouTube
+Facebook
+Figma
 
 GUI vs Web UI
 ============
