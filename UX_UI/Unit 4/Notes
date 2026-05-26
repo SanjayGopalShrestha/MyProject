@@ -113,7 +113,7 @@ Used in websites and apps (home, about, contact)
 
 4.2 Formatting of menus: Consistency, display, presentation, organization, complexity
     , item arrangement, ordering, grouping
-
+=====================================================================================
 Menu formatting refers to the visual organization and styling of menus in a user 
 interface so they are easy to read, navigate, and use.
 
@@ -238,7 +238,6 @@ Formatting of Menus: Grouping
 =============================
 Grouping in menu formatting means arranging related menu items together under a 
 common category or section so users can easily understand and find functions.
-
 It reduces confusion and improves navigation by organizing similar commands.
 
 Meaning of Menu Grouping
@@ -256,14 +255,32 @@ Here, all file-related actions are grouped under File.
 
 4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
     menu, iconic menu
-4.4 Selection of windows and its  components, window presentation styles: Tiled win-
+==================================================================================
+
+4.4 Selection of windows and its components, window presentation styles: Tiled win-
     dows, overlapping windows, cascading windows
+===================================================================================
+
+
 4.5 Types of windows: Primary windows, secondary windows, dialog boxes
+======================================================================
+
 4.6 Screen based controls: Operable controls: (Buttons, toolbars), Text entry/Read
     -only controls (Single and multiple line textboxes), selection controls (radio 
      buttons, checkboxes, palettes, list boxes, list view controls, drop down/popup
      list boxes
+===================================================================================
+
+
 4.7  Other operable controls: slider, tabs, date picker, tree view, scroll bars
+===============================================================================
+
 4.8  Selecting the proper controls
+==================================
+
 4.9  Creating meaningful graphics, icons and images 
+====================================================
+
+
+
 
