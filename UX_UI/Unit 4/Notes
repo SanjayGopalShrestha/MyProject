@@ -594,11 +594,12 @@ Text entry/Read-only controls Single and multiple line textboxes
 Selection controls:
 radio buttons
 checkboxes
-palettes
+palettes (A movable or fixed panel that groups related tools or options in one 
+place for easy access)
 list boxes 
-list view controls
+list view controls (A UI component that presents multiple items in a vertical list 
+so users can easily browse, select, and manage them)
 drop down/popup
-list boxes
 
 
 4.7  Other operable controls: slider, tabs, date picker, tree view, scroll bars
