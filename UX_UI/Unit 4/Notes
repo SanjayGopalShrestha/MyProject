@@ -1,48 +1,46 @@
 Unit 4: UI Components
 =====================
 4.1 System menus and functions of menus
-System Menus and Functions of Menus
-What is a System Menu?
 
-A system menu is a menu provided by an operating system or application that contains essential commands to control a window or program.
+What is a System Menu?
+======================
+A system menu is a menu provided by an operating system or application that contains
+essential commands to control a window or program.
 
 It usually appears when you:
-
 Click the icon in the top-left corner of a window
 Press a shortcut (like Alt + Space in Windows)
 
 Example system: Windows 11
 
 Common System Menu Options
-
+==========================
 A typical system menu includes:
 
 1. Restore
-
+==========
 Returns a maximized window to its previous size.
 
 2. Move
-
+=======
 Allows repositioning the window on the screen.
 
 3. Size
-
+=======
 Lets the user resize the window manually.
 
 4. Minimize
-
+===========
 Sends the window to the taskbar.
 
 5. Maximize
-
+===========
 Expands the window to full screen.
 
 6. Close
-
+========
 Closes the application.
 
-Illustration of System Menu
-4
 Functions of Menus in User Interfaces
 
 Menus are used to organize commands and improve usability.
