@@ -163,6 +163,61 @@ Navigation clarity
 Readability
 Professional appearance
 
+Formatting of Menus: Organization
+
+Organization in menu formatting means arranging menu items in a logical, structured, and meaningful way so users can quickly find what they need.
+
+Good menu organization improves:
+
+Navigation
+Usability
+Efficiency
+User understanding
+
+Menus should group related options together and arrange them in a clear order.
+
+Example:
+
+File
+ ├── New
+ ├── Open
+ ├── Save
+ └── Exit
+
+Related commands are grouped under File.
+
+Formatting of Menus: Complexity
+
+Complexity in menu formatting refers to the level of difficulty users experience while understanding and navigating menus.
+
+A menu becomes complex when it contains:
+
+Too many options
+Deep submenu levels
+Confusing organization
+Unclear labels
+
+Good UI design aims to reduce unnecessary complexity.
+
+
+Item arrangement in menu formatting refers to how menu items are ordered, grouped, and positioned within a menu so users can quickly locate and use commands.
+
+Good arrangement improves:
+
+Navigation speed
+Readability
+Usability
+User experience
+Meaning of Item Arrangement
+
+Menu items should be placed:
+
+Logically
+Consistently
+In meaningful order
+
+
+
 
 
 
