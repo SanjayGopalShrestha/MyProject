@@ -428,7 +428,7 @@ computer data (structured code).
 Good GUI (Graphical User Interface) design balances visual aesthetics with 
 functional efficiency to make a digital product highly usable, predictable, 
 and delightful. It reduces the user's mental effort, allowing them to complete 
-tasks with minimal friction.Core 
+tasks with minimal friction.
 
 Properties of Good GUI
 ======================
@@ -494,7 +494,7 @@ Once the design is ready, developers use code to build it.
 =====================================
 These make UI development faster:
 
-For small scale applications:
+For small-scale applications:
 •	JQuery → small and simple web apps (JavaScript)
 
 For modern large-scale applications:
@@ -553,22 +553,25 @@ ________________________________________
   developed by Google)
 •	React Native → mobile apps using JavaScript (whereas React is for web apps)
 ________________________________________
+
 4. Desktop app UI tools 
+•	C++
+•	C#
 •	Java swing
 •	JavaFX
 •	Python Tkinter
 
 How are they connected
+======================
 •	Designers create UI/UX in Figma 
 •	Developers inspect designs and write code 
 •	The final product becomes a working app or website 
-________________________________________
 
 Important mindset
+=================
 •	You don’t need programming at the beginning 
 •	Learn design first (layout, usability, user flows) 
 •	Then, optionally learn coding to become a UI developer or product designer 
-________________________________________
 
 In general, we do not use one particular tool to design and develop the software 
 systems. Depending upon the requirement and types of problems, we can use a variety
