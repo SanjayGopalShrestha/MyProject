@@ -563,35 +563,52 @@ Each window title bar is visible
 Arranged in a step-like pattern
 
 
-
-3. Types of Windows in Selection Context
+4.5 Types of windows: Primary windows, secondary windows, dialog boxes
+======================================================================
 1. Primary Window
-
+=================
 Main working window (e.g., document editor)
 
 2. Secondary Window
-
+===================
 Supporting window (e.g., settings)
 
 3. Dialog Box
-
+=============
 Small popup for input or message
 
-
-
-
-4.5 Types of windows: Primary windows, secondary windows, dialog boxes
-======================================================================
 
 4.6 Screen based controls: Operable controls: (Buttons, toolbars), Text entry/Read
     -only controls (Single and multiple line textboxes), selection controls (radio 
      buttons, checkboxes, palettes, list boxes, list view controls, drop down/popup
      list boxes
 ===================================================================================
+Screen-based controls are the visual interactive elements displayed on a screen 
+that allow users to input data, select options, or perform actions in a graphical
+user interface (GUI). They replace command-line typing with direct visual 
+interaction.
+
+Buttons
+Toolbars
+Text entry/Read-only controls Single and multiple line textboxes
+Selection controls:
+radio buttons
+checkboxes
+palettes
+list boxes 
+list view controls
+drop down/popup
+list boxes
 
 
 4.7  Other operable controls: slider, tabs, date picker, tree view, scroll bars
 ===============================================================================
+Other operable controls: 
+slider 
+tabs 
+date picker 
+tree view 
+scroll bars
 
 4.8  Selecting the proper controls
 ==================================
