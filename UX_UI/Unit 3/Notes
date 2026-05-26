@@ -1,4 +1,4 @@
-Unit 2: User Interface design
+Unit 3: User Interface design
 =============================
 
 3.1 Graphical and web user interfaces
@@ -70,6 +70,538 @@ Installation	            Required	                  Usually Not
 Speed	                    Faster for heavy apps	      Depends on browser/network
 Technologies	            Java, C#, Qt	              HTML, CSS, JS
 Examples	                Photoshop, VLC	            Gmail, Figma
+
+3.2 Interaction styles: Command line, Menu selection, Form fill in, Direct 
+manipulation, Antrhorpomorphic
+
+Command Line Interface (CLI)
+============================
+A Command Line Interface (CLI) is a text-based user interface where users interact
+with a computer by typing commands instead of clicking buttons or icons. It is one 
+of the oldest types of user interfaces.
+
+Menu selection
+==============
+A Menu Selection Interface is a type of user interface where users choose options 
+from a displayed list or menu instead of typing commands.
+
+It is commonly used in:
+======================
+Desktop applications
+Websites
+Mobile apps
+ATMs
+Smart TVs
+Embedded systems
+
+Form Fill-In Interface
+======================
+A Form Fill-In Interface is a type of user interface where users enter information
+into fields, boxes, checklists, or dropdown menus.
+
+It is widely used in:
+=====================
+Registration forms
+Login pages
+Online applications
+Surveys
+Payment systems
+Desktop software forms
+
+Direct manipulation
+===================
+A Direct Manipulation Interface is a type of user interface where users interact 
+directly with visible objects on the screen using actions like:
+
+Dragging
+Dropping
+Resizing
+Rotating
+Swiping
+Zooming
+
+Instead of typing commands, users manipulate graphical objects directly.
+
+Antrhorpomorphic
+================
+An Anthropomorphic Interface is a user interface designed to behave or appear like 
+a human.
+
+The system may:
+
+Speak like a person
+Show emotions
+Use facial expressions
+Act like a virtual assistant
+Mimic human conversation
+
+The word anthropomorphic is “giving human characteristics to non-human systems.”
+
+
+3.3. Principles of UI design
+============================
+Principles of UI Design
+=======================
+1. Clarity
+==========
+The interface should be easy to understand.
+Buttons, icons, and menus should clearly show their purpose.
+Users should know what to do without confusion.
+
+Example:
+=======
+A trash icon for delete
+A search icon for search
+
+2. Consistency
+==============
+Use the same styles and behaviors throughout the interface.
+Same button colors
+Same font styles
+Same navigation patterns
+
+Consistency helps users learn faster.
+
+Example:
+========
+All “Save” buttons should look identical.
+
+3. Simplicity
+=============
+Keep the design clean and avoid unnecessary elements.
+
+Remove clutter
+Use minimal text
+Focus on important actions
+
+Simple interfaces improve usability.
+
+4. Feedback
+===========
+The system should respond to user actions.
+
+Examples:
+=========
+Button changes color when clicked
+Loading spinner appears (A loading spinner is a visual animation that tells users the system is 
+processing something or waiting for data to load)
+Success message after saving
+
+Feedback tells users what is happening.
+
+5. Visibility
+=============
+Important elements should be easy to find.
+
+Menus should be visible
+Important buttons should stand out
+Information hierarchy should be clear
+
+Example:
+========
+“Login” button highlighted prominently
+
+6. Accessibility
+================
+Design should be usable by everyone, including people with disabilities.
+
+Examples:
+=========
+Large readable text
+Good color contrast
+Keyboard navigation
+Screen reader support
+
+Accessibility improves usability for all users.
+
+7. User Control
+===============
+Users should feel in control of the interface.
+
+Examples:
+=========
+Undo button
+Back button
+Cancel option
+
+Avoid forcing users into unwanted actions.
+
+8. Efficiency
+=============
+Tasks should be completed quickly and easily.
+
+Examples:
+=========
+Short navigation paths
+Keyboard shortcuts
+Auto-complete search
+
+Efficient interfaces save time.
+
+9. Visual Hierarchy
+===================
+Arrange elements according to importance.
+
+Methods:
+========
+Larger text for headings
+Bold important buttons
+Use spacing and colors wisely
+
+This guides user attention.
+
+10. Error Prevention and Recovery
+==================================
+Help users avoid mistakes and recover easily.
+
+Examples:
+=========
+Confirmation before deleting
+Form validation (Form validation is the process of checking whether the data entered into a form 
+is correct, complete, and acceptable before submission, it helps prevent errors and improves user
+experience)
+Helpful error messages
+
+Good UI reduces frustration.
+
+3.4 Graphical user interface
+============================
+Same as 3.1
+
+
+3.5 UI design process
+=====================
+The UI (User Interface) design process is a structured set of steps used to design
+visually effective, user-friendly interfaces for websites, apps, and software.
+
+It focuses on how the product looks and how users interact with it.
+
+1. Research (Understanding Users)
+=================================
+This is the first step where designers understand:
+User needs
+Target audience
+Problems to solve
+Competitor apps
+
+Common activities:
+User interviews
+Surveys
+Market research
+
+2. Define Requirements
+======================
+After research, designers define:
+What features are needed
+What screens are required
+User goals
+Business goals
+
+Example:
+========
+Login screen
+Dashboard
+Profile page
+
+3. Wireframing
+==============
+Wireframes are basic layout sketches of screens.
+
+They show:
+==========
+Structure
+Placement of elements
+Navigation flow
+
+No colors or graphics yet.
+
+
+4. UI Design (Visual Design)
+============================
+This step adds:
+Colors
+Typography
+Icons
+Images
+Branding
+
+Tools used:
+==========
+Figma
+Adobe XD
+
+5. Prototyping
+==============
+A prototype is a clickable model of the UI.
+
+It allows users to:
+Navigate screens
+Test interactions
+Simulate real app behavior
+
+6. User Testing
+===============
+Real users test the design to check:
+Usability
+Confusing elements
+Navigation issues
+Overall experience
+
+Feedback is collected to improve design.
+
+7. Iteration (Improvement)
+=========================
+Based on feedback:
+Fix design problems
+Improve layout
+Enhance usability
+Update interactions
+
+This step may repeat multiple times.
+
+8. Handoff to Developers
+========================
+Final UI is given to developers with:
+Design files
+Style guides
+Component specs
+Assets (icons/images)
+
+Tools used:
+===========
+Figma (Dev Mode)
+Zeplin
+Adobe XD export tools
+
+
+3.6 Human considerations in interface and screen design
+=======================================================
+Human considerations in UI and screen design refer to designing interfaces based 
+on how real people see, think, and behave. The goal is to make systems easy, 
+comfortable, safe, and efficient to use.
+
+This comes from Human-Computer Interaction (HCI) principles.
+============================================================
+
+1. Perception (How users see things)
+====================================
+Design should match human visual perception:
+Clear contrast between text and background
+Readable font sizes
+Proper spacing and alignment
+Avoid visual clutter
+
+2. Memory (Limited human memory)
+===============================
+Humans cannot remember too many things at once, so design should:
+Avoid forcing users to memorize steps
+Use menus instead of commands
+Show hints, labels, and icons
+Keep instructions visible
+
+Example:
+Menu selection is easier than CLI commands
+
+3. Attention (Focus and distraction)
+====================================
+Users focus only on a few things at a time:
+Highlight important actions (buttons, alerts)
+Avoid unnecessary animations
+Use visual hierarchy (titles → content → details)
+
+4. Learning and Familiarity
+===========================
+Interfaces should be easy to learn:
+Use familiar icons (home, search, settings)
+Keep consistent layouts
+Follow platform standards (Android/iOS/Web patterns)
+
+Example:
+Gear icon = Settings (universally understood)
+
+5. Motor Skills (Physical interaction)
+======================================
+Design should consider how users interact physically:
+Large clickable buttons
+Easy touch targets (especially on mobile)
+Avoid tiny clickable elements
+Support keyboard and mouse navigation
+
+6. Error Prevention and Recovery
+===============================
+Humans make mistakes, so interfaces should:
+Prevent errors (validation, confirmations)
+Show clear error messages
+Allow undo/redo options
+
+Example:
+“Are you sure you want to delete this file?”
+
+7. Feedback (System response)
+=============================
+Users need to know what is happening:
+Loading spinners
+Success messages
+Button animations
+Progress bars
+
+8. Consistency
+==============
+Users learn faster when designs are consistent:
+Same button styles across screens
+Same color meanings (red = error, green = success)
+Predictable navigation
+
+9. Accessibility (Inclusive design)
+===================================
+Design must support all users:
+Color-blind friendly palettes
+Screen reader support
+Keyboard navigation
+High contrast mode
+
+10. Cognitive Load (Mental effort)
+==================================
+Reduce user thinking effort:
+Simple layouts
+Clear labels
+Group related items
+Avoid too many choices
+
+
+3.7 Technological considerations in interface design
+====================================================
+Technological considerations refer to the hardware, software, and system limitations
+or capabilities that influence how a user interface (UI) is designed and implemented.
+In simple terms, UI must not only be good for humans, but also feasible for 
+technology.
+
+1. Device and Platform Constraints
+==================================
+UI must adapt to different devices:
+Desktop computers
+Mobile phones
+Tablets
+Smart TVs
+Wearables
+
+Each has different:
+Screen sizes
+Input methods (mouse, touch, voice)
+Processing power
+
+2. Screen Resolution and Display Quality
+========================================
+Design must consider:
+High-resolution (HD, 4K) vs low-resolution screens
+Pixel density (retina displays)
+Scaling of UI elements
+
+Key idea:
+UI must remain clear and readable on all screen sizes
+
+3. Performance and Speed
+========================
+UI should be optimized for system performance:
+Fast loading time
+Smooth animations
+Minimal lag
+Efficient resource usage (CPU, RAM)
+
+Example:
+Heavy animations may slow low-end devices
+
+4. Network Connectivity
+=======================
+For web and cloud applications:
+Internet speed affects UI experience
+Offline support may be required
+Data should load progressively
+
+Example:
+========
+Loading skeleton screens in apps
+
+5. Input Technology
+===================
+Different systems support different inputs:
+Keyboard and mouse (desktop)
+Touch gestures (mobile)
+Voice input (VUI)
+Stylus input (tablets)
+Motion sensors (AR/VR)
+
+Design must match input method.
+
+6. Browser and Software Compatibility
+=====================================
+For web UI:
+Works across browsers (Chrome, Firefox, Edge, Safari)
+Must follow web standards (HTML, CSS, JavaScript)
+Responsive design is required
+
+Example:
+A website should not break in different browsers
+
+7. Scalability
+==============
+UI should handle:
+Small number of users → large number of users
+Small data → large datasets
+
+Example:
+Dashboards showing thousands of records efficiently
+
+8. Security Considerations
+==========================
+UI must support secure interactions:
+Login authentication
+Encryption of sensitive data
+Secure forms (banking, payments)
+Protection from attacks (e.g., XSS)
+
+9. Integration with Backend Systems
+===================================
+UI depends on backend services:
+APIs (data fetching)
+Databases
+Cloud services
+
+Example:
+========
+A login form connects to authentication server
+
+10. Update and Maintenance
+==========================
+UI should be easy to:
+Update without breaking features
+Deploy quickly (especially web apps)
+Maintain across versions
+
+Example:
+Web apps update instantly without reinstalling
+
+11. Accessibility Technology Support
+====================================
+UI must support assistive technologies:
+Screen readers
+Keyboard navigation
+Voice control systems
+High contrast modes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Best Free Figma Plugins
@@ -219,151 +751,9 @@ UX Validation	                Attention Insight
 Mock Data	                    Content Reel
 
 
-3.2 Interaction styles: Command line,
-Menu selection, Form fill in, Direct manipulation, 
-Antrhorpomorphic
-
-3.3. Principles of UI design
-============================
-Principles of UI Design
-=======================
-1. Clarity
-==========
-The interface should be easy to understand.
-Buttons, icons, and menus should clearly show their purpose.
-Users should know what to do without confusion.
-
-Example:
-=======
-A trash icon for delete
-A search icon for search
-
-2. Consistency
-==============
-Use the same styles and behaviors throughout the interface.
-Same button colors
-Same font styles
-Same navigation patterns
-
-Consistency helps users learn faster.
-
-Example:
-========
-All “Save” buttons should look identical.
-
-3. Simplicity
-=============
-Keep the design clean and avoid unnecessary elements.
-
-Remove clutter
-Use minimal text
-Focus on important actions
-
-Simple interfaces improve usability.
-
-4. Feedback
-===========
-The system should respond to user actions.
-
-Examples:
-=========
-Button changes color when clicked
-Loading spinner appears (A loading spinner is a visual animation that tells users the system is 
-processing something or waiting for data to load)
-Success message after saving
-
-Feedback tells users what is happening.
-
-5. Visibility
-=============
-Important elements should be easy to find.
-
-Menus should be visible
-Important buttons should stand out
-Information hierarchy should be clear
-
-Example:
-========
-“Login” button highlighted prominently
-
-6. Accessibility
-================
-Design should be usable by everyone, including people with disabilities.
-
-Examples:
-=========
-Large readable text
-Good color contrast
-Keyboard navigation
-Screen reader support
-
-Accessibility improves usability for all users.
-
-7. User Control
-===============
-Users should feel in control of the interface.
-
-Examples:
-=========
-Undo button
-Back button
-Cancel option
-
-Avoid forcing users into unwanted actions.
-
-8. Efficiency
-=============
-Tasks should be completed quickly and easily.
-
-Examples:
-=========
-Short navigation paths
-Keyboard shortcuts
-Auto-complete search
-
-Efficient interfaces save time.
-
-9. Visual Hierarchy
-===================
-Arrange elements according to importance.
-
-Methods:
-========
-Larger text for headings
-Bold important buttons
-Use spacing and colors wisely
-
-This guides user attention.
-
-10. Error Prevention and Recovery
-==================================
-Help users avoid mistakes and recover easily.
-
-Examples:
-=========
-Confirmation before deleting
-Form validation (Form validation is the process of checking whether the data entered into a form 
-is correct, complete, and acceptable before submission, it helps prevent errors and improves user
-experience)
-Helpful error messages
-
-Good UI reduces frustration.
 
 
-3.4 Graphical user interface
-============================
 
-
-3.5 UI design process
-=====================
-
-
-3.6 Human considerations in interface and screen design
-=======================================================
-
-
-3.7 Technological considerations in interface design
-====================================================
 
 
 
