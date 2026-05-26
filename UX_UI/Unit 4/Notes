@@ -1,7 +1,7 @@
 Unit 4: UI Components
 =====================
 4.1 System menus and functions of menus
-
+=======================================
 What is a System Menu?
 ======================
 A system menu is a menu provided by an operating system or application that contains
@@ -89,6 +89,8 @@ Provides shortcuts to frequently used actions.
 Example:
 ========
 Toolbar menus in software like Microsoft Word
+
+
 Types of Menus in Interfaces
 ============================
 1. System Menu
