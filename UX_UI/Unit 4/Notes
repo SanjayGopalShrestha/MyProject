@@ -114,25 +114,25 @@ Used in websites and apps (home, about, contact)
 4.2 Formatting of menus: Consistency, display, presentation, organization, complexity
     , item arrangement, ordering, grouping
 
-Menu formatting refers to the visual organization and styling of menus in a user interface so they are easy to read, navigate, and use.
+Menu formatting refers to the visual organization and styling of menus in a user 
+interface so they are easy to read, navigate, and use.
 
 Good menu formatting improves:
-
+==============================
 Usability
 Readability
 Navigation speed
 User experience
 
 Formatting of Menus: Consistency
-
-Consistency in menu formatting means that menus should look and behave the same throughout the interface.
-
-Users should not have to relearn navigation on every screen.
+================================
+Consistency in menu formatting means that menus should look and behave the same 
+throughout the interface. Users should not have to relearn navigation on every 
+screen.
 
 What Consistency Means in Menus
-
+===============================
 Consistent menus use:
-
 Same layout
 Same colors
 Same fonts
@@ -140,35 +140,40 @@ Same spacing
 Same interaction behavior
 
 Example:
-
+========
 If the “Home” menu is blue on one page, it should not suddenly become green on another page.
 
 Formatting of Menus: Display
-
-Display in menu formatting refers to how menu items are visually presented on the screen so users can easily see, understand, and interact with them.
+===========================
+Display in menu formatting refers to how menu items are visually presented on the 
+screen so users can easily see, understand, and interact with them.
 
 Good menu display improves:
-
+==========================
 Visibility
 Readability
 Navigation speed
 User experience
 
-Presentation in menu formatting refers to the visual appearance and arrangement of menu items so they are attractive, readable, and easy to use.
+Formatting of Menus: Presentation
+=================================
+Presentation in menu formatting refers to the visual appearance and arrangement of 
+menu items so they are attractive, readable, and easy to use.
 
 Good presentation improves:
-
+===========================
 User experience
 Navigation clarity
 Readability
 Professional appearance
 
 Formatting of Menus: Organization
-
-Organization in menu formatting means arranging menu items in a logical, structured, and meaningful way so users can quickly find what they need.
+=================================
+Organization in menu formatting means arranging menu items in a logical, structured,
+and meaningful way so users can quickly find what they need.
 
 Good menu organization improves:
-
+================================
 Navigation
 Usability
 Efficiency
@@ -177,7 +182,7 @@ User understanding
 Menus should group related options together and arrange them in a clear order.
 
 Example:
-
+========
 File
  ├── New
  ├── Open
@@ -187,11 +192,11 @@ File
 Related commands are grouped under File.
 
 Formatting of Menus: Complexity
-
-Complexity in menu formatting refers to the level of difficulty users experience while understanding and navigating menus.
+===============================
+Complexity in menu formatting refers to the level of difficulty users experience 
+while understanding and navigating menus.
 
 A menu becomes complex when it contains:
-
 Too many options
 Deep submenu levels
 Confusing organization
@@ -199,11 +204,13 @@ Unclear labels
 
 Good UI design aims to reduce unnecessary complexity.
 
-
-Item arrangement in menu formatting refers to how menu items are ordered, grouped, and positioned within a menu so users can quickly locate and use commands.
+Formatting of Menus: Item arrangement
+=====================================
+Item arrangement in menu formatting refers to how menu items are ordered, grouped, 
+and positioned within a menu so users can quickly locate and use commands.
 
 Good arrangement improves:
-
+==========================
 Navigation speed
 Readability
 Usability
@@ -211,42 +218,40 @@ User experience
 Meaning of Item Arrangement
 
 Menu items should be placed:
-
 Logically
 Consistently
 In meaningful order
 
 Formatting of Menus: Ordering
-
-Ordering in menu formatting refers to the sequence in which menu items are arranged so users can find commands quickly and naturally.
+=============================
+Ordering in menu formatting refers to the sequence in which menu items are arranged
+so users can find commands quickly and naturally.
 
 Good ordering improves:
-
+=======================
 Navigation speed
 Usability
 User understanding
 Efficiency
 
 Formatting of Menus: Grouping
-
-Formatting of Menus: Grouping
-
-Grouping in menu formatting means arranging related menu items together under a common category or section so users can easily understand and find functions.
+=============================
+Grouping in menu formatting means arranging related menu items together under a 
+common category or section so users can easily understand and find functions.
 
 It reduces confusion and improves navigation by organizing similar commands.
 
 Meaning of Menu Grouping
-
+=========================
 Instead of listing all items randomly, related items are placed together.
 
 Example:
-
+========
 File
  ├── New
  ├── Open
  ├── Save
  └── Exit
-
 Here, all file-related actions are grouped under File.
 
 4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
