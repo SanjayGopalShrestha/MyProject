@@ -1,12 +1,18 @@
 Unit 4: UI Components
 =====================
-4.1
-4.2
-4.3
-4.4
-4.5
-4.6
-4.7
-4.8
-4.9
+4.1 System menus and functions of menus
+4.2 Formatting of menus: Consistency, display, presentation, organization, complexity
+    , item arrangement, ordering, grouping
+4.3 Types of menus: Menu bar, pull down menu, cascading menu, popup menu, tear off
+    menu, iconic menu
+4.4 Selection of windows and its  components, window presentation styles: Tiled win-
+    dows, overlapping windows, cascading windows
+4.5 Types of windows: Primary windows, secondary windows, dialog boxes
+4.6 Screen based controls: Operable controls: (Buttons, toolbars), Text entry/Read
+    -only controls (Single and multiple line textboxes), selection controls (radio 
+     buttons, checkboxes, palettes, list boxes, list view controls, drop down/popup
+     list boxes
+4.7  Other operable controls: slider, tabs, date picker, tree view, scroll bars
+4.8  Selecting the proper controls
+4.9  Creating meaningful graphics, icons and images 
 
