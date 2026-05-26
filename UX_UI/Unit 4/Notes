@@ -376,18 +376,87 @@ Properties
 
 Popup menus are commonly used in:
 ================================
-
 Desktop operating systems
 File managers
 Text editors
 Web applications
 
 Examples:
-
+=========
 Windows 11 file explorer
 Microsoft Word editing options
 Adobe Photoshop tool actions
 
+
+Types of menus: Tear off menu
+=============================
+A Tear-off menu is a special type of menu that can be “detached” from its original 
+position and turned into a floating window so it stays visible on the screen.
+
+It helps users access frequently used commands without repeatedly opening the menu.
+
+How It Works
+============
+User opens a menu (e.g., File, Edit, Tools)
+A tear-off handle or dotted line appears at the top of the menu
+User drags or clicks it
+The menu “tears off” and becomes a separate floating panel
+
+Example:
+========
+Tools Menu
+------------
+✂ Cut
+📄 Copy
+📋 Paste
+🔧 Options   ← tear-off handle
+
+Tear-off menus are mostly found in:
+===================================
+Older desktop GUI systems
+Advanced graphics tools
+Custom tool palettes
+
+Examples:
+=========
+Adobe Photoshop tool palettes
+GIMP floating tool windows
+Legacy UNIX/X11 applications
+
+
+Types of menus: Iconic menu
+===========================
+An Iconic Menu is a type of menu where options are represented using icons
+(symbols or images) instead of text labels. Users select commands by clicking the 
+icons.
+
+It is widely used in modern graphical user interfaces because it is compact and 
+visually intuitive.
+
+How It Works
+============
+Each menu item is shown as an icon
+Users click/tap the icon to perform an action
+Often includes tooltips (text appears on hover)
+
+Example:
+========
+💾    📂  ✏️   🗑️     🔍
+Save Open Edit Delete Search
+
+
+Iconic menus are commonly used in:
+=================================
+Mobile apps
+Toolbars in desktop applications
+Web applications
+Design tools
+
+Examples:
+========
+Adobe Photoshop toolbars
+Microsoft Word quick access toolbar
+Google Chrome navigation icons
 
 4.4 Selection of windows and its components, window presentation styles: Tiled win-
     dows, overlapping windows, cascading windows
