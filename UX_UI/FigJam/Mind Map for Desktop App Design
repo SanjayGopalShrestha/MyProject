@@ -1,0 +1,89 @@
+Mind Map for designing a Desktop Application in Figma:
+======================================================
+                           DESKTOP APP DESIGN
+                                   │
+ ┌─────────────────────────────────┼─────────────────────────────────┐
+ │                                 │                                 │
+User Research                 Information Architecture          Visual Design
+ │                                 │                                 │
+ ├─ User Interviews               ├─ Site Map                      ├─ Colors
+ ├─ Personas                      ├─ Navigation Flow               ├─ Typography
+ ├─ User Needs                    ├─ Screen Structure              ├─ Icons
+ └─ User Goals                    └─ Content Organization          └─ Design System
+                                   │
+                                   │
+                            Wireframing
+                                   │
+                ├─ Main Window Layout
+                ├─ Menu Bar
+                ├─ Toolbar
+                ├─ Sidebar
+                ├─ Content Area
+                └─ Status Bar
+                                   │
+                                   │
+                               Prototype
+                                   │
+                ├─ Screen Linking
+                ├─ Navigation Flow
+                ├─ Hover Effects
+                ├─ Click Actions
+                └─ Animations
+                                   │
+                                   │
+                              Usability Testing
+                                   │
+                ├─ User Feedback
+                ├─ Task Completion
+                ├─ Error Detection
+                └─ Improvements
+                                   │
+                                   │
+                              Developer Handoff
+                                   │
+                ├─ Components
+                ├─ Assets Export
+                ├─ CSS/Code Specs
+                └─ Documentation
+
+How to create this in Figma
+===========================
+Use Figma FigJam to create the mind map:
+========================================
+Create a new FigJam board.
+Put "Desktop App Design" in the center.
+Create branches:
+User Research
+Information Architecture
+Wireframing
+Visual Design
+Prototype
+Usability Testing
+Developer Handoff
+Add the subtopics under each branch.
+Use colors and icons to distinguish different stages.
+
+                 [Desktop App Design]
+                          │
+ ┌──────────┬──────────┬──────────┬──────────┐
+ │          │          │          │
+Research   IA      Wireframe   Visual Design
+ │          │          │          │
+Persona  Sitemap   Menu Bar    Colors
+Goals    Navigation Sidebar    Typography
+Needs    Structure  Content    Icons
+                          │
+                     Prototype
+                          │
+               Navigation • Animation
+                          │
+                     Testing
+                          │
+                   Feedback • Fixes
+                          │
+                  Developer Handoff
+                          │
+                 Assets • Components
+
+This mind map works well for desktop applications such as calculators, inventory systems, ERP 
+systems, POS systems, and productivity tools.  
