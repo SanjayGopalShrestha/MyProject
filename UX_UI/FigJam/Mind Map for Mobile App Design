@@ -1,0 +1,77 @@
+A Mind Map for Mobile App Design in Figma can look like this:
+=============================================================
+                          MOBILE APP DESIGN
+                                  │
+ ┌────────────────────────────────┼────────────────────────────────┐
+ │                                │                                │
+User Research              Information Architecture         Visual Design
+ │                                │                                │
+ ├─ Target Users                ├─ App Structure              ├─ Color Palette
+ ├─ Personas                    ├─ User Flow                  ├─ Typography
+ ├─ User Needs                  ├─ Navigation                 ├─ Icons
+ └─ User Goals                  └─ Screen Hierarchy           └─ Design System
+                                  │
+                                  │
+                             Wireframing
+                                  │
+                 ├─ Splash Screen
+                 ├─ Login / Signup
+                 ├─ Home Screen
+                 ├─ Profile Screen
+                 ├─ Settings Screen
+                 └─ Navigation Bar
+                                  │
+                                  │
+                              Prototyping
+                                  │
+                 ├─ Screen Transitions
+                 ├─ Gestures
+                 ├─ Animations
+                 ├─ Interactive Elements
+                 └─ User Journey
+                                  │
+                                  │
+                           Usability Testing
+                                  │
+                 ├─ User Feedback
+                 ├─ Accessibility Check
+                 ├─ Error Identification
+                 └─ Design Improvements
+                                  │
+                                  │
+                           Developer Handoff
+                                  │
+                 ├─ Components
+                 ├─ Assets Export
+                 ├─ Design Specifications
+                 └─ Documentation
+
+FigJam Layout Example
+======================
+                         [Mobile App Design]
+                                  │
+      ┌────────────┬────────────┬────────────┬────────────┐
+      │            │            │            │
+  Research        IA       Wireframes    Visual Design
+      │            │            │            │
+  Personas     User Flow   Home Screen   Colors
+  Goals        Navigation  Login Screen  Typography
+  Needs        Structure   Profile       Icons
+                                  │
+                            Prototyping
+                                  │
+                      Gestures • Animation
+                                  │
+                             Testing
+                                  │
+                     Feedback • Accessibility
+                                  │
+                        Developer Handoff
+                                  │
+                    Components • Assets • Specs
+
+For most mobile app projects in Figma, the design flow is:
+=========================================================
+Research → Personas → User Flow → Wireframes → Visual Design → Prototype → Testing → Developer 
+Handoff.
+
