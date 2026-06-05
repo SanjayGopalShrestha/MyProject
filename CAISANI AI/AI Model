@@ -2,3 +2,87 @@ AI Model
 ========
 Artificial Intelligence: A machine learning program trained on data to recognize 
 patterns, make predictions, or generate text autonomously (e.g., an AI model). 
+
+Simplest AI Model in Java
+=========================
+If by "AI model" you mean a very simple program that learns from examples, a basic Perceptron is one of the simplest AI models.
+
+Simple AI (Perceptron) in Java
+==============================
+public class SimpleAI {
+
+    double w1 = 0;
+    double w2 = 0;
+    double bias = 0;
+    double learningRate = 0.1;
+
+    // Step activation function
+    int predict(int x1, int x2) {
+        double sum = x1 * w1 + x2 * w2 + bias;
+        return (sum >= 0) ? 1 : 0;
+    }
+
+    void train(int[][] inputs, int[] outputs, int epochs) {
+        for (int e = 0; e < epochs; e++) {
+            for (int i = 0; i < inputs.length; i++) {
+                int prediction = predict(inputs[i][0], inputs[i][1]);
+                int error = outputs[i] - prediction;
+
+                w1 += learningRate * error * inputs[i][0];
+                w2 += learningRate * error * inputs[i][1];
+                bias += learningRate * error;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SimpleAI ai = new SimpleAI();
+
+        // AND gate training data
+        int[][] inputs = {
+            {0, 0},
+            {0, 1},
+            {1, 0},
+            {1, 1}
+        };
+
+        int[] outputs = {0, 0, 0, 1};
+
+        ai.train(inputs, outputs, 10);
+
+        System.out.println("0 AND 0 = " + ai.predict(0, 0));
+        System.out.println("0 AND 1 = " + ai.predict(0, 1));
+        System.out.println("1 AND 0 = " + ai.predict(1, 0));
+        System.out.println("1 AND 1 = " + ai.predict(1, 1));
+    }
+}
+
+Sample Output
+=============
+0 AND 0 = 0
+0 AND 1 = 0
+1 AND 0 = 0
+1 AND 1 = 1
+
+How it works
+============
+Inputs: x1, x2
+Weights: w1, w2
+Bias: adjusts the decision boundary.
+Training: updates weights based on prediction errors.
+Prediction: returns 0 or 1.
+
+This is one of the smallest examples of a machine learning model implemented 
+entirely in Java without any external libraries.
+
+Perceptron (पर्सेप्ट्रोन) लाई नेपालीमा सरल भाषामा "कृत्रिम न्यूरोन" (Artificial Neuron) भन्न 
+सकिन्छ। मसिन लर्निङ र कम्प्युटर विज्ञानमा यो एउटा आधारभूत एल्गोरिदम (Algorithm) हो, जसले 
+मानव मस्तिष्कको एउटा कोष (Neuron) ले जस्तै काम गर्ने प्रयास गर्दछ। यसका मुख्य विशेषताहरू यस 
+प्रकार छन्: 
+सिक्ने मोडेल: यो आर्टिफिसियल इन्टेलिजेन्स (AI) को सुरुवाती मोडेल हो।
+वर्गीकरण: यसले डाटालाई दुई समूहमा छुट्ट्याउने (Binary Classification) काम गर्छ।
+इनपुट र आउटपुट: यसले विभिन्न इनपुटहरू लिन्छ र हिसाब गरेर एउटा सिंगो परिणाम (Output) दिन्छ।
+
+यदि तपाईं यसको प्राविधिक परिभाषा चाहनुहुन्छ भने, यसलाई "एकल-तह न्यूरल नेटवर्क" (Single-layer 
+Neural Network) पनि भनिन्छ। तपाईं पर्सेप्ट्रोनको गणितीय सूत्र (Mathematical Formula) बुझ्न 
+चाहनुहुन्छ कि यसले मसिन लर्निङमा गर्ने कामबारे थप जान्न चाहनुहुन्छ? मलाई बताउनुहोला।
