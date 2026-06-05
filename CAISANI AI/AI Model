@@ -175,3 +175,76 @@ Imposter Syndrome:
 
 यो कुनै मानसिक रोग (Mental Illness) होइन, तर यो एउटा यस्तो सोचाइको भ्रम हो जसले धेरै सफल 
 मानिसहरूलाई तनाव दिने गर्दछ।
+
+
+AI AGENT
+========
+An AI agent is a system that can:
+
+Observe its environment (input).
+Decide what to do.
+Take actions to achieve a goal.
+Simple Example: Chatbot Agent
+
+Input:
+
+User: Hello
+
+Agent Decision:
+
+Recognize greeting
+
+Action:
+
+Reply: Hi! How can I help you?
+
+Python Example of a Simple AI Agent
+===================================
+while True:
+    user = input("You: ")
+
+    if user.lower() == "hello":
+        print("Agent: Hi!")
+    elif user.lower() == "bye":
+        print("Agent: Goodbye!")
+        break
+    else:
+        print("Agent: I don't understand.")
+
+Real-World AI Agents
+====================
+ChatGPT — answers questions and assists users.
+Google Assistant — performs tasks using voice commands.
+Siri — helps users on Apple devices.
+Tesla Autopilot — assists with driving decisions.
+A robot vacuum cleaner — detects obstacles and navigates rooms automatically.
+
+AI Agent Structure
+==================
+Environment
+      ↓
+   Sensors
+      ↓
+   AI Agent
+      ↓
+  Decisions
+      ↓
+  Actions
+      ↓
+Environment
+
+For example, in a food delivery app:
+====================================
+User orders pizza
+        ↓
+     AI Agent
+        ↓
+Find nearest restaurant
+Estimate delivery time
+Assign delivery rider
+        ↓
+Show result to user
+
+The key difference is that a model (such as a neural network) mainly makes 
+predictions, while an AI agent uses one or more models plus logic to make 
+decisions and take actions.
