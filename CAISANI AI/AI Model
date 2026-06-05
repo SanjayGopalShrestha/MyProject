@@ -86,3 +86,81 @@ Perceptron (पर्सेप्ट्रोन) लाई नेपाली�
 यदि तपाईं यसको प्राविधिक परिभाषा चाहनुहुन्छ भने, यसलाई "एकल-तह न्यूरल नेटवर्क" (Single-layer 
 Neural Network) पनि भनिन्छ। तपाईं पर्सेप्ट्रोनको गणितीय सूत्र (Mathematical Formula) बुझ्न 
 चाहनुहुन्छ कि यसले मसिन लर्निङमा गर्ने कामबारे थप जान्न चाहनुहुन्छ? मलाई बताउनुहोला।
+
+
+Simplest AI Model code in Python
+================================
+A very simple AI model in Python is a Perceptron that learns the AND logic gate.
+
+class SimpleAI:
+    def __init__(self):
+        self.w1 = 0
+        self.w2 = 0
+        self.bias = 0
+        self.learning_rate = 0.1
+
+    def predict(self, x1, x2):
+        total = x1 * self.w1 + x2 * self.w2 + self.bias
+        return 1 if total >= 0 else 0
+
+    def train(self, inputs, outputs, epochs):
+        for _ in range(epochs):
+            for i in range(len(inputs)):
+                prediction = self.predict(inputs[i][0], inputs[i][1])
+                error = outputs[i] - prediction
+
+                self.w1 += self.learning_rate * error * inputs[i][0]
+                self.w2 += self.learning_rate * error * inputs[i][1]
+                self.bias += self.learning_rate * error
+
+# Training data for AND gate
+inputs = [
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [1, 1]
+]
+
+outputs = [0, 0, 0, 1]
+
+ai = SimpleAI()
+ai.train(inputs, outputs, 10)
+
+print("0 AND 0 =", ai.predict(0, 0))
+print("0 AND 1 =", ai.predict(0, 1))
+print("1 AND 0 =", ai.predict(1, 0))
+print("1 AND 1 =", ai.predict(1, 1))
+
+Output
+======
+0 AND 0 = 0
+0 AND 1 = 0
+1 AND 0 = 0
+1 AND 1 = 1
+
+AI Components in this Model
+===========================
+Inputs: x1, x2
+Weights: w1, w2
+Bias: bias
+Learning Rate: controls how fast learning occurs
+Training: adjusts weights when predictions are wrong
+Prediction: returns 0 or 1
+
+This is one of the simplest machine learning models and is often used to introduce 
+the concepts behind neural networks.
+
+Imposter Syndrome: 
+=================
+मनोविज्ञानमा Imposter Syndrome को नेपाली अर्थ "सक्षम भएर पनि आफूलाई कमजोर वा धोकेबाज ठान्ने 
+मानसिक अवस्था" हो। यसलाई सरल नेपाली भाषामा "आत्म-शंकाको अवस्था" भन्न सकिन्छ। यो यस्तो मानसिक 
+अनुभव हो जहाँ व्यक्ति वास्तवमै योग्य, शिक्षित र सफल भए तापनि उसलाई भित्रभित्रै "म यो सफलताको 
+लायक छैन" वा "मैले सबैलाई झुक्याइरहेको छु" भन्ने डर लागिरहन्छ। यसका मुख्य लक्षणहरू यस प्रकार छन्:
+
+भाग्यलाई दोष दिने: आफ्नो मिहिनेत र क्षमतालाई विश्वास नगरेर सफलतालाई 'भाग्य' वा 'संयोग' मात्र मान्ने।
+खुलासा हुने डर: आफूभित्रै "कुनै दिन सबैले मेरो कमजोरी थाहा पाउनेछन् र म पक्राउ पर्नेछु" भन्ने कडा डर हुनु।
+अवास्तविक अपेक्षा: आफूबाट धेरै बढीको अपेक्षा (Perfectionism) राख्नु र सानो गल्तीमा पनि धेरै निराश हुनु।
+तुलना गर्ने: आफूलाई जहिले पनि अरूभन्दा कमजोर सम्झिने।
+
+यो कुनै मानसिक रोग (Mental Illness) होइन, तर यो एउटा यस्तो सोचाइको भ्रम हो जसले धेरै सफल 
+मानिसहरूलाई तनाव दिने गर्दछ।
