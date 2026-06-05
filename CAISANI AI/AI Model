@@ -5,7 +5,14 @@ patterns, make predictions, or generate text autonomously (e.g., an AI model).
 
 Simplest AI Model in Java
 =========================
-If by "AI model" you mean a very simple program that learns from examples, a basic Perceptron is one of the simplest AI models.
+If by "AI model" you mean a very simple program that learns from examples, a 
+basic Perceptron is one of the simplest AI models.
+
+A perceptron is an artificial neuron and the foundational building block of artificial
+neural networks and deep learning. Invented in 1957 by Frank Rosenblatt, it is a 
+supervised learning algorithm primarily used for binary classification—meaning it 
+decides whether an input belongs to one of two categories (e.g., yes/no or 
+true/false).
 
 Simple AI (Perceptron) in Java
 ==============================
