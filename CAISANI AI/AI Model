@@ -14,6 +14,10 @@ supervised learning algorithm primarily used for binary classification—meaning
 decides whether an input belongs to one of two categories (e.g., yes/no or 
 true/false).
 
+Frank Rosenblatt was an American psychologist notable in the field of artificial 
+intelligence. He is sometimes called the father of deep learning for his pioneering
+work on artificial neural networks.
+
 Simple AI (Perceptron) in Java
 ==============================
 public class SimpleAI {
