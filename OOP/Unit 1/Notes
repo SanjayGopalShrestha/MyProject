@@ -102,84 +102,8 @@ Core Idea
 =========
 “Everything is an object that contains data and behavior together.”
 
-Main Concepts of OOP
+Main concepts of OOP
 ====================
-1. Class and Object
-===================
-Class → Blueprint (template)
-Object → Real instance of a class
-class Car {
-public:
-    string brand;
-    void drive() {
-        cout << "Car is driving";
-    }
-};
-
-2. Encapsulation
-================
-Wrapping data + methods together in a single unit
-Hides internal details using access specifiers
-
-class BankAccount {
-private:
-    int balance;
-
-public:
-    void setBalance(int b) {
-        balance = b;
-    }
-
-    int getBalance() {
-        return balance;
-    }
-};
-
-3. Inheritance
-==============
-One class acquires properties of another
-
-class Animal {
-public:
-    void eat() {
-        cout << "Eating";
-    }
-};
-
-class Dog : public Animal {
-};
-
-4. Polymorphism
-===============
-Same function name, different behavior
-Compile-time (overloading)
-Run-time (overriding)
-
-class Base {
-public:
-    virtual void show() {
-        cout << "Base";
-    }
-};
-
-class Derived : public Base {
-public:
-    void show() override {
-        cout << "Derived";
-    }
-};
-
-5. Abstraction
-==============
-Hiding implementation details, showing only essential features
-
-class Shape {
-public:
-    virtual void draw() = 0; // pure virtual function
-};
-
-Features of OOP
-===============
 Real-world modeling
 Code reusability
 Security (data hiding)
