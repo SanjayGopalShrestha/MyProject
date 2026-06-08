@@ -1,1 +1,97 @@
-Notes
+How to override method in C++?
+==============================
+In C++, you override a method using inheritance + virtual functions.
+
+✔ Basic idea of method overriding
+==================================
+Method overriding means:
+A derived class provides its own version of a base class method.
+
+✔ Step 1: Use virtual in base class
+===================================
+class Base {
+public:
+    virtual void show() {
+        std::cout << "Base class show()" << std::endl;
+    }
+};
+
+✔ Step 2: Override in derived class
+===================================
+class Derived : public Base {
+public:
+    void show() override {
+        std::cout << "Derived class show()" << std::endl;
+    }
+};
+
+✔ Step 3: Use base pointer (important for runtime polymorphism)
+===============================================================
+int main() {
+    Base* obj = new Derived();
+    obj->show();  // calls Derived version
+
+    delete obj;
+}
+
+✔ Output:
+=========
+Derived class show()
+
+✔ Key points
+=============
+virtual in base class enables runtime polymorphism
+override in derived class is optional but recommended (helps catch errors)
+Method signature must be exactly the same
+
+❌ What happens WITHOUT virtual?
+================================
+Base* obj = new Derived();
+obj->show();
+
+👉 Calls Base class method, not Derived (no runtime polymorphism)
+
+✔ Summary
+=========
+Concept	                  Requirement
+=======                   ===========
+Overriding	              Same function signature
+Runtime behavior	        virtual keyword in base
+Best practice	            Use override in derived
+
+
+Example (Working Code)
+======================
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+public:
+    // virtual function enables method overriding
+    virtual void show() {
+        cout << "Base class show() function" << endl;
+    }
+};
+
+// Derived class
+class Derived : public Base {
+public:
+    // overridden function
+    void show() override {
+        cout << "Derived class show() function" << endl;
+    }
+};
+
+int main() {
+    Base* ptr;          // base class pointer
+    Derived obj;        // derived class object
+
+    ptr = &obj;         // base pointer points to derived object
+
+    ptr->show();        // runtime polymorphism (method overriding)
+
+    return 0;
+}
+
+
