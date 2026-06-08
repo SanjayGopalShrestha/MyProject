@@ -1,11 +1,21 @@
 Unit 1: Programming in Java (8Hrs.)
 
-1.1.	Java Architecture, Java Buzzwords, Path and ClassPath variables, Sample Java Program, Compling and Running Java Programs.
+1.1.	Java Architecture, Java Buzzwords, Path and ClassPath variables, Sample Java Program, 
+Compiling and Running Java Programs.
+
 Java Architecture
-Create .java file (eg. Main.java), save file as class name, here in our context class is Main, so file should be Main.java
-Javac – creates .class (bytecode) file (eg. Main.class), now you will have Main.java and Main.class files in your folder.
-Java – run/interpret Main class (eg. Java Main or java one.java (if filename is not as class name) using JVM.
+=================
+Create .java file (eg. Main.java), save file as class name, here in our context class is Main, 
+so file should be Main.java.
+
+Javac – creates .class (bytecode) file (eg. Main.class), now you will have Main.java and 
+Main.class files in your folder.
+
+Java – run/interpret Main class (eg. Java Main or java one.java (if filename is not as class 
+name) using JVM.
+
 Java Buzzwords
+==============
 1. Simple
 •	Java removes complex features like pointers and operator overloading (from C++) 
 •	Easy to learn and write 
@@ -64,15 +74,18 @@ ________________________________________
 •	Supports dynamic linking
 
 Path and ClassPath variables
-
-A path is the address that tells the system where a file or directory is located, either absolutely (from root) or relatively (from current directory).
-There are two related but distinct concepts in Java: CLASSPATH and Class (as in the java.lang.Class object), plus sometimes people confuse classpath variables with environment variables used to locate classes. 
+============================
+A path is the address that tells the system where a file or directory is located, either 
+absolutely (from root) or relatively (from current directory).
 ________________________________________
 CLASSPATH in Java
+=================
 What is it?
-CLASSPATH is an environment variable (or command-line parameter) that tells the Java Virtual Machine (JVM) and Java compiler where to look for user-defined classes and packages.
+CLASSPATH is an environment variable (or command-line parameter) that tells the Java Virtual 
+Machine (JVM) and Java compiler where to look for user-defined classes and packages.
 •	By default, JVM looks in the current directory (.).
-•	If your classes are in other directories or JAR files, you must include them in the classpath.
+•	If your classes are in other directories or JAR files, you must include them in the 
+    classpath.
 ________________________________________
 Syntax examples
 a) Environment variable (system-wide)
@@ -88,15 +101,21 @@ ________________________________________
 Notes
 •	Multiple paths are separated by : (Linux/Mac) or ; (Windows).
 •	If you don’t set CLASSPATH, the JVM uses . (current directory) by default.
-javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server.java
-java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" Server
+javac -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" 
+Server.java
+java -cp ".;E:\jtest\CORBAProject\jacorb\jacorb-3.9\lib\*;E:\jtest\CORBAProject\corba_lib\*" 
+Server
 
 Summary Table
-Concept	Purpose
-CLASSPATH	Tells JVM/compiler where to find compiled class files / JARs
-Class object (java.lang.Class)	Represents a Java class at runtime; used for reflection, metadata, dynamic instantiation
+=============
+Concept									Purpose
+CLASSPATH								Tells JVM/compiler where to find compiled class files / 
+										JARs
+Class object (java.lang.Class)			Represents a Java class at runtime; used for reflection,
+										metadata, dynamic instantiation
+
 Sample Java Program
-=========================
+===================
 Public class Main
 {
 Public static void main(String[ ] arg)
@@ -116,6 +135,7 @@ Structure of Java program using optional components
 3.	Import statement
 4.	Class Implementation
 5.	Main Method
+
 Example (Creating Package)
 =======================
 
@@ -145,7 +165,7 @@ System.out.println(l*b);
 
 
 Class 
-====
+=====
 A class is a collection data (characteristics) and behaviors (methods).
 Example:
 =======
@@ -162,17 +182,19 @@ System.out.println(l*b);
 }
 
 Class Access Modifiers
-==================
-Class - package-private (default),  public
-Elements of interface – public static final for data (default), public abstract for method (default), but Java 8+ added – static, default
+======================
+Class - package-private (default),  public, private, protected
+Elements of Class - package-private (default), private, protected, public
 
 Interface Modifiers
 ================
 Interface - package-private (default), public
-Elements of Class - package-private (default), private, protected, public
+Elements of interface – public static final for data (default), public abstract for method 
+(default), but Java 8+ added – static, default
+
 
 List of Packages
-=============
+================
 import java.lang.*;
 import java.util.*;
 import java.time.*;
@@ -221,8 +243,9 @@ rect.areaRectangle();
 }
 
 
-The class java.lang.Object is the root of the Java class hierarchy. Every class in Java inherits these methods.
-________________________________________
+The class java.lang.Object is the root of the Java class hierarchy. Every class in Java 
+inherits these methods.
+_______________________________________
 📋 Methods of java.lang.Object
 🔹 1. equals(Object obj)
 •	Compares two objects for equality 
@@ -263,19 +286,23 @@ ________________________________________
 🔹 11. wait(long timeout, int nanos)
 •	Waits with more precise time control 
 ________________________________________
+
 Summary Table
-Method	Purpose
-equals()	Compare objects
-hashCode()	Hash value
-toString()	String representation
-clone()	Copy object
-finalize()	Cleanup before GC (deprecated)
-getClass()	Get class info
-notify()	Wake one thread
-notifyAll()	Wake all threads
-wait()	Pause thread
+=============
+Method						Purpose
+======						=======
+equals()					Compare objects
+hashCode()					Hash value
+toString()					String representation
+clone()						Copy object
+finalize()					Cleanup before GC (deprecated)
+getClass()					Get class info
+notify()					Wake one thread
+notifyAll()					Wake all threads
+wait()						Pause thread
 ________________________________________
 Key Points
+==========
 •	These methods are automatically available in every Java class 
 •	Most commonly overridden: 
 o	toString() 
@@ -284,8 +311,9 @@ o	hashCode()
 
 
 What is an object in Java?
-An object in Java is an instance of a class that represents a real-world entity and contains state, behavior, and identity.
-That means:
+==========================
+An object in Java is an instance of a class that represents a real-world entity and contains 
+state, behavior, and identity. That means:
 •	A class is a blueprint
 •	An object is the real thing created from that blueprint
 ________________________________________
@@ -294,18 +322,22 @@ An object has:
 2.	Behavior → methods (functions)
 3.	Identity → unique reference in memory
 ________________________________________
-Example 
+Example
+=======
 class Car 
 { }      // class (blueprint)
 Car c = new Car(); // object (instance)
 
 What keyword is used to create an object in Java?
-Ans: The keyword new is used to create an object in Java.
+=================================================
+Ans: The keyword "new" is used to create an object in Java.
 ________________________________________
 1.	What  getClass() represents?
+================================
 Ans: getClass() returns the runtime class of an object.
-Example
 
+Example
+=======
 class Student {
 }
 
@@ -315,14 +347,18 @@ public class Test {
         System.out.println(s.getClass());
     }
 }
+
 Output
+======
 class Student
 This shows:
 •	s is an object
 •	At runtime, Java knows it belongs to Student
 •	getClass() returns a Class object describing it
 ________________________________________
+
 2.	What hashCode() represents
+==============================
 hashCode() returns an integer number that represents an object.
 It’s mainly used by hash-based collections like HashMap and HashSet.
 Before the example, think
@@ -330,6 +366,7 @@ Do you expect two equal objects to have the same or different hash code?
 (Keep that in mind.)
 ________________________________________
 Example (default hashCode())
+============================
 class Test {
     public static void main(String[] args) {
         String s1 = new String("Java");
@@ -339,13 +376,16 @@ class Test {
         System.out.println(s2.hashCode());
     }
 }
+
 Output
+======
 2301506
 2301506
 ✔ Even though s1 and s2 are different objects,
 they have the same hash code because their contents are equal.
 ________________________________________
 Custom class example
+====================
 class Student {
     int id;
 
@@ -363,14 +403,17 @@ public class Test {
         System.out.println(s2.hashCode());
     }
 }
+
 Here, the hash codes will usually be different,
 because we did not override hashCode().
 ________________________________________
 Key rule (very important)
+=========================
 Rule:
 If equals() is overridden, hashCode() must also be overridden.
 ________________________________________
 Quick check 
+===========
 1.	True or False?
 If two objects have the same hash code, they must be equal.
 (Just answer True or False.)
@@ -391,6 +434,7 @@ String(String value)
 So parameters go to the constructor, not to new itself.
 ________________________________________
 Your own class example
+======================
 Let’s mirror this idea with a custom class:
 class Student {
     int id;
@@ -409,26 +453,33 @@ public class Test {
 ❌ If the constructor didn’t exist, Java would give a compile-time error.
 ________________________________________
 Important rule to remember
+==========================
 Rule:
 Parameters can be passed during object creation only through constructors.
 ________________________________________
 Quick check (your turn 👇)
+==========================
 Will this compile or not?
+=========================
 class Demo {
 }
 
 Demo d = new Demo(5);
 Answer with “Compile” or “Error” (one word).
 No, because it doesn't have constructor.
-Exactly! Perfect reasoning, Since Demo has no constructor that takes an int, Java cannot match new Demo(5) to any constructor, so it gives a compile-time error.
+Exactly! Perfect reasoning, Since Demo has no constructor that takes an int, Java cannot match 
+new Demo(5) to any constructor, so it gives a compile-time error.
 ________________________________________
 Quick tip
+=========
 •	If you don’t write any constructor, Java gives a default no-argument constructor.
-•	But if you write a parameterized constructor, the default no-arg constructor disappears unless you add it yourself.
+•	But if you write a parameterized constructor, the default no-arg constructor disappears 
+    unless you add it yourself.
 ________________________________________
  The rule
  Every class in Java has a constructor, even if you don’t write one.
-•	If you don’t write any constructor, Java provides a default no-argument constructor automatically.
+•	If you don’t write any constructor, Java provides a default no-argument constructor 
+    automatically.
 •	If you write a constructor yourself, Java does not provide a default one.
 ________________________________________
 Example
@@ -458,6 +509,7 @@ public class Test {
 }
 ________________________________________
 Key points
+==========
 •	Default constructor → automatically added if no constructor exists.
 •	Parameterized constructor → you must call it with matching parameters.
 Memory tip: “Java always gives a default constructor… until you write your own.”
@@ -467,7 +519,8 @@ Package hierarchy in Java
 ========================================
 Step 1: Package hierarchy in Java
 •	In Java, packages are namespaces.
-•	java is a top-level package name. It doesn’t contain classes directly. Instead, it has subpackages like:
+•	java is a top-level package name. It doesn’t contain classes directly. Instead, it has 
+    subpackages like:
 o	java.lang
 o	java.util
 o	java.net
@@ -479,12 +532,14 @@ Step 2: What “core package” means
 o	java.lang (mandatory, contains Object, String, etc.)
 o	java.util (collections, date, etc.)
 o	java.io, java.net, java.sql (standard APIs)
-•	java.lang is considered the root core package, because it’s automatically imported and contains the root class Object.
+•	java.lang is considered the root core package, because it’s automatically imported and 
+    contains the root class Object.
 ________________________________________
 Step 3: Where “everything grows from”
 •	Inheritance-wise: Everything in Java grows from java.lang.Object, not from the package java.
 •	java.lang is the real root package for core classes.
-•	java is just the top-level namespace; think of it like a folder that organizes subfolders (java.lang, java.util, etc.).
+•	java is just the top-level namespace; think of it like a folder that organizes subfolders 
+    (java.lang, java.util, etc.).
 ________________________________________
 Analogy (folder structure)
 java/               <- top folder (namespace)
@@ -500,6 +555,7 @@ java/               <- top folder (namespace)
 •	The “java” folder/package is just a container for these subpackages
 ________________________________________
 Key takeaway:
+============
 Inheritance and “core” start from java.lang, not java.
 java is just the top-level namespace for organizing the subpackages.
 
@@ -531,7 +587,8 @@ Step 4: Notes to remember
 3.	All its fields/metvhods are static utility features (like I/O, environment properties, time).
 
 Show the hierarchy of "println()" method?
-println() is often confused as belonging to System, but it’s actually inside another class. Let’s carefully build the hierarchy.
+println() is often confused as belonging to System, but it’s actually inside another class. 
+Let’s carefully build the hierarchy.
 ________________________________________
 Step 1: Where println() lives
 •	You usually call it like this:
@@ -542,7 +599,8 @@ public static final PrintStream out;
 ________________________________________
 Step 2: PrintStream class hierarchy
 •	PrintStream is a class in java.io
-•	It extends java.io.FilterOutputStream, which extends java.io.OutputStream, which extends java.lang.Object
+•	It extends java.io.FilterOutputStream, which extends java.io.OutputStream, which extends 
+    java.lang.Object
 So the class hierarchy looks like this:
 java.lang.Object
         ↑
@@ -551,7 +609,8 @@ java.io.OutputStream
 java.io.FilterOutputStream
         ↑
 java.io.PrintStream
-•	println() is defined in PrintStream, so it inherits nothing; it’s a concrete method in PrintStream.
+•	println() is defined in PrintStream, so it inherits nothing; it’s a concrete method 
+in PrintStream.
 ________________________________________
 Step 3: Summary of method call
 •	System.out → reference to PrintStream
@@ -571,7 +630,9 @@ println(), print(), printf() ...
 •	Important: System just provides the out reference; it does not define println() itself.
 
 Inner class example in Java?
+============================
 What is an Inner Class?
+=======================
 An inner class is a class defined inside another class.
 Why use it?
 •	It logically belongs to the outer class
@@ -595,6 +656,7 @@ What’s happening?
 •	Inner can directly access x (even though it’s not public)
 ________________________________________
 Creating an Inner Class Object
+==============================
 This part is important
 class Test {
     public static void main(String[] args) {
@@ -604,13 +666,16 @@ class Test {
     }
 }
 Key idea 
+========
 You cannot create an inner class object without an outer class object.
 ________________________________________
 Output
+======
 x = 10
 ________________________________________
 
 What is wrong with this statement?
+==================================
 static int x=5;
 The statement itself:
 static int x = 5;
@@ -618,7 +683,7 @@ By itself, this line is NOT wrong in Java.
 So the real question is: where is this written?
 
 Step 1: Possible places this line could appear
-Think about these options: :
+Think about these options:
 1.	Inside a normal class
 2.	Inside a static nested class
 3.	Inside a method
@@ -651,9 +716,11 @@ class Outer {
     }
 }
 
-
-How can we define "static class" for class as the class has only two modifiers default "package-private" and "public"?
+How can we define "static class" for class as the class has only two modifiers default 
+"package-private" and "public"?
+======================================================================================
 Key idea (the core answer)
+==========================
 You are 100% correct that a top-level class can have only two access modifiers:
 •	public
 •	default (package-private)
@@ -661,6 +728,7 @@ So…
 There is NO such thing as a “static top-level class” in Java.
 
 Then what is a “static class”?
+==============================
 When people say static class, they actually mean:
 static nested class, not a top-level class.
 Example:
@@ -675,6 +743,7 @@ Here:
 •	static applies to the nested class, not the top-level class
 ________________________________________
 Why is this allowed?
+====================
 Because nested classes are members of another class, just like:
 •	fields
 •	methods
@@ -690,13 +759,14 @@ Can have static members	           ❌ No	          ✅ Yes
 Access outer instance vars	           ✅ Yes	          ❌ No
 
 Common exam sentence (important!)
+=================================
 “Java does not support static top-level classes.
 However, Java supports static nested classes.”
 ________________________________________
 Complete Running Example: Static Nested Class
 Code (single file)
+==============================================
 class Outer {
-
     static int x = 10;   // static member of outer class
 
     // static nested class
@@ -714,9 +784,11 @@ class Outer {
 }
 
 Output
+======
 x = 10
 
 Step-by-step understanding 🧠
+==========================
 Why is this called a “static class”?
 •	StaticInner is inside Outer
 •	It is marked static
@@ -748,22 +820,32 @@ Ans: No, static class variable could reference to static class only.
 Overloading and Overriding
 ================================
 
-Method Overloading	Method Overriding
--	Same method with same name, different number of arguments, types of arguments,
-and different order.	-	When a child class modifies the behavior inherited form parent class.
--	Rules
+	Method Overloading						Method Overriding
+	==================						=================
+-	Same method with same				-	When a child class 
+	name, different number					modifies the behavior 	
+	of arguments, types						inherited form parent 
+	of arguments, and 						class.
+	different order.	
+	Rules
+    =====
 •	Method name should be same
 •	Different number of arguments
 •	Different type of arguments
-•	Different order of arguments	-	Rules
+•	Different order of arguments		
+
+	Rules
+	=====
 •	class to class - extends
 •	Interface to class – implements
 •	Using public abstract method
 •	Using default method
 •	Not by using static method
--	Compile time polymorphism.	-	Runtime Polymorphism
--	Example
+-	Compile time polymorphism.			-	Runtime Polymorphism
 
+
+Example (Class)
+===============
 import java.lang.*;
 import java.util.*;
 
@@ -800,8 +882,8 @@ System.out.println(p.area(5,10));
 }
 
 
-	-	Example
-
+Example (Interface)
+===================
 import java.lang.*;
 import java.util.*;
 
@@ -855,7 +937,6 @@ p.show();
 p.display();
 }
 }
-
 
 
 
