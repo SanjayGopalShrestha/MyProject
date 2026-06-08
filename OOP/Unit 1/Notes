@@ -1,18 +1,306 @@
 Unit 1: Introduction to Object Oriented Programming (3 Hrs.) 
 ============================================================
-Overview of structured programming approach, Object oriented programming approach, 
-Characteristics of object oriented languages 
+1.1 Overview of structured programming approach 
+1.2 Object oriented programming approach 
+1.3 Characteristics of object oriented languages 
 
-Overview of structured programming approach
+1.1 Overview of structured programming approach
+===============================================
+Structured programming is a programming paradigm designed to improve clarity, reduce complexity, 
+and make programs easier to debug and maintain. It focuses on writing code in a logical, 
+top-down, and modular way using well-defined control structures.
+
+✔ Core Idea
+===========
+Break a program into small, manageable blocks and execute them in a clear sequence using 
+structured control flow.
+
+✔ Main Principles
+=================
+1. Top-down design
+==================
+Problem is divided into smaller sub-problems
+Each sub-problem is solved step by step
+Example: “Build a bank system” → login → transactions → reports
+
+2. Modular programming
+======================
+Program is divided into functions or modules
+Each function performs a specific task
+Improves reuse and readability
+
+3. Structured control flow (3 basic constructs)
+===============================================
+a) Sequence
+===========
+Statements execute one after another
+
+a = 5;
+b = 10;
+c = a + b;
+
+b) Selection (Decision making)
+==============================
+Uses conditions:
+
+if (a > b) {
+    cout << "A is greater";
+} else {
+    cout << "B is greater";
+}
+
+c) Iteration (Loops)
+====================
+Repeats execution:
+
+for(int i = 0; i < 5; i++) {
+    cout << i << endl;
+}
+
+Features of Structured Programming
+==================================
+Easy to understand
+Easier debugging and testing
+Reduces complexity
+Avoids chaotic “spaghetti code”
+Encourages clean design
+
+Advantages
+==========
+Better readability
+Easier maintenance
+Reusable code (functions)
+Fewer logical errors
+
+Limitations
+===========
+Not suitable for very large complex systems alone
+No direct support for real-world modeling (objects)
+Less flexible compared to OOP
+
+Languages supporting structured programming
 ===========================================
+C
+Pascal
+Ada
+C++ (supports both structured + OOP)
+Java (mostly OOP, but structured concepts exist)
+
+Simple analogy
+==============
+Think of structured programming like:
+Following a recipe step-by-step, instead of doing everything randomly.
 
 
-Object oriented programming approach
+1.2 Object-oriented programming approach
+========================================
+Object-Oriented Programming (OOP) is a programming approach where software is designed using 
+objects and classes, just like real-world entities. It focuses on organizing code around data
+(objects) rather than just functions.
+
+Core Idea
+=========
+“Everything is an object that contains data and behavior together.”
+
+Main Concepts of OOP
+====================
+1. Class and Object
+===================
+Class → Blueprint (template)
+Object → Real instance of a class
+class Car {
+public:
+    string brand;
+    void drive() {
+        cout << "Car is driving";
+    }
+};
+
+2. Encapsulation
+================
+Wrapping data + methods together in a single unit
+Hides internal details using access specifiers
+
+class BankAccount {
+private:
+    int balance;
+
+public:
+    void setBalance(int b) {
+        balance = b;
+    }
+
+    int getBalance() {
+        return balance;
+    }
+};
+
+3. Inheritance
+==============
+One class acquires properties of another
+
+class Animal {
+public:
+    void eat() {
+        cout << "Eating";
+    }
+};
+
+class Dog : public Animal {
+};
+
+4. Polymorphism
+===============
+Same function name, different behavior
+Compile-time (overloading)
+Run-time (overriding)
+
+class Base {
+public:
+    virtual void show() {
+        cout << "Base";
+    }
+};
+
+class Derived : public Base {
+public:
+    void show() override {
+        cout << "Derived";
+    }
+};
+
+5. Abstraction
+==============
+Hiding implementation details, showing only essential features
+
+class Shape {
+public:
+    virtual void draw() = 0; // pure virtual function
+};
+
+Features of OOP
+===============
+Real-world modeling
+Code reusability
+Security (data hiding)
+Flexibility
+Easy maintenance
+
+Advantages
+==========
+Reduces complexity
+Reusable code (inheritance)
+Scalable systems
+Better organization
+
+Limitations
+===========
+More complex than structured programming
+Slight performance overhead
+Requires careful design
+
+Real-life analogy
+=================
+Think of OOP like:
+A car system
+
+Class = Car blueprint
+Objects = Toyota, BMW, Tesla
+Properties = color, speed
+Behaviors = drive, brake
+
+Structured vs OOP (quick comparison)
 ====================================
+Feature	                Structured	                      OOP
+=======                 ==========                        ====
+Focus	                  Functions	                        Objects
+Approach	              Top-down	                        Bottom-up
+Data security	          Low	                              High
+Reusability	            Limited	                          High
 
 
-Characteristics of object oriented languages
-============================================
+1.3 Characteristics of object oriented languages
+================================================
+Object-oriented languages like C++, Java, Python are designed around objects and classes. 
+Their main characteristics are based on how they model real-world systems.
 
+1. Class and Object
+===================
+Class → Blueprint or template
+Object → Instance of a class
+
+- Everything in OOP is built using objects.
+
+2. Encapsulation (Data Hiding)
+==============================
+Wrapping data and methods together into a single unit (class)
+Restricts direct access to data using access modifiers (private)
+
+- Improves security and control over data
+
+3. Abstraction
+===============
+Hiding implementation details and showing only essential features
+Focuses on what to do, not how it is done
+
+- Example: You use a phone without knowing internal circuits
+
+4. Inheritance
+==============
+One class acquires properties and behaviors of another class
+Promotes code reusability
+
+class Animal {
+public:
+    void eat() {
+        cout << "Eating";
+    }
+};
+
+class Dog : public Animal {
+};
+
+5. Polymorphism
+===============
+“One name, many forms”
+Same function behaves differently in different contexts
+
+Types:
+Compile-time (function overloading)
+Run-time (function overriding)
+
+6. Dynamic Binding
+==================
+Method call is resolved at runtime (not compile time)
+Used in runtime polymorphism
+
+- Achieved using virtual functions in C++
+
+7. Message Passing
+==================
+Objects communicate by sending messages (calling methods)
+obj.show();
+
+8. Modularity
+=============
+Program is divided into independent modules (classes)
+Easier to maintain and debug
+
+Summary Table
+=============
+Characteristic	            Meaning
+==============              =======
+Class & Object	            Building blocks
+Encapsulation	              Data protection
+Abstraction	                Hide complexity
+Inheritance	                Code reuse
+Polymorphism	              Multiple forms
+Dynamic Binding	            Runtime method decision
+Message Passing	            Object communication
+Modularity	                Divided structure
+
+Simple idea
+===========
+OOP languages model software like a real-world system made of interacting objects.
 
 
