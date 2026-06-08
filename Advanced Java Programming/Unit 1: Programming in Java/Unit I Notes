@@ -194,20 +194,29 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;	//POA, POAHelper
 
 
+import java.lang.*;
+
 interface Polygon
 {
-static void areaRectangle()
+abstract void areaRectangle();
+}
+
+
+class Rectangle implements Polygon
+{
+public void areaRectangle()
 {
 System.out.println(5*6);
 }
 }
 
 
-public class Main
+public class Main 
 {
 public static void main(String[] arg)
 {
-Polygon.areaRectangle();
+Rectangle rect = new Rectangle();
+rect.areaRectangle();
 }
 }
 
