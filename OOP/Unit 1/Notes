@@ -10,13 +10,13 @@ Structured programming is a programming paradigm designed to improve clarity, re
 and make programs easier to debug and maintain. It focuses on writing code in a logical, 
 top-down, and modular way using well-defined control structures.
 
-✔ Core Idea
-===========
+Core Idea
+=========
 Break a program into small, manageable blocks and execute them in a clear sequence using 
 structured control flow.
 
-✔ Main Principles
-=================
+Main Principles
+===============
 1. Top-down design
 ==================
 Problem is divided into smaller sub-problems
@@ -213,9 +213,9 @@ Structured vs OOP (quick comparison)
 ====================================
 Feature	                Structured	                      OOP
 =======                 ==========                        ====
-Focus	                  Functions	                        Objects
-Approach	              Top-down	                        Bottom-up
-Data security	          Low	                              High
+Focus	                Functions	                      Objects
+Approach	            Top-down	                      Bottom-up
+Data security	        Low	                              High
 Reusability	            Limited	                          High
 
 
