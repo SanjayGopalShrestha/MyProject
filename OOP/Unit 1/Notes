@@ -120,7 +120,7 @@ Better organization
 Limitations
 ===========
 More complex than structured programming
-Slight performance overhead
+Slight performance overhead (slower)
 Requires careful design
 
 Real-life analogy
