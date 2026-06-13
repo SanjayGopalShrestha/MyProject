@@ -1,0 +1,15 @@
+Feature	                  Compile-Time Polymorphism	           Run-Time Polymorphism
+=======                   =========================            ======================
+Alternative Names	        Static binding, Early binding	       Dynamic binding, Late binding
+
+When it's resolved	      During compilation.	                 During execution (at runtime).
+
+How it's achieved	        Method Overloading                   Method Overriding (via
+                          & Operator Overloading.	             inheritance and virtual functions).
+
+Execution Speed	          Faster, because the                  Slower, because the program
+                          decision is already made             must look up the correct            
+                          before the program runs.	           method at runtime.
+
+Flexibility	              Less flexible; everything            Highly flexible; allows
+                          must be known before running.	       for dynamic plugin-like behavior.
