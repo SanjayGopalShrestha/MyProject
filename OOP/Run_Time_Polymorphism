@@ -1,9 +1,9 @@
-#include<stdio.h>
+#include<cstdio>
 
 class Animal
 {
   public: 
-  virtural void sound()=0;
+  virtual void sound()=0;
 };
 
 class Dog: public Animal
