@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+class Animal
+{
+  public: 
+  virtural void sound()=0;
+};
+
+class Dog: public Animal
+{
+public:
+  printf("Dog Barks!");
+};
+
+int main()
+{
+  Animal *a = new Dog();
+  a->sound();
+  return 0;
+}
+
+  
+  
+  
+  
+  public:
+  void sound()
+  {
+    
